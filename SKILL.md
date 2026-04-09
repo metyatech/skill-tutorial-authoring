@@ -13,13 +13,14 @@ description: >-
 
 # Tutorial authoring
 
-Use this skill when writing, revising, or auditing any document where a reader
-follows steps to build or achieve something.
+Use this skill when writing, revising, or auditing any document
+where a reader follows steps to build or achieve something.
 
 ## Scientific foundations
 
-All authoring rules derive from these established principles. Apply them actively
-when both writing new tutorials and reviewing existing ones.
+All authoring rules below derive from the principles in this
+table. The agent MUST apply them actively when writing new
+tutorials and when reviewing existing ones.
 
 | Principle | Source | Core insight | Authoring implication |
 |---|---|---|---|
@@ -34,7 +35,7 @@ when both writing new tutorials and reviewing existing ones.
 
 ## Information hierarchy
 
-Every tutorial is composed of exactly these layers:
+Every tutorial MUST be composed of exactly these layers:
 
 ```
 Tutorial (page)
@@ -78,34 +79,48 @@ The smallest learning unit is:
 ```
 
 Rules:
-- One image per action. Never batch images.
-- Image is always above/before text (spatial contiguity).
-- Do not describe in text what the image already shows (redundancy elimination).
-- If the action produces a visible result, state it inline; **do not** create a
-  separate Verify — those are for Procedure-level confirmation only.
+
+- The author MUST use one image per action. The author MUST NOT
+  batch images.
+- The image MUST be placed above or before the text (spatial
+  contiguity).
+- The author MUST NOT describe in text what the image already
+  shows (redundancy elimination).
+- If the action produces a visible result, the author MUST state
+  it inline. The author MUST NOT create a separate Verify for
+  this — Verify is reserved for Procedure-level confirmation only.
 
 ## Writing rules
 
 ### Action text
-- Use imperative: 「〜をクリックします」「〜と入力します」
-- Name the exact UI element in bold: 「**コンパイル**」をクリック
-- Panel/location names appear inline on first use:
-  「画面下部の**コンテンツブラウザ**（Content Browser）から〜」
+
+- The author MUST use the imperative mood: 「〜をクリックします」
+  「〜と入力します」.
+- The author MUST name the exact UI element in bold:
+  「**コンパイル**」をクリック.
+- Panel and location names MUST appear inline on first use:
+  「画面下部の**コンテンツブラウザ**（Content Browser）から〜」.
 
 ### Concept text
-- Max 5 sentences or 1 short table.
-- Must answer: "what is it?" and "why does the learner need to know right now?"
-- If it takes more than 5 sentences, split into multiple Concepts.
+
+- A Concept MUST be at most 5 sentences or 1 short table.
+- A Concept MUST answer "what is it?" and "why does the learner
+  need to know right now?".
+- If a Concept needs more than 5 sentences, the author MUST split
+  it into multiple Concepts.
 
 ### Verify text
-- Always starts with `→`
-- Describes observable state, not internal mechanics:
-  ✅ 「→ キューブが消えれば成功です」
-  ❌ 「→ Destroy Actor が実行されました」
+
+- A Verify line MUST start with `→`.
+- A Verify line MUST describe observable state, not internal
+  mechanics:
+  - ✅ 「→ キューブが消えれば成功です」
+  - ❌ 「→ Destroy Actor が実行されました」
 
 ### Checkpoint
-- Bullet list of observable behaviors.
-- No internal state or jargon.
+
+- A Checkpoint MUST be a bullet list of observable behaviors.
+- A Checkpoint MUST NOT include internal state or jargon.
 
 ## Anti-patterns (do NOT do)
 
@@ -123,8 +138,9 @@ Rules:
 
 ## Component system (course-docs-platform)
 
-When writing for `@metyatech/course-docs-platform`-based sites, use the
-provided MDX components. They are globally available (no import needed):
+When writing for `@metyatech/course-docs-platform`-based sites,
+the author MUST use the provided MDX components. They are
+globally available (no import needed):
 
 ```mdx
 <Step goal="アイテムに触れると消えてスコアが増える">
@@ -165,8 +181,9 @@ provided MDX components. They are globally available (no import needed):
 
 ## Non-component tutorials
 
-When components are not available (plain Markdown, Docusaurus, etc.), apply the
-same information hierarchy using native syntax:
+When components are not available (plain Markdown, Docusaurus,
+etc.), the author MUST apply the same information hierarchy
+using native syntax:
 
 | Component equivalent | Plain Markdown |
 |---|---|
@@ -178,4 +195,5 @@ same information hierarchy using native syntax:
 | `<Verify>` | `**→ expected result**` |
 | `<Checkpoint>` | `:::tip[確認ポイント]` or equivalent admonition |
 
-The hierarchy and writing rules remain identical regardless of tooling.
+The hierarchy and writing rules MUST remain identical regardless
+of tooling.
