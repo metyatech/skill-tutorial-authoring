@@ -1,0 +1,61 @@
+name: Annual research review
+
+# Opens a maintenance issue every January 1st to review new learning
+# science research and update the skill accordingly. Also runnable on
+# demand via the Actions tab (workflow_dispatch) — useful the first
+# time this workflow lands, or when a new meta-analysis appears
+# mid-year and warrants an early sweep.
+
+on:
+  schedule:
+    # Minute Hour Day Month DayOfWeek — 00:00 UTC on January 1st.
+    - cron: '0 0 1 1 *'
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  open-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (for issue template)
+        uses: actions/checkout@v4
+
+      - name: Open annual review issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const year = new Date().getUTCFullYear();
+            const template = fs.readFileSync(
+              '.github/ISSUE_TEMPLATE/annual-research-review.md',
+              'utf8',
+            );
+
+            // Strip the YAML front matter; use only the body.
+            const body = template.replace(/^---[\s\S]*?---\n?/, '');
+
+            // Avoid duplicate issues if the workflow is retried or
+            // dispatched manually after the yearly cron has already
+            // opened this year's review.
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'research-review',
+            });
+            const title = `Annual learning-science review — ${year}`;
+            if (existing.data.some((i) => i.title === title)) {
+              core.info(`Issue already exists for ${year}; skipping.`);
+              return;
+            }
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body,
+              labels: ['maintenance', 'research-review'],
+            });
