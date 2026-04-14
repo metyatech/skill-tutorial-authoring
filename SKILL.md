@@ -19,19 +19,21 @@ where a reader follows steps to build or achieve something.
 ## Scientific foundations
 
 All authoring rules below derive from the principles in this
-table. The agent MUST apply them actively when writing new
-tutorials and when reviewing existing ones.
+table. Principles are stated so their scopes do NOT overlap;
+when two seem to conflict, the "Scope & limits" column
+resolves the boundary. The agent MUST apply them actively when
+writing new tutorials and when reviewing existing ones.
 
-| Principle | Source | Core insight | Authoring implication |
+| Principle (source) | Core insight | Scope & limits | Authoring implication |
 |---|---|---|---|
-| **マルチメディアの原理 (Multimedia)** | Mayer, 2009 | テキスト単体より、テキスト＋画像の組み合わせが学習を促進する | 全ての操作ステップには対応する画像を付ける |
-| **空間的接近の原理 (Spatial contiguity)** | Mayer, 2009 | 画像とテキストが空間的に近い方が効果的 | 画像は説明テキストの直前に配置する。画像を手順の前にまとめて置かない |
-| **時間的近接の原理 (Temporal contiguity)** | Mayer, 2009 | テキストと画像は継続的に提示されるよりも同時に提示される方が効果的 | 音声ナレーション付き動画では、対応する画像のタイミングに合わせてナレーションを流す |
-| **一貫性の原理 (Coherence)** | Mayer, 2009 | 教示内容と無関係な文書・画像・音は学習を阻害する | 装飾的な画像・面白い余談・BGMはすべて除去する。教材が楽しくなっても学習効率は下がる |
-| **モダリティの原理 (Modality)** | Mayer, 2009 | 視覚＋視覚より、視覚＋聴覚など異なるモダリティの組み合わせが有効 | ナレーション付き動画では、テキストをナレーションと被せず、画像に集中させる |
-| **冗長性の原理 (Redundancy)** | Mayer, 2009 | 同じ情報を複数フォーマットで提示すると学習を阻害する | 画像が示している内容をテキストで繰り返さない。ナレーションと同一の文章を画面に表示しない |
-| **セグメンティングの原理 (Segmenting)** | Mayer, 2009 | 学習者がペースを制御できる方が学習効果が高い | 工程を小さな段階に区切り、一度に一つの概念を提示する |
-| **ミニマリズム (Minimalism)** | Carroll, 1990 | すぐに行動開始・doing で学ぶ | コンセプト説明を最小化し、最初のアクションをできるだけ早める |
+| **マルチメディアの原理** (Mayer, 2009) | 補完的情報を異なる表現（画像とテキスト）に分担すると学習が促進される | 「組み合わせ」は**補完**であって**重複**ではない。同一情報の二重提示は本原理では正当化されない(→ 冗長性原理) | 操作ステップでは、画像が WHERE（位置・順序・選択肢の外観）を、テキストが WHAT（動作の種類・画像に映らない値）を担う |
+| **空間的接近の原理** (Mayer, 2009) | 対応する画像とテキストが空間的に近いほど効果的 | 1:1 対応のペアに限定。無関係な画像とテキストを並置する理由にはならない | 1 Action = 1 画像。画像は対応テキストの直前・隣接に配置する |
+| **時間的近接の原理** (Mayer, 2009) | 対応する画像とテキスト（または音声）は同時に提示するほど効果的 | **音声または動画など時間軸を持つ媒体にのみ**適用。静的ページでは空間的接近原理で代替 | ナレーション付き動画では、画像切替とナレーションを同期させる |
+| **一貫性の原理** (Mayer, 2009) | 教示目的と無関係な文書・画像・音は学習を阻害する | 「無関係」は学習目的から見た判定。面白さや装飾性は保持の根拠にならない | 装飾画像・余談・BGM・装飾的アニメーションは除去 |
+| **モダリティの原理** (Mayer, 2009) | 視覚＋聴覚の分担は視覚独占より有効（視覚チャネル過負荷回避） | **音声モダリティを含む媒体（動画・音声教材）でのみ**適用。静的テキスト＋画像の媒体では無関係 | ナレーションと同一文章を画面に出さない |
+| **冗長性の原理** (Mayer, 2009) | 意味的に同一の情報を複数フォーマットで重複提示すると学習を阻害する | 適用対象は**意味的に同一**の情報（同じ UI ラベル・同じ値・同じ説明）に限定。補完的情報の併置は該当しない(→ マルチメディア原理) | 画像に映っている UI ラベル・選択肢名・既定値をテキストで再掲しない |
+| **セグメンティングの原理** (Mayer, 2009) | 学習者がペースを制御できる単位に分割するほど効果的 | セグメント単位は**1つの意味的に閉じたサブゴール**。単一画面・単一状態内の連続操作は原則 1 セグメント。画面遷移・状態遷移・モード切替が自然な境界 | 画面内の項目数で機械的にセグメントを割らない。画面遷移で区切る |
+| **ミニマリズム** (Carroll, 1990) | 学習者はすぐ行動しながら学ぶ（doing で学ぶ） | 適用対象は**まだ不要な情報の除去**。必要情報の補完的分担(→ マルチメディア原理)を削ることは含意しない | 前置きの概念説明を最小化し、最初の Action を早める。Concept は first-use 直前に置く |
 
 ## Information hierarchy
 
@@ -134,10 +136,21 @@ Rules:
 
 - The author MUST use the imperative mood: 「〜をクリックします」
   「〜と入力します」.
-- The author MUST name the exact UI element in bold:
-  「**コンパイル**」をクリック.
-- Panel and location names MUST appear inline on first use:
-  「画面下部の**コンテンツブラウザ**（Content Browser）から〜」.
+- The author MUST name a UI element in bold **only when** the
+  image does not clearly label it with a visible caption or a
+  numbered callout, or cannot disambiguate it from similar
+  elements. Repeating an image-labelled element in text violates
+  the Redundancy principle; Identity is image-primary when
+  labelled in the shot (see the WHERE/WHAT channel rules in
+  Atomic unit: Action).
+- Panel and location names appear inline on first use **only
+  when** the shot does not already make the panel unambiguous.
+  A full-screen screenshot that shows the panel in context does
+  not require redundant naming in text.
+- Regardless of the above, values the learner must type
+  (e.g. `UE90min`), user-specific paths, and gestures/motions
+  (drag direction, hover vs click) MUST remain in text because
+  a still image cannot convey them.
 
 ### Concept text
 
@@ -175,6 +188,8 @@ these, so the author is responsible for catching them.
 | Anti-pattern | Violated principle | Fix |
 |---|---|---|
 | Text restating what image shows | Redundancy | Remove the text or remove the image |
+| Button/selection label repeated in bold text while the image already labels it with a numbered callout | Redundancy | Keep text to "① を選びます" etc.; Identity is carried by the image |
+| Mechanical splitting of a single-screen unified task into many Actions (one per item in the same dialog) | Segmenting (misapplied) | Keep 1 screen = 1 Action when the sub-goal is unified; split only on screen/state transitions |
 | Decorative images, fun sidebars, background music | Coherence | Remove entirely; they impair learning |
 | Same content in narration AND on-screen text | Redundancy / Modality | Use narration OR on-screen text, not both |
 | `:::note` for concepts | Segmenting | Not collapsible; use Concept component |
