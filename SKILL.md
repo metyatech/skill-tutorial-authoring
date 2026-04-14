@@ -16,6 +16,19 @@ description: >-
 Use this skill when writing, revising, or auditing any document
 where a reader follows steps to build or achieve something.
 
+## Target learner (expertise reversal boundary)
+
+This skill is optimised for **beginner-to-intermediate**
+learners encountering the subject for the first or second time.
+Most multimedia learning principles (Signaling, Pre-training,
+Personalization, heavy imagery) are strongest in that range and
+weaken — or reverse — for experts (Kalyuga's *expertise
+reversal effect*). If the artefact is an expert-facing quick
+reference, the author MUST scale back Signaling, Concept
+density, and hand-holding narrative, and lean on Reference
+tables. When in doubt, state the target learner explicitly in
+the document's opening.
+
 ## Scientific foundations
 
 All authoring rules below derive from the principles in this
@@ -34,6 +47,11 @@ writing new tutorials and when reviewing existing ones.
 | **冗長性の原理** (Mayer, 2009) | 意味的に同一の情報を複数フォーマットで重複提示すると学習を阻害する | 適用対象は**意味的に同一**の情報（同じ UI ラベル・同じ値・同じ説明）に限定。補完的情報の併置は該当しない(→ マルチメディア原理) | 画像に映っている UI ラベル・選択肢名・既定値をテキストで再掲しない |
 | **セグメンティングの原理** (Mayer, 2009) | 学習者がペースを制御できる単位に分割するほど効果的 | セグメント単位は**1つの意味的に閉じたサブゴール**。単一画面・単一状態内の連続操作は原則 1 セグメント。画面遷移・状態遷移・モード切替が自然な境界 | 画面内の項目数で機械的にセグメントを割らない。画面遷移で区切る |
 | **ミニマリズム** (Carroll, 1990) | 学習者はすぐ行動しながら学ぶ（doing で学ぶ） | 適用対象は**まだ不要な情報の除去**。必要情報の補完的分担(→ マルチメディア原理)を削ることは含意しない | 前置きの概念説明を最小化し、最初の Action を早める。Concept は first-use 直前に置く |
+| **シグナリングの原理** (Mayer, 2009) | 重要箇所を視覚的手がかりで強調すると注意配分が改善し本質処理に集中できる | 合図は**学習目的に沿った要素**にのみ付ける。装飾目的の強調・感情表現の太字は一貫性原理違反 | Section の goal 宣言、画像の番号吹き出し、太字 UI 要素名、①②③ の順序番号で重要箇所を示す |
+| **事前トレーニングの原理** (Mayer, 2009) | キー用語の名前と特徴を事前に提示すると主学習時の外在的処理が下がる | 予習は**これから出る概念のみ**に限定。遠い将来に出る概念や全体概論はミニマリズム違反 | Concept は first-use の直前に置き、「名前＋鍵となる特徴」を最小単位で提示する |
+| **個人化の原理** (Mayer, 2009) | 会話的・二人称・能動的文体はフォーマル文体より学習効果が高い | 文体の**親しみやすさ**が本質。馴れ馴れしさ・絵文字濫用・感情過剰は一貫性原理違反になり得る | 学習者に直接語りかける二人称・能動形で書く（日本語：「〜しましょう」「確認してください」）。三人称で読者を描写しない（「受講者が〜する」「初学者向け」等を禁止） |
+| **生成活動の原理** (Mayer, 2014) | 学習者に要約・予測・説明などの生成活動を求めると学習が深まる | 活動は**学習目的に関連**していること。単なる作業の追加は一貫性原理違反 | Verify で「何が起きるか」を観察判断させる。Checkpoint で behavior を自己確認させる。Exercise を周期的に織り込む |
+| **熟達度反転効果** (Kalyuga, 2007) | 初心者に効く合図・概念予習・詳細説明は熟達者には逆効果になる | 本スキルは**初〜中級者向け**に最適化。熟達者向け資料では Signaling・Concept 密度・narrative を縮退させる | 対象者を冒頭で宣言し、原理の適用量を対象者に合わせる |
 
 ## Information hierarchy
 
@@ -110,6 +128,81 @@ Rules:
   it inline. The author MUST NOT create a separate Verify for
   this — Verify is reserved for Procedure-level confirmation only.
 
+## Signaling (visual cueing)
+
+学習者の注意を本質的な情報に誘導するために、情報階層を**視覚的な
+合図**で表現する。合図は学習目的に沿った要素にのみ付ける。
+
+Signaling surfaces in this skill:
+
+| Surface | Cue | Purpose |
+|---|---|---|
+| Section heading | `goal` banner (future-declarative) | Step の到達点を宣言 |
+| Action image | Numbered callout (①②③) + arrow | Position / Sequence を強調 |
+| Action text | Bold for unlabelled UI element names, typed values, key gestures | Identity / Typed value の強調 |
+| Procedure | `why` one-liner | Procedure の目的を宣言 |
+| Verify / Recovery | Component framing (→, title) | 状態判定と回復手段の境界を明示 |
+
+Rules:
+
+- 合図は**必ず学習目的に沿う**こと。装飾目的の太字、感情表現の
+  強調、文末の飾り記号は Signaling ではなく一貫性原理違反。
+- 画像の番号吹き出しとテキストの ① 番号は**併記する**（Sequence
+  channel の二重化は Redundancy に該当しない補完関係）。
+- 太字の濫用（1 文に 3 箇所以上など）は合図の効力を破壊するため
+  禁止。強調は本当に注視すべき要素のみに絞る。
+
+## Personalization (reader-addressing voice)
+
+学習者に**直接語りかける**二人称・能動・会話的な文体で書く。
+
+Rules:
+
+- Use second-person direct address to the reader. Do not
+  describe the reader in third person ("受講者が〜する",
+  "初学者が〜", "学習者は〜").
+- Use active, conversational Japanese: 「〜しましょう」
+  「〜してください」「ここで〜を確認します」.
+- Do not open a page by describing what the document *is* or
+  *who it is for* ("この教材は〜のための資料です" は NG).
+  Open with the first learner-facing step or an inviting
+  goal statement.
+- Personalization is about **friendliness, not familiarity**.
+  Emoji spam, 余談, 感情過剰な装飾はむしろ Coherence 原理違反
+  になるため避ける。親しみやすさの上限は「先輩が隣で教えて
+  くれる」程度が目安。
+- Goal strings already use future-declarative form; they also
+  implicitly address the reader — do not revert them to
+  third-person ("受講者が〜する状態になります" は Goal と
+  Personalization の両方に違反する).
+
+## Generative activity (prediction / retrieval)
+
+学習者が**受動的に読むだけ**にならないよう、生成活動（予測・
+説明・自己確認）を組み込む。活動は必ず学習目的に関連させる。
+
+Surfaces:
+
+| Surface | Generative role |
+|---|---|
+| Verify | 直前の Procedure の結果を**観察判断**させる（受動受領でなく能動観察） |
+| Checkpoint | Step 末で behavior を**自己確認**させる retrieval 活動 |
+| Exercise (course-docs-platform の `<Exercise>`) | 学習単位の周期的な応用課題 |
+| Recovery | 失敗時の**原因推論**を補助する（一行で原因→回復） |
+
+Rules:
+
+- Verify の文面は「**観察可能な状態**」で書く（例: 「キューブが
+  消えれば成功」）。内部処理・実行履歴の記述（例: 「Destroy
+  Actor が実行されました」）は生成活動を奪う。
+- Checkpoint の項目は学習者自身が視覚・操作で確かめられる内容に
+  限定。内部状態や jargon は不可。
+- Exercise は**学習目的に関連**していること。作業量稼ぎの演習、
+  本筋と関係ない応用は一貫性原理違反。
+- 予測を促すプロンプト（「実行前に、何が起こるか予想してみて
+  ください」）は有効だが、過剰使用は認知負荷を上げる。Step ごとに
+  1 回が目安。
+
 ## Writing rules
 
 ### Goal text
@@ -154,11 +247,23 @@ Rules:
 
 ### Concept text
 
+Concept serves the **Pre-training** principle: it teaches the
+*name* and the *key features* of a term the learner is about
+to encounter, so that main-task cognitive load is reduced.
+
 - A Concept MUST be at most 5 sentences or 1 short table.
-- A Concept MUST answer "what is it?" and "why does the learner
-  need to know right now?".
+- A Concept MUST answer "what is it?" (name + key features)
+  and "why does the learner need to know right now?".
+- A Concept MUST be placed immediately before the first
+  Procedure that uses the term. Placing Concepts far upfront
+  violates Minimalism; omitting them until after first use
+  violates Pre-training.
+- Concepts for terms that appear much later MUST NOT be written
+  now. Pre-training applies to the *next* sub-task, not to the
+  entire page.
 - If a Concept needs more than 5 sentences, the author MUST split
-  it into multiple Concepts.
+  it into multiple Concepts and place each before its own
+  first-use Procedure.
 
 ### Verify text
 
@@ -199,6 +304,14 @@ these, so the author is responsible for catching them.
 | Reducing Action text to a bare "クリックします" to avoid redundancy | Redundancy (over-correction) | Keep the imperative WHAT plus the values the image cannot convey |
 | Settings table duplicating the image's numbered callouts row-for-row | Redundancy | Keep in text only the values the image cannot convey (typed input, user-specific paths, dropdown values absent from the shot) |
 | Micro-interaction detail ("空白で離す", "カーソルを乗せ") redundantly described when image's arrows already convey it | Redundancy | Remove — but only after confirming the image truly conveys the gesture; motion attributes ("drop in **empty** space", "hover vs click") often need text because a still image cannot encode them |
+| Opening a page by describing what the document *is* or *who it is for* ("この教材は〜のための資料です", "受講者が〜する授業") | Personalization | Rewrite in second-person direct address; open with the first learner-facing action or an inviting goal |
+| Describing the reader in third person ("学習者は〜", "初学者向け", "受講者が〜") anywhere in the tutorial body | Personalization | Use second-person active voice ("〜しましょう", "確認してください") |
+| Front-loading a long concept chapter before the first Action (Pre-training misapplied) | Pre-training × Minimalism | Move each term's Concept to immediately before its first-use Procedure; keep each Concept to name + key features only |
+| Bold/highlight used for emotional emphasis or decoration, not tied to a learning-objective cue | Signaling × Coherence | Reserve bold/highlight for the element the learner must find or type; remove decorative emphasis |
+| Multiple bold spans crammed in one sentence | Signaling (dilution) | Bold only the single element that most matters; demote the rest to plain text |
+| Verify line that describes internal mechanics instead of observable state ("Destroy Actor が実行されました") | Generative activity | Rewrite as an observable outcome the learner can check ("キューブが消えれば成功") |
+| Exercises tacked on for practice volume rather than learning objective | Coherence / Generative activity (misapplied) | Tie every Exercise to the Step's stated goal; drop unrelated drills |
+| Applying beginner-weight Signaling/Concept density to an expert-facing reference | Expertise reversal | Scale back: use compact Reference tables, drop hand-holding narrative |
 
 ## Mechanised checks (enforced at MDX build/dev time)
 
