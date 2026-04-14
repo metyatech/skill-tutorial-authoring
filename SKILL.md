@@ -40,7 +40,7 @@ Every tutorial MUST be composed of exactly these layers:
 ```
 Tutorial (page)
  └── Step (milestone: "when done, you can X")
-      ├── goal — 1 sentence declaring the end state
+      ├── goal — 1 future-tense sentence declaring what the learner will achieve
       ├── Concept × N — term/background, always collapsible, before first use
       ├── Reference × N — lookup tables, always collapsible, near relevant procedure
       ├── Procedure × N — a group of actions toward one sub-goal
@@ -92,6 +92,25 @@ Rules:
 
 ## Writing rules
 
+### Goal text
+
+- The `goal` string is rendered verbatim as a banner directly below
+  the section heading; no prefix such as "ゴール:" is added. It MUST
+  read as a complete sentence on its own. Bare noun-phrase endings
+  such as 「〜した状態」 are forbidden because they render as
+  incomplete prose.
+- The author MUST write goals in future-declarative form describing
+  what the learner will achieve by the time the section is complete:
+  - Action completion → 「〜します」（例: 「キューブを 1 つ置きます」）
+  - Acquired capability → 「〜できるようになります」（例:
+    「キャラクターを操作できるようになります」）
+  - Acquired behavior / state → 「〜ようになります」 /
+    「〜の状態になります」（例: 「触れたら消えるようになります」）
+- The author MUST NOT write goals in past or completed form
+  (「〜した」「〜された」「〜した状態」「〜している」「〜できます」) because
+  those frame the section as a retrospective of what already happened
+  instead of a preview of what the learner is about to build.
+
 ### Action text
 
 - The author MUST use the imperative mood: 「〜をクリックします」
@@ -135,6 +154,8 @@ Rules:
 | Verify after every action | Segmenting | Verify at Procedure end only |
 | Front-loading reference tables | Minimalism | Use Reference, near first use |
 | Term introduced before it's needed | Minimalism | Concept before first-use Procedure |
+| Goal written in past or completed form ("〜した状態", "〜している", "〜できます") | Goal text rule | Use future-declarative form ("〜します" / "〜できるようになります" / "〜ようになります") |
+| Goal written as a bare noun phrase without predicate | Goal text rule | Add a predicate so the banner reads as a complete Japanese sentence |
 
 ## Component system (course-docs-platform)
 
@@ -143,7 +164,7 @@ the author MUST use the provided MDX components. They are
 globally available (no import needed):
 
 ```mdx
-<Step goal="アイテムに触れると消えてスコアが増える">
+<Step goal="アイテムに触れると消えてスコアが増えるようになります">
 
   <Concept title="コリジョンとは">
     当たり判定のこと。ブロック＝壁、オーバーラップ＝すり抜け＋検知。
