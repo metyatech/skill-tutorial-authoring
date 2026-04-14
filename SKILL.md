@@ -361,16 +361,49 @@ The following conventions are enforced by the
 `npm run dev` and `npm run build` output; author reliance on
 memory is not required.
 
+### Severity policy (evidence-tiered)
+
+Severity is tied to how strongly the rule is anchored in the
+underlying research, so the tool does not over-reach.
+
+| Severity | Semantics | Build effect |
+|---|---|---|
+| **error** | Structural break that makes the MDX incoherent or loses required authoring metadata | Fails the MDX compile |
+| **warn**  | Principle violation with solid empirical support, or a render/technical bug | Emitted via `console.warn` + `file.message()`. Fails under `TUTORIAL_LINT_STRICT=1` |
+| **note**  | Advisory derived from a principle whose specific numeric threshold or lexical pattern is a professional guess rather than a direct research finding | Emitted via `console.info` only. **Never** promoted to an error, even under strict. In collect-all mode, notes appear in the summary but do not by themselves fail the build |
+
+`TUTORIAL_LINT_COLLECT=1` aggregates every finding in a file
+into a single failure message, so a PR author can fix all
+violations in one pass instead of one at a time. If the
+aggregated collection contains only notes, the summary is
+printed via `console.info` and the build still passes.
+
+### Rule → severity mapping
+
 | Rule ID | Severity | Intent |
 |---|---|---|
-| `tutorial/section-goal-required` | error | Every `<Section>` declares its `goal` |
-| `tutorial/section-goal-tense` | error | Goal uses future-declarative form |
-| `tutorial/action-single-image` | error | One image per Action |
-| `tutorial/section-no-hrule` | error | No `---` inside a Section |
-| `tutorial/checkpoint-placement` | error | Exactly one `<Checkpoint>` per Step, placed last |
-| `tutorial/reference-image-only` | warn | `<Reference>` whose only content is an image — success-verifying screenshots belong in a visible `<Action>` |
-| `tutorial/verify-no-duplicate-arrow` | warn | `<Verify>` body starts with `→` — component already renders it |
-| `tutorial/action-positional-prefix` | warn | `img`-bearing `<Action>` body starts with a positional prefix — either remove or add a callout to the image |
+| `tutorial/section-goal-required` | **error** | Every `<Section>` declares its `goal` |
+| `tutorial/action-single-image`   | **error** | One image per Action |
+| `tutorial/checkpoint-placement`  | warn  | Exactly one `<Checkpoint>` per Step, placed last |
+| `tutorial/section-no-hrule`      | warn  | No `---` inside a Section |
+| `tutorial/verify-no-duplicate-arrow` | warn  | `<Verify>` body starts with `→` — component already renders it |
+| `tutorial/action-positional-prefix`  | warn  | `img`-bearing `<Action>` body starts with a positional prefix |
+| `tutorial/section-lacks-feedback`    | warn  | A Section with Actions has no `<Verify>` / `<Recovery>` / `<Checkpoint>` |
+| `tutorial/section-goal-tense`        | *note* | Goal endings matching heuristic future-declarative patterns |
+| `tutorial/reference-image-only`      | *note* | `<Reference>` whose only content is an image |
+| `tutorial/action-bold-overuse`       | *note* | 6+ bold spans in one Action (dilution threshold is advisory) |
+| `tutorial/third-person-reader`       | *note* | Third-person reader references match a heuristic pattern list |
+| `tutorial/page-opens-with-doc-description` | *note* | First paragraph starts with "この教材は〜" etc. (opener-only scope is heuristic) |
+| `tutorial/verify-internal-mechanics` | *note* | Verify text matches the engine-state pattern list |
+| `tutorial/concept-length`            | *note* | Concept body exceeds 10 sentences or 1 table (numeric threshold is advisory) |
+| `tutorial/concept-placement`        | *note* | Concept has no following Action / Procedure / Section / Exercise |
+| `tutorial/decorative-emoji`         | *note* | Non-allowlisted emoji outside signalling surfaces (allowlist is a cultural convention) |
+
+The *note* tier exists because these rules are correct in
+principle but their specific numeric boundary or lexical
+trigger has no direct empirical backing — they are the
+authoring equivalent of professional code review hints, not
+hard gates.
 
 ## Component system (course-docs-platform)
 
