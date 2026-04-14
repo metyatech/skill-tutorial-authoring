@@ -37,6 +37,25 @@ when two seem to conflict, the "Scope & limits" column
 resolves the boundary. The agent MUST apply them actively when
 writing new tutorials and when reviewing existing ones.
 
+### Underlying load model (Sweller's CLT)
+
+Every principle in the table below is a tactic for managing one
+of the three load types in Cognitive Load Theory (Sweller, 1988).
+When two principles compete, resolve by asking *which load type
+currently dominates*.
+
+| Load type | What it is | Which principles address it |
+|---|---|---|
+| **Intrinsic** — inherent difficulty of the material | Cannot be reduced, only sequenced | Segmenting, Pre-training |
+| **Extraneous** — effort wasted on poor presentation | MUST be minimised | Coherence, Redundancy, Spatial/Temporal contiguity, Signaling, Modality |
+| **Germane** — effort spent on schema construction | SHOULD be fostered | Multimedia, Personalization, Generative activity, Worked example, Feedback |
+
+Expertise reversal (Kalyuga, 2007) predicts that tactics which
+reduce extraneous load for novices can *increase* extraneous
+load for experts (because redundant signals compete with
+established schemas). This is why the skill scopes itself to
+beginner-to-intermediate learners.
+
 | Principle (source) | Core insight | Scope & limits | Authoring implication |
 |---|---|---|---|
 | **マルチメディアの原理** (Mayer, 2009) | 補完的情報を異なる表現（画像とテキスト）に分担すると学習が促進される | 「組み合わせ」は**補完**であって**重複**ではない。同一情報の二重提示は本原理では正当化されない(→ 冗長性原理) | 操作ステップでは、画像が WHERE（位置・順序・選択肢の外観）を、テキストが WHAT（動作の種類・画像に映らない値）を担う |
@@ -52,6 +71,27 @@ writing new tutorials and when reviewing existing ones.
 | **個人化の原理** (Mayer, 2009) | 会話的・二人称・能動的文体はフォーマル文体より学習効果が高い | 文体の**親しみやすさ**が本質。馴れ馴れしさ・絵文字濫用・感情過剰は一貫性原理違反になり得る | 学習者に直接語りかける二人称・能動形で書く（日本語：「〜しましょう」「確認してください」）。三人称で読者を描写しない（「受講者が〜する」「初学者向け」等を禁止） |
 | **生成活動の原理** (Mayer, 2014) | 学習者に要約・予測・説明などの生成活動を求めると学習が深まる | 活動は**学習目的に関連**していること。単なる作業の追加は一貫性原理違反 | Verify で「何が起きるか」を観察判断させる。Checkpoint で behavior を自己確認させる。Exercise を周期的に織り込む |
 | **熟達度反転効果** (Kalyuga, 2007) | 初心者に効く合図・概念予習・詳細説明は熟達者には逆効果になる | 本スキルは**初〜中級者向け**に最適化。熟達者向け資料では Signaling・Concept 密度・narrative を縮退させる | 対象者を冒頭で宣言し、原理の適用量を対象者に合わせる |
+| **フィードバックの原理** (Shute, 2008) | 学習者が自分の行動の正誤・結果を確認できると schema 構築が促進される | フィードバックは**即時・具体・観察可能**であるべき。汎用的な「成功しました」表示は Coherence に接するため実体のある状態記述にする | Verify は Procedure の観察可能な結果、Recovery は失敗の原因と回復手順、Checkpoint は Step 末の自己確認、という三層のフィードバックを必ず配置する |
+| **ワークトエグザンプル効果** (Sweller, 1985; Atkinson et al., 2000) | 完全な解法例を示してから自力演習に移す方が、最初から演習するより初心者には効果的 | 熟達が進むと逆転（Expertise Reversal）して演習先行が有効になる。本スキルは初〜中級向けなので**例→演習**の順を優先 | 新しい手順や概念では、まず完成例（画像＋完結した Action 列）を通しで見せてから、変化点を差し替える演習（Exercise）を置く |
+
+### Out-of-scope principles (noted explicitly, not applied here)
+
+The following Mayer principles require audio or speaker presence
+and therefore do NOT apply to static text-and-image tutorials.
+If the artefact is a narrated video or an avatar-driven
+walkthrough, consult the primary sources — this skill does not
+cover their application.
+
+| Principle | Applies to | Why out of scope here |
+|---|---|---|
+| **Voice principle** (Mayer, 2009) | 音声ナレーション媒体 | 人間の声 vs 機械音声の比較。静的ページに音声はない |
+| **Image principle** (Mayer, 2009) | 動画教材で話者の画像を画面に出すか | 話者の顔映像の有無は静的ページで判断不能 |
+| **Embodiment principle** (Mayer, 2014) | 動画で話者がジェスチャーを伴うか | ジェスチャーは動画特有 |
+| **Immersion principle** (Mayer, 2021) | VR / 没入型媒体 | 本スキルは 2D 静的ページに限定 |
+
+Authors writing narrated video or VR content MUST NOT assume
+this skill covers these principles; apply them separately from
+Mayer's primary sources.
 
 ## Information hierarchy
 
@@ -393,3 +433,58 @@ using native syntax:
 
 The hierarchy and writing rules MUST remain identical regardless
 of tooling.
+
+## Limits of principled authoring
+
+This skill encodes the best available tactics, but it does not
+guarantee pedagogically correct output. Authors and reviewers
+MUST treat the following as known limitations.
+
+### Semantic checks that tooling cannot enforce
+
+The `remarkTutorialLint` plugin catches structural violations
+only. The following judgements are **author-only**; treat them
+as explicit review gates, not as automated safety nets.
+
+| Judgement | Why machine-unreachable |
+|---|---|
+| "Is this bold/highlight serving a learning objective, or decorative?" (Signaling × Coherence) | Requires knowing what is objective-relevant at this step |
+| "Is this image decorative or essential?" (Coherence) | Same |
+| "Is this prose second-person direct address, or third-person description?" (Personalization) | Japanese grammar allows zero-subject sentences; pattern matching over-triggers |
+| "Does this Exercise serve the stated Step goal?" (Generative activity × Coherence) | Requires semantic alignment with the Step's goal string |
+| "Is this Concept's 'why does the learner need to know now?' actually satisfied?" (Pre-training) | Intent-level check |
+| "Is Signaling density appropriate for the target learner?" (Expertise reversal) | Requires modelling the reader's prior knowledge |
+
+### Generalisation limits of the underlying research
+
+- Mayer's effect sizes were measured primarily on **educational
+  videos and science lessons** with short durations. Applying
+  them to long-form software tutorials requires extrapolation;
+  the *direction* of each effect is robust, but magnitude is not
+  guaranteed.
+- Most studies use novice learners in controlled settings.
+  Real-world learners mix expertise levels, read non-linearly,
+  and bring prior frustration. The skill's rules are the
+  *baseline*, not a replacement for observing real learners.
+- Language and cultural effects on Personalization / Voice have
+  been studied mainly in English. Japanese-specific tactics
+  (「〜しましょう」 vs 「〜します」 の丁寧度階調, etc.) are
+  transferred by analogy, not by direct evidence.
+
+### When principles appear to conflict
+
+1. Identify which load type (Intrinsic / Extraneous / Germane)
+   is currently dominant for the target learner at this step.
+2. Apply the principle that directly addresses that load type.
+3. If still ambiguous, ask *which tactic would a novice
+   benefit more from right now?* — the skill is novice-biased.
+4. If the conflict involves an out-of-scope principle (Voice,
+   Image, Embodiment, Immersion), treat it as not resolved by
+   this skill and consult the primary sources.
+
+### Self-review
+
+Use `REVIEW-CHECKLIST.md` (same repository) as a reviewer-facing
+checklist. It mirrors the principle table and is the single
+place to audit a draft tutorial against every principle in
+sequence.
