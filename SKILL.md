@@ -81,11 +81,29 @@ The smallest learning unit is:
 Rules:
 
 - The author MUST use one image per action. The author MUST NOT
-  batch images.
+  batch images. *(mechanised: `tutorial/action-single-image`)*
 - The image MUST be placed above or before the text (spatial
   contiguity).
 - The author MUST NOT describe in text what the image already
   shows (redundancy elimination).
+- The image and the text MUST cover non-overlapping channels:
+  the image carries **WHERE** (position, visual anchor, step
+  ordering via numbered callouts); the text carries the
+  imperative **WHAT** plus any values the image cannot convey.
+- The author MUST keep in the text: values the learner types by
+  hand (e.g. `UE90min`, `CLEAR!`), user-specific paths the
+  screenshot cannot generalise, and UI element names that are
+  not labelled in the shot.
+- The author MUST remove from the text: positional prefixes when
+  the image already shows position *(mechanised:
+  `tutorial/action-positional-prefix`)*; label/value pairs
+  already paired in the image's numbered callouts; micro-
+  interaction details already conveyed by the image's arrows or
+  step markers.
+- Reducing Action text to a bare verb such as "クリックします"
+  MUST NOT be used as a redundancy fix. The imperative WHAT
+  plus the values the image cannot convey is the minimum;
+  strip only what the image already carries.
 - If the action produces a visible result, the author MUST state
   it inline. The author MUST NOT create a separate Verify for
   this — Verify is reserved for Procedure-level confirmation only.
@@ -110,6 +128,7 @@ Rules:
   (「〜した」「〜された」「〜した状態」「〜している」「〜できます」) because
   those frame the section as a retrospective of what already happened
   instead of a preview of what the learner is about to build.
+  *(mechanised: `tutorial/section-goal-required`, `tutorial/section-goal-tense`)*
 
 ### Action text
 
@@ -130,32 +149,60 @@ Rules:
 
 ### Verify text
 
-- A Verify line MUST start with `→`.
+- In component-based tutorials the Verify component renders its
+  own leading `→`; the author MUST NOT include `→` in the source
+  or the rendered output will have a doubled arrow.
+  *(mechanised: `tutorial/verify-no-duplicate-arrow`)*
+- In plain-Markdown tutorials (no component), the Verify line
+  MUST start with `→`.
 - A Verify line MUST describe observable state, not internal
   mechanics:
-  - ✅ 「→ キューブが消えれば成功です」
-  - ❌ 「→ Destroy Actor が実行されました」
+  - ✅ 「キューブが消えれば成功です」
+  - ❌ 「Destroy Actor が実行されました」
 
 ### Checkpoint
 
 - A Checkpoint MUST be a bullet list of observable behaviors.
 - A Checkpoint MUST NOT include internal state or jargon.
+- Exactly one Checkpoint per Step, placed as the last element
+  of the Step. *(mechanised: `tutorial/checkpoint-placement`)*
 
 ## Anti-patterns (do NOT do)
 
+Judgement-based anti-patterns; a tool cannot reliably detect
+these, so the author is responsible for catching them.
+
 | Anti-pattern | Violated principle | Fix |
 |---|---|---|
-| Images batched before steps | Spatial contiguity | 1 image per Action, placed directly before its text |
 | Text restating what image shows | Redundancy | Remove the text or remove the image |
 | Decorative images, fun sidebars, background music | Coherence | Remove entirely; they impair learning |
 | Same content in narration AND on-screen text | Redundancy / Modality | Use narration OR on-screen text, not both |
 | `:::note` for concepts | Segmenting | Not collapsible; use Concept component |
-| `---` between sub-steps | — | Visual noise; only between Steps |
 | Verify after every action | Segmenting | Verify at Procedure end only |
 | Front-loading reference tables | Minimalism | Use Reference, near first use |
 | Term introduced before it's needed | Minimalism | Concept before first-use Procedure |
-| Goal written in past or completed form ("〜した状態", "〜している", "〜できます") | Goal text rule | Use future-declarative form ("〜します" / "〜できるようになります" / "〜ようになります") |
-| Goal written as a bare noun phrase without predicate | Goal text rule | Add a predicate so the banner reads as a complete Japanese sentence |
+| Reducing Action text to a bare "クリックします" to avoid redundancy | Redundancy (over-correction) | Keep the imperative WHAT plus the values the image cannot convey |
+| Settings table duplicating the image's numbered callouts row-for-row | Redundancy | Keep in text only the values the image cannot convey (typed input, user-specific paths, dropdown values absent from the shot) |
+| Micro-interaction detail ("空白で離す", "カーソルを乗せ") redundantly described when image's arrows already convey it | Redundancy | Remove — but only after confirming the image truly conveys the gesture; motion attributes ("drop in **empty** space", "hover vs click") often need text because a still image cannot encode them |
+
+## Mechanised checks (enforced at MDX build/dev time)
+
+The following conventions are enforced by the
+`remarkTutorialLint` plugin in
+`@metyatech/course-docs-platform`. Violations surface in
+`npm run dev` and `npm run build` output; author reliance on
+memory is not required.
+
+| Rule ID | Severity | Intent |
+|---|---|---|
+| `tutorial/section-goal-required` | error | Every `<Section>` declares its `goal` |
+| `tutorial/section-goal-tense` | error | Goal uses future-declarative form |
+| `tutorial/action-single-image` | error | One image per Action |
+| `tutorial/section-no-hrule` | error | No `---` inside a Section |
+| `tutorial/checkpoint-placement` | error | Exactly one `<Checkpoint>` per Step, placed last |
+| `tutorial/reference-image-only` | warn | `<Reference>` whose only content is an image — success-verifying screenshots belong in a visible `<Action>` |
+| `tutorial/verify-no-duplicate-arrow` | warn | `<Verify>` body starts with `→` — component already renders it |
+| `tutorial/action-positional-prefix` | warn | `img`-bearing `<Action>` body starts with a positional prefix — either remove or add a callout to the image |
 
 ## Component system (course-docs-platform)
 
