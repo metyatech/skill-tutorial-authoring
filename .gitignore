@@ -1,0 +1,4 @@
+# mwt runtime artefacts — only config.toml is shared across machines.
+.mwt/**
+!.mwt/
+!.mwt/config.toml
