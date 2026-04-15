@@ -106,7 +106,7 @@ Tutorial (page)
       ├── Procedure × N — a group of actions toward one sub-goal
       │    ├── why — 1 sentence: why this procedure exists (optional)
       │    ├── Action × N — the atomic unit (image + instruction + result)
-      │    └── Verify — "→ expected result" (1 line)
+      │    └── Verify — "→ expected result" (1 text line; optional result screenshot)
       ├── Recovery — error recovery, inline, after the action that can fail
       └── Checkpoint — end-of-step checklist (exactly one per Step)
 ```
@@ -116,7 +116,7 @@ Tutorial (page)
 | Type | Content | Display | Placement |
 |---|---|---|---|
 | **Action** | Image + instruction + result | Always visible. Image above text, 1:1 mapping | Inside Procedure |
-| **Verify** | Success confirmation | Always visible, `→` prefix, 1 line | End of Procedure |
+| **Verify** | Success confirmation + optional result-state screenshot | Always visible, `→` prefix, 1 text line; optional `img` displayed above the text row (Spatial contiguity) | End of Procedure |
 | **Concept** | Term definition, background | Collapsible (`<details>`) | Before procedure that first uses it |
 | **Reference** | Key tables, panel lists | Collapsible (`<details>`) | Near procedure that needs it |
 | **Recovery** | Error recovery steps | Always visible, short | After action that can fail |
@@ -126,7 +126,7 @@ Tutorial (page)
 | Subject | Primary | Secondary | Rationale |
 |---|---|---|---|
 | UI operation (where to click) | Annotated screenshot | Label text only | Unknown UI requires visual anchor |
-| Result (what happened) | Text (`→` 1 line) | Screenshot (optional) | State changes are faster to judge via text |
+| Result (what happened) | Text (`→` 1 line in `<Verify>`) | Screenshot via `<Verify img="...">` (optional) | State changes are faster to judge via text; screenshot confirms visual result state when text alone is ambiguous |
 | Concept (why) | Text only | — | Abstraction does not benefit from images |
 | Multi-step continuous flow | Video/GIF | Text (supplement) | Motion cannot be conveyed in stills |
 
@@ -352,6 +352,7 @@ these, so the author is responsible for catching them.
 | Verify line that describes internal mechanics instead of observable state ("Destroy Actor が実行されました") | Generative activity | Rewrite as an observable outcome the learner can check ("キューブが消えれば成功") |
 | Exercises tacked on for practice volume rather than learning objective | Coherence / Generative activity (misapplied) | Tie every Exercise to the Step's stated goal; drop unrelated drills |
 | Applying beginner-weight Signaling/Concept density to an expert-facing reference | Expertise reversal | Scale back: use compact Reference tables, drop hand-holding narrative |
+| Using `<Action img>` to show a result-state screenshot while the text contains result-check language ("〜になれば成功", "〜ていることを確認") | Feedback (Verify workaround) | Replace with `<Verify img="...">` — the image carries the observable result state, the text carries the 1-line confirmation *(mechanised: `tutorial/verify-visual-workaround-as-action`)* |
 
 ## Mechanised checks (enforced at MDX build/dev time)
 
@@ -398,6 +399,7 @@ printed via `console.info` and the build still passes.
 | `tutorial/concept-length`            | *note* | Concept body exceeds 10 sentences or 1 table (numeric threshold is advisory) |
 | `tutorial/concept-placement`        | *note* | Concept has no following Action / Procedure / Section / Exercise |
 | `tutorial/decorative-emoji`         | *note* | Non-allowlisted emoji outside signalling surfaces (allowlist is a cultural convention) |
+| `tutorial/verify-visual-workaround-as-action` | *note* | `<Action img>` whose text matches result-check patterns ("〜になれば成功", "〜ていることを確認" etc.) — likely a Verify disguised as an Action |
 
 The *note* tier exists because these rules are correct in
 principle but their specific numeric boundary or lexical
@@ -443,7 +445,7 @@ globally available (no import needed):
 | `<Step>` | `goal` (string) | Milestone wrapper |
 | `<Procedure>` | `why` (string, optional) | Groups actions into a logical task |
 | `<Action>` | `img` (string, optional), `alt` (string, optional) | Atomic operation with image |
-| `<Verify>` | children | Procedure success confirmation |
+| `<Verify>` | `img` (string, optional), `alt` (string, optional), children | Procedure success confirmation; `img` shows result-state screenshot above the text row |
 | `<Concept>` | `title` (string) | Collapsible background/term |
 | `<Reference>` | `title` (string) | Collapsible lookup table |
 | `<Checkpoint>` | children | End-of-step checklist |
