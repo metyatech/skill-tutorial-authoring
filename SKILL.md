@@ -46,8 +46,8 @@ currently dominates*.
 
 | Load type | What it is | Which principles address it |
 |---|---|---|
-| **Intrinsic** — inherent difficulty of the material | Cannot be reduced, only sequenced | Segmenting, Pre-training |
-| **Extraneous** — effort wasted on poor presentation | MUST be minimised | Coherence, Redundancy, Spatial/Temporal contiguity, Signaling, Modality |
+| **Intrinsic** — inherent difficulty of the material | Cannot be reduced, only sequenced | Segmenting, Pre-training, Activation |
+| **Extraneous** — effort wasted on poor presentation | MUST be minimised | Coherence, Redundancy, Spatial/Temporal contiguity, Split-attention, Signaling, Modality |
 | **Germane** — effort spent on schema construction | SHOULD be fostered | Multimedia, Personalization, Generative activity, Worked example, Feedback |
 
 Expertise reversal (Kalyuga, 2007) predicts that tactics which
@@ -65,7 +65,11 @@ beginner-to-intermediate learners.
 | **モダリティの原理** (Mayer, 2009) | 視覚＋聴覚の分担は視覚独占より有効（視覚チャネル過負荷回避） | **音声モダリティを含む媒体（動画・音声教材）でのみ**適用。静的テキスト＋画像の媒体では無関係 | ナレーションと同一文章を画面に出さない |
 | **冗長性の原理** (Mayer, 2009) | 意味的に同一の情報を複数フォーマットで重複提示すると学習を阻害する | 適用対象は**意味的に同一**の情報（同じ UI ラベル・同じ値・同じ説明）に限定。補完的情報の併置は該当しない(→ マルチメディア原理) | 画像に映っている UI ラベル・選択肢名・既定値をテキストで再掲しない |
 | **セグメンティングの原理** (Mayer, 2009) | 学習者がペースを制御できる単位に分割するほど効果的 | セグメント単位は**1つの意味的に閉じたサブゴール**。単一画面・単一状態内の連続操作は原則 1 セグメント。画面遷移・状態遷移・モード切替が自然な境界 | 画面内の項目数で機械的にセグメントを割らない。画面遷移で区切る |
-| **ミニマリズム** (Carroll, 1990) | 学習者はすぐ行動しながら学ぶ（doing で学ぶ） | 適用対象は**まだ不要な情報の除去**。必要情報の補完的分担(→ マルチメディア原理)を削ることは含意しない | 前置きの概念説明を最小化し、最初の Action を早める。Concept は first-use 直前に置く |
+| **分割注意の原理** (Ayres & Sweller, 2021) | 空間的に離れた複数の情報源を統合する必要があると外在的処理が増大する | スクリーンショットと注釈テキストの**物理的距離**が問題。空間的接近原理と相補関係にあるが、こちらは**離れた情報源の統合コスト**に焦点を当てる | 番号吹き出し付きスクリーンショットと説明テキストを隣接配置する。ページ下部にまとめた「設定一覧表」から遠いスクリーンショットを参照させる構成を避ける |
+| **ミニマリズム P1: 行動志向** (van der Meij & Carroll, 1995; Carroll, 1990) | 学習者はすぐ行動しながら学ぶ（doing で学ぶ）。最初のアクションへの到達を最短にする | 適用対象は**まだ不要な情報の除去**。必要情報の補完的分担(→ マルチメディア原理)を削ることは含意しない | 前置きの概念説明を最小化し、最初の Action を早める。Concept は first-use 直前に置く |
+| **ミニマリズム P2: タスク領域への定着** (van der Meij & Carroll, 1995) | 教材は学習者の実際の目標とタスクに基づく。機能ベースではなく目標ベースで構成する | 「実タスク」は学習者が**本当に達成したいこと**を指す。ソフトウェアの機能一覧に沿った構成はこの原則に違反する | Step の goal は学習者の実タスク上の成果物で記述する。Procedure の `why` で「なぜこの手順を行うのか」を実タスク文脈で説明する |
+| **ミニマリズム P3: エラー認識・回復の支援** (van der Meij & Carroll, 1995) | エラーは学習機会であり、予防・検出・診断・回復の全段階を支援する | Recovery コンポーネントは**回復手順のみ**を扱う。予防（操作前の注意喚起）と検出（エラー症状の記述）も別途必要 | Recovery に加えて、失敗しやすい操作の**直前**に予防的注意を置く。Recovery 内では「症状→原因→回復手順」の3段構成で書く |
+| **ミニマリズム P4: 柔軟な利用の支援** (van der Meij & Carroll, 1995) | 学習者は文書を最初から順に読まない。拾い読み・飛ばし読み・逆引きを支援する | 本スキルの主対象は**順序付きチュートリアル**であるため、完全な非線形設計は求めない。ただし各 Step は可能な限り自己完結させる | 各 Step 冒頭の goal で「この Step で何ができるようになるか」を宣言し、途中参入者が必要な Step を特定できるようにする。Concept と Reference を折りたたみにして既知の読者がスキップできるようにする |
 | **シグナリングの原理** (Mayer, 2009) | 重要箇所を視覚的手がかりで強調すると注意配分が改善し本質処理に集中できる | 合図は**学習目的に沿った要素**にのみ付ける。装飾目的の強調・感情表現の太字は一貫性原理違反 | Section の goal 宣言、画像の番号吹き出し、太字 UI 要素名、①②③ の順序番号で重要箇所を示す |
 | **事前トレーニングの原理** (Mayer, 2009) | キー用語の名前と特徴を事前に提示すると主学習時の外在的処理が下がる | 予習は**これから出る概念のみ**に限定。遠い将来に出る概念や全体概論はミニマリズム違反 | Concept は first-use の直前に置き、「名前＋鍵となる特徴」を最小単位で提示する |
 | **個人化の原理** (Mayer, 2009) | 会話的・二人称・能動的文体はフォーマル文体より学習効果が高い | 文体の**親しみやすさ**が本質。馴れ馴れしさ・絵文字濫用・感情過剰は一貫性原理違反になり得る | 学習者に直接語りかける二人称・能動形で書く（日本語：「〜しましょう」「確認してください」）。三人称で読者を描写しない（「受講者が〜する」「初学者向け」等を禁止） |
@@ -73,14 +77,25 @@ beginner-to-intermediate learners.
 | **熟達度反転効果** (Kalyuga, 2007) | 初心者に効く合図・概念予習・詳細説明は熟達者には逆効果になる | 本スキルは**初〜中級者向け**に最適化。熟達者向け資料では Signaling・Concept 密度・narrative を縮退させる | 対象者を冒頭で宣言し、原理の適用量を対象者に合わせる |
 | **フィードバックの原理** (Shute, 2008) | 学習者が自分の行動の正誤・結果を確認できると schema 構築が促進される | フィードバックは**即時・具体・観察可能**であるべき。汎用的な「成功しました」表示は Coherence に接するため実体のある状態記述にする | Verify は Procedure の観察可能な結果、Recovery は失敗の原因と回復手順、Checkpoint は Step 末の自己確認、という三層のフィードバックを必ず配置する |
 | **ワークトエグザンプル効果** (Sweller, 1985; Atkinson et al., 2000) | 完全な解法例を示してから自力演習に移す方が、最初から演習するより初心者には効果的 | 熟達が進むと逆転（Expertise Reversal）して演習先行が有効になる。本スキルは初〜中級向けなので**例→演習**の順を優先 | 新しい手順や概念では、まず完成例（画像＋完結した Action 列）を通しで見せてから、変化点を差し替える演習（Exercise）を置く |
+| **既有知識の活性化** (Merrill, 2002) | 新しい知識を学ぶ前に、学習者が既に持っている関連知識を呼び起こすと学習が促進される | 事前トレーニング原理（未知の用語を教える）とは異なり、こちらは**既知の概念との接続**を促す。対象が beginner-to-intermediate であっても、隣接領域の経験は存在する | 新しい概念を導入する際に「〜を使ったことがあれば、それと同じ仕組みです」のような既知概念へのアンカーを Concept 内で提供する |
 
-### Out-of-scope principles (noted explicitly, not applied here)
+**Citation note**: The Mayer principles above cite the 2nd
+edition (Mayer, 2009) which defined 12 principles. The 3rd
+edition (Mayer, 2021) expanded to 15, adding Split-attention,
+Transient information, and Immersion. This skill incorporates
+Split-attention (relevant to static tutorials) and notes
+Immersion as out-of-scope. Transient information applies to
+video/animation tutorials and is not covered here; consult
+Jiang & Sweller (2021) when authoring such content.
 
-The following Mayer principles require audio or speaker presence
-and therefore do NOT apply to static text-and-image tutorials.
-If the artefact is a narrated video or an avatar-driven
-walkthrough, consult the primary sources — this skill does not
-cover their application.
+### Principles not applicable to static text-and-image tutorials
+
+The following are canonical CTML principles, but they require
+audio or speaker presence and therefore are **not applicable**
+to static text-and-image tutorials. If the artefact is a
+narrated video or an avatar-driven walkthrough, these
+principles MUST be applied from the primary sources — this
+skill does not cover their application.
 
 | Principle | Applies to | Why out of scope here |
 |---|---|---|
@@ -91,7 +106,8 @@ cover their application.
 
 Authors writing narrated video or VR content MUST NOT assume
 this skill covers these principles; apply them separately from
-Mayer's primary sources.
+Mayer & Fiorella (2021), *Cambridge Handbook of Multimedia
+Learning* (3rd ed.).
 
 ## Information hierarchy
 
@@ -99,6 +115,7 @@ Every tutorial MUST be composed of exactly these layers:
 
 ```
 Tutorial (page)
+ ├── Prerequisites — what the learner needs before starting (optional)
  └── Step (milestone: "when done, you can X")
       ├── goal — 1 future-tense sentence declaring what the learner will achieve
       ├── Concept × N — term/background, always collapsible, before first use
@@ -108,18 +125,21 @@ Tutorial (page)
       │    ├── Action × N — the atomic unit (image + instruction + result)
       │    └── Verify — "→ expected result" (1 text line; optional result screenshot)
       ├── Recovery — error recovery, inline, after the action that can fail
-      └── Checkpoint — end-of-step checklist (exactly one per Step)
+      ├── Checkpoint — end-of-step checklist (exactly one per Step)
+      └── Next steps — what to do after the tutorial (final Step only, optional)
 ```
 
-## Five information types and display rules
+## Seven information types and display rules
 
 | Type | Content | Display | Placement |
 |---|---|---|---|
+| **Prerequisites** | Required environment, software versions, prior knowledge, completed prior tutorials | Always visible, bullet list | Page top, before the first Step |
 | **Action** | Image + instruction + result | Always visible. Image above text, 1:1 mapping | Inside Procedure |
 | **Verify** | Success confirmation + optional result-state screenshot | Always visible, `→` prefix, 1 text line; optional `img` displayed above the text row (Spatial contiguity) | End of Procedure |
 | **Concept** | Term definition, background | Collapsible (`<details>`) | Before procedure that first uses it |
 | **Reference** | Key tables, panel lists | Collapsible (`<details>`) | Near procedure that needs it |
 | **Recovery** | Error recovery steps | Always visible, short | After action that can fail |
+| **Next steps** | What to do after completing this tutorial | Always visible, bullet list | End of the final Step or after the last Checkpoint |
 
 ## Image / text / video hierarchy
 
@@ -216,6 +236,41 @@ Rules:
   third-person ("受講者が〜する状態になります" は Goal と
   Personalization の両方に違反する).
 
+## Accessibility (authoring obligations)
+
+画像主体のチュートリアルでは、アクセシビリティは**プラットフォーム
+実装の責務**と**オーサリングの責務**の両方にまたがる。以下はオーサ
+リング段階で著者が守るべき最低限のルール（WCAG 2.2 Level AA 準拠、
+Section 508 E205 の教育・訓練資料要件に基づく）。
+
+Rules:
+
+- Every `<Action>` image MUST have an `alt` prop that describes
+  what the image shows in the context of the step. The alt text
+  MUST convey the **WHERE** information (which panel, which
+  button, which area) so that a screen-reader user can follow
+  the procedure without seeing the image. If the image is purely
+  decorative (rare in tutorials), use `alt=""`.
+- Numbered callouts, arrows, and highlights in images MUST NOT
+  rely on colour alone to convey meaning. Pair colour with
+  shape (numbered circles, arrows with labels) so that readers
+  with colour vision deficiencies can follow the sequence
+  (WCAG SC 1.4.1).
+- When an image conveys information not present anywhere in the
+  surrounding text (e.g. a UI layout, a spatial relationship
+  between panels), the author MUST provide a text equivalent
+  nearby — either in the Action text, a Concept, or a
+  Reference — so that the meaning is recoverable without the
+  image.
+- Text annotations overlaid on screenshots MUST meet a minimum
+  contrast ratio of 3:1 against the background they sit on
+  (WCAG SC 1.4.11 for non-text UI components).
+- The tutorial's heading hierarchy (Step → Procedure) MUST
+  use semantic heading levels (`h2` → `h3` or equivalent) so
+  that screen-reader navigation by heading works correctly.
+- Interactive examples or embedded widgets (if any) MUST be
+  operable by keyboard alone in a logical tab order.
+
 ## Generative activity (prediction / retrieval)
 
 学習者が**受動的に読むだけ**にならないよう、生成活動（予測・
@@ -242,6 +297,34 @@ Rules:
 - 予測を促すプロンプト（「実行前に、何が起こるか予想してみて
   ください」）は有効だが、過剰使用は認知負荷を上げる。Step ごとに
   1 回が目安。
+
+### Progressive independence (scaffolding / fading)
+
+ワークトエグザンプル効果と生成活動原理を組み合わせて、チュートリアル
+全体を通して**段階的に足場を外す**構成にする（Van de Pol et al.,
+2010; backward fading: Renkl et al., 2002）。
+
+静的チュートリアルにおける段階的撤退の実装:
+
+| Phase | Structure | Learner role |
+|---|---|---|
+| **Phase 1: 完全例** (序盤の Step) | 全 Action に画像＋詳細テキスト。Concept で用語を丁寧に導入。Verify で結果を明示 | 観察・模倣（worked example） |
+| **Phase 2: ガイド付き変形** (中盤の Step) | 基本手順は示すが、一部の値・選択肢を「〜に変更してみましょう」で学習者に委ねる | 部分的な意思決定（completion problem） |
+| **Phase 3: 独立課題** (終盤の Exercise) | Goal と期待結果のみ提示。手順は示さない | 自力での手順構成（independent practice） |
+
+Rules:
+
+- Tutorial の最初の Step は Phase 1（完全例）で始める。
+  いきなり Phase 3 の独立課題を出すのはミニマリズム P1 と
+  ワークトエグザンプル効果に反する。
+- Phase 間の移行は**同種の手順の繰り返し**で自然に起こる。
+  同じ操作パターンが 2 回目に出るときに Phase 2 へ、
+  3 回目以降に Phase 3 へ移行するのが目安。
+- Phase 2 の Exercise では、変更点（差分）を明示し、学習者が
+  ゼロから構成する必要がない形にする。
+- 足場の撤退量は対象読者の熟達度に比例させる。beginner 向け
+  では Phase 1 を長めに、intermediate 向けでは Phase 2 から
+  開始してもよい。
 
 ## Writing rules
 
@@ -318,6 +401,51 @@ to encounter, so that main-task cognitive load is reduced.
   - ✅ 「キューブが消えれば成功です」
   - ❌ 「Destroy Actor が実行されました」
 
+### Prerequisites text
+
+- Prerequisites MUST appear at the page top, before the first
+  Step.
+- Each prerequisite MUST be actionable or verifiable: state
+  the required software version, completed prior tutorial,
+  or assumed knowledge concretely.
+  - ✅ 「Unreal Engine 5.4 以上がインストール済みであること」
+  - ✅ 「Step 1〜3（前回のチュートリアル）を完了していること」
+  - ❌ 「基本的な知識があること」(what knowledge?)
+- If no prerequisites exist, omit the section entirely (do not
+  write "特になし").
+
+### Recovery text
+
+Recovery serves **ミニマリズム P3** (error recognition and
+recovery support). It covers the full error lifecycle:
+prevention, detection, and correction.
+
+- A Recovery block MUST be placed **after** the Action that can
+  plausibly fail.
+- A Recovery block MUST follow the structure: **symptom →
+  cause → fix** (in that order). The symptom comes first
+  because the learner sees the symptom, not the cause.
+  - ✅ 「ブループリントが動かない場合 → コンパイルエラーが
+    出ていないか確認してください → ノード名のタイプミスが
+    原因です。正しい名前は〜」
+  - ❌ 「うまくいかない場合はやり直してください」
+- For actions with a high failure probability, the author
+  SHOULD place a **preventive note** (1 sentence) immediately
+  before the Action, warning about the common mistake. This
+  note is distinct from Recovery (which is reactive).
+- Recovery MUST NOT be placed at the end of a Step as a
+  catch-all. Each Recovery block addresses a specific failure
+  point.
+
+### Next steps text
+
+- Next steps MUST appear only at the end of the final Step or
+  after the last Checkpoint.
+- Each item MUST link to a concrete next action: another
+  tutorial, a documentation page, or an exercise.
+- The author MUST NOT use vague pointers ("詳しくは公式
+  ドキュメントを参照してください" without a link).
+
 ### Checkpoint
 
 - A Checkpoint MUST be a bullet list of observable behaviors.
@@ -353,6 +481,16 @@ these, so the author is responsible for catching them.
 | Exercises tacked on for practice volume rather than learning objective | Coherence / Generative activity (misapplied) | Tie every Exercise to the Step's stated goal; drop unrelated drills |
 | Applying beginner-weight Signaling/Concept density to an expert-facing reference | Expertise reversal | Scale back: use compact Reference tables, drop hand-holding narrative |
 | Using `<Action img>` to show a result-state screenshot while the text contains result-check language ("〜になれば成功", "〜ていることを確認") | Feedback (Verify workaround) | Replace with `<Verify img="...">` — the image carries the observable result state, the text carries the 1-line confirmation *(mechanised: `tutorial/verify-visual-workaround-as-action`)* |
+| Organising tutorial sections by software feature/menu rather than by learner's task goal | ミニマリズム P2 (task anchoring) | Reorganise by what the learner wants to achieve, not by where the feature lives in the UI |
+| No Recovery block after an action that commonly fails | ミニマリズム P3 (error support) | Add Recovery with symptom → cause → fix structure |
+| Recovery that says "やり直してください" without diagnosing the cause | ミニマリズム P3 (error support) | Rewrite with concrete symptom, cause, and fix |
+| All Steps require reading every prior Step to make sense; no standalone entry point | ミニマリズム P4 (flexible use) | Make each Step's goal self-explanatory; use collapsible Concepts/References so known readers can skip |
+| Tutorial starts without stating required environment, software version, or prior knowledge | Prerequisites (ISO 26514) | Add a Prerequisites section at the page top listing concrete, verifiable requirements |
+| Images with no `alt` text, or `alt` text that says "screenshot" / "image" | Accessibility (WCAG SC 1.1.1) | Write `alt` that describes WHERE information: which panel, button, or area is shown |
+| Numbered callouts or highlights that use colour alone (no shape or label) to convey sequence | Accessibility (WCAG SC 1.4.1) | Pair colour with numbered circles, arrows with text labels, or other shape cues |
+| Jumping straight to independent exercises without first showing a complete worked example | Scaffolding / Worked example | Start with Phase 1 (full example), then Phase 2 (guided variation), then Phase 3 (independent) |
+| Introducing a new concept without connecting it to anything the learner already knows | Activation (Merrill) | Add an analogy or reference to a familiar concept in the Concept block |
+| Screenshot + explanation table placed far apart, requiring the reader to scroll between them | Split-attention | Place the explanation immediately adjacent to (or overlaid on) the screenshot |
 
 ## Mechanised checks (enforced at MDX build/dev time)
 

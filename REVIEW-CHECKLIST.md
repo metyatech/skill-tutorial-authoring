@@ -20,6 +20,15 @@ the order it appears in the Scientific foundations table.
 - [ ] `<Verify>` body does not start with a literal `→` *(auto)*
 - [ ] No `<Reference>` whose only content is an image *(auto)*
 
+## Prerequisites *(judgement)*
+
+- [ ] A Prerequisites section exists at the page top (or is
+      intentionally omitted because none are needed)
+- [ ] Each prerequisite is concrete and verifiable (software
+      version, completed prior tutorial, specific prior
+      knowledge)
+- [ ] No vague prerequisites ("基本的な知識があること")
+
 ## Target learner *(judgement)*
 
 - [ ] The intended learner expertise level is stated or
@@ -44,6 +53,13 @@ the order it appears in the Scientific foundations table.
 - [ ] Each image is directly adjacent to its corresponding
       text, not batched upstream
 - [ ] (Video only) Narration and image changes are synchronised
+
+## Split-attention *(judgement)*
+
+- [ ] No screenshot is explained by a table or text block
+      placed far away on the page (requiring scroll to compare)
+- [ ] Numbered callout explanations appear immediately adjacent
+      to the screenshot, not in a separate section
 
 ## Coherence *(judgement)*
 
@@ -70,12 +86,39 @@ the order it appears in the Scientific foundations table.
       into one Action (not mechanically split per field)
 - [ ] Section boundaries align with screen/state transitions
 
-## Minimalism *(judgement)*
+## Minimalism P1: Action orientation *(judgement)*
 
 - [ ] The first Action appears early; no long front-loaded
       prose
 - [ ] No reference tables or long Concepts appear before the
       first Action of the Step
+
+## Minimalism P2: Task anchoring *(judgement)*
+
+- [ ] Steps and Procedures are organised around the learner's
+      task goals, not around software features or menu
+      structure
+- [ ] Each Procedure's `why` explains the task-domain reason,
+      not just the technical operation
+
+## Minimalism P3: Error support *(judgement)*
+
+- [ ] Recovery is present after every action that can plausibly
+      fail
+- [ ] Recovery follows "symptom → cause → fix" structure
+- [ ] Preventive notes appear before high-failure-probability
+      actions where appropriate
+- [ ] No Recovery says "やり直してください" without diagnosis
+
+## Minimalism P4: Flexible use *(judgement)*
+
+- [ ] Each Step's goal is self-explanatory enough for a reader
+      arriving mid-tutorial to decide if they need this Step
+- [ ] Concepts and References are collapsible so experienced
+      readers can skip them
+- [ ] The tutorial does not require reading every prior Step to
+      understand the current one (within reasonable limits of
+      sequential tutorials)
 
 ## Signaling *(judgement)*
 
@@ -95,6 +138,14 @@ the order it appears in the Scientific foundations table.
 - [ ] Each Concept is ≤ 5 sentences and answers both "what is
       it?" and "why need to know now?"
 
+## Activation *(judgement)*
+
+- [ ] New concepts include an analogy or bridge to something
+      the learner already knows (where a plausible prior-
+      knowledge anchor exists)
+- [ ] Activation is distinct from Pre-training: it recalls
+      existing knowledge, not introduces new terms
+
 ## Personalization *(judgement)*
 
 - [ ] Prose addresses the reader in second person (「〜しましょう」
@@ -106,6 +157,16 @@ the order it appears in the Scientific foundations table.
 - [ ] Friendliness stays at "senior peer teaching next to you"
       level (no emoji spam, no 余談, no 感情過剰)
 
+## Accessibility *(judgement)*
+
+- [ ] Every `<Action>` image has an `alt` prop describing the
+      WHERE information (panel, button, area)
+- [ ] Callouts and highlights use shape + colour, not colour
+      alone
+- [ ] Image-only meaning is recovered in nearby text
+- [ ] Text annotations on screenshots meet 3:1 contrast ratio
+- [ ] Heading hierarchy is semantic (`h2` → `h3`)
+
 ## Generative activity *(judgement)*
 
 - [ ] Every Procedure ends with a Verify stating an observable
@@ -114,6 +175,17 @@ the order it appears in the Scientific foundations table.
       behaviours the learner can self-confirm
 - [ ] Exercises (if any) tie directly to the Step's goal
 - [ ] Optional prediction prompts appear at most once per Step
+
+## Scaffolding / Progressive independence *(judgement)*
+
+- [ ] The tutorial begins with Phase 1 (complete worked
+      example) before asking for independent work
+- [ ] When the same operation pattern repeats, later
+      occurrences reduce guidance (Phase 2 → Phase 3)
+- [ ] Phase 2 exercises specify only the variation points, not
+      full re-instruction
+- [ ] No Phase 3 (independent exercise) appears before a Phase
+      1 example of the same pattern
 
 ## Feedback *(judgement)*
 
@@ -139,7 +211,13 @@ the order it appears in the Scientific foundations table.
 - [ ] Expert-facing sections (if any) use compact Reference
       tables instead of full Action sequences
 
-## Out-of-scope principles (video / audio / VR)
+## Next steps *(judgement)*
+
+- [ ] The final Step (or page end) includes concrete next
+      actions with links
+- [ ] No vague pointers ("公式ドキュメントを参照" without URL)
+
+## Principles not applicable to static tutorials (video / audio / VR)
 
 - [ ] If the artefact is narrated video, Voice / Image /
       Embodiment principles have been applied from primary
