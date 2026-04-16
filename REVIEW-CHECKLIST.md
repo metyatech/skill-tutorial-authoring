@@ -12,7 +12,8 @@ the order it appears in the Scientific foundations table.
 
 - [ ] Every `<Section>` declares a `goal` *(auto)*
 - [ ] Goal is written in future-declarative form *(auto)*
-- [ ] Exactly one `<Checkpoint>` per Step, placed last *(auto)*
+- [ ] Exactly one `<Checkpoint>` per top-level Section, placed last *(auto)*
+- [ ] Page frontmatter declares `authoringMode: 'tutorial'` for tutorial pages *(auto)*
 - [ ] No `---` horizontal rules inside a Section *(auto)*
 - [ ] Every `<Action>` has at most one image *(auto)*
 - [ ] No `<Action>` body begins with a positional prefix that
@@ -91,15 +92,16 @@ the order it appears in the Scientific foundations table.
 - [ ] The first Action appears early; no long front-loaded
       prose
 - [ ] No reference tables or long Concepts appear before the
-      first Action of the Step
+      first Action of the top-level Section
 
 ## Minimalism P2: Task anchoring *(judgement)*
 
-- [ ] Steps and Procedures are organised around the learner's
-      task goals, not around software features or menu
-      structure
-- [ ] Each Procedure's `why` explains the task-domain reason,
-      not just the technical operation
+- [ ] Top-level and nested Sections are organised around the
+      learner's task goals, not around software features or
+      menu structure
+- [ ] Each nested Section's `goal` (when present) explains the
+      task-domain reason for that sub-step, not just the
+      technical operation
 
 ## Minimalism P3: Error support *(judgement)*
 
@@ -112,13 +114,14 @@ the order it appears in the Scientific foundations table.
 
 ## Minimalism P4: Flexible use *(judgement)*
 
-- [ ] Each Step's goal is self-explanatory enough for a reader
-      arriving mid-tutorial to decide if they need this Step
+- [ ] Each top-level Section's goal is self-explanatory enough
+      for a reader arriving mid-tutorial to decide if they
+      need this Section
 - [ ] Concepts and References are collapsible so experienced
       readers can skip them
-- [ ] The tutorial does not require reading every prior Step to
-      understand the current one (within reasonable limits of
-      sequential tutorials)
+- [ ] The tutorial does not require reading every prior
+      top-level Section to understand the current one (within
+      reasonable limits of sequential tutorials)
 
 ## Signaling *(judgement)*
 
@@ -131,7 +134,7 @@ the order it appears in the Scientific foundations table.
 
 ## Pre-training *(judgement)*
 
-- [ ] Each Concept sits immediately before the Procedure that
+- [ ] Each Concept sits immediately before the Section that
       first uses the term
 - [ ] No Concept introduces a term that appears much later on
       the page
@@ -169,12 +172,14 @@ the order it appears in the Scientific foundations table.
 
 ## Generative activity *(judgement)*
 
-- [ ] Every Procedure ends with a Verify stating an observable
-      state (not internal mechanics)
-- [ ] Every Step ends with a Checkpoint of observable
-      behaviours the learner can self-confirm
-- [ ] Exercises (if any) tie directly to the Step's goal
-- [ ] Optional prediction prompts appear at most once per Step
+- [ ] Every Section containing Actions ends with a Verify
+      stating an observable state (not internal mechanics)
+- [ ] Every top-level Section ends with a Checkpoint of
+      observable behaviours the learner can self-confirm
+- [ ] Exercises (if any) tie directly to the containing
+      top-level Section's goal
+- [ ] Optional prediction prompts appear at most once per
+      top-level Section
 
 ## Scaffolding / Progressive independence *(judgement)*
 
@@ -194,8 +199,8 @@ the order it appears in the Scientific foundations table.
 - [ ] Recovery is present after every action that can
       plausibly fail, and names the failure symptom before the
       fix
-- [ ] Checkpoint allows the learner to confirm Step-level
-      success independently
+- [ ] Checkpoint allows the learner to confirm top-level
+      Section success independently
 
 ## Worked example *(judgement)*
 
@@ -213,8 +218,8 @@ the order it appears in the Scientific foundations table.
 
 ## Next steps *(judgement)*
 
-- [ ] The final Step (or page end) includes concrete next
-      actions with links
+- [ ] The final top-level Section (or page end) includes
+      concrete next actions with links
 - [ ] No vague pointers ("公式ドキュメントを参照" without URL)
 
 ## Principles not applicable to static tutorials (video / audio / VR)

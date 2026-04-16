@@ -35,7 +35,7 @@ The skill activates automatically when working on:
 
 - Scientific foundations table with 20 authoring principles (11 Mayer/CTML + 1 split-attention + 4 minimalism + 4 additional) and 4 noted-but-not-applicable principles
 - Underlying CLT load model with conflict resolution rules
-- Information hierarchy: Prerequisites → Step → Procedure → Action → Next steps
+- Information hierarchy: Prerequisites → Section (recursive; depth 0 = milestone, nested = sub-goal) → Action → Next steps
 - Seven information types with display rules
 - Atomic unit rules (one image per action, spatial proximity, channel separation, no redundancy)
 - Accessibility authoring obligations (alt text, colour independence, contrast, semantic headings)
