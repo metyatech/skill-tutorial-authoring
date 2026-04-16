@@ -539,6 +539,8 @@ printed via `console.info` and the build still passes.
 | `tutorial/concept-placement`        | *note* | Concept has no following Action / Procedure / Section / Exercise |
 | `tutorial/decorative-emoji`         | *note* | Non-allowlisted emoji outside signalling surfaces (allowlist is a cultural convention) |
 | `tutorial/verify-visual-workaround-as-action` | *note* | `<Action img>` whose text matches result-check patterns ("〜になれば成功", "〜ていることを確認" etc.) — likely a Verify disguised as an Action |
+| `tutorial/prerequisites-placement` | warn | `<Prerequisites>` appears after the first `<Section>` |
+| `tutorial/nextsteps-placement` | *note* | `<NextSteps>` appears before the last `<Section>` (advisory) |
 
 The *note* tier exists because these rules are correct in
 principle but their specific numeric boundary or lexical
@@ -581,6 +583,7 @@ globally available (no import needed):
 
 | Component | Props | Purpose |
 |---|---|---|
+| `<Prerequisites>` | children | Page-level requirements before starting |
 | `<Step>` | `goal` (string) | Milestone wrapper |
 | `<Procedure>` | `why` (string, optional) | Groups actions into a logical task |
 | `<Action>` | `img` (string, optional), `alt` (string, optional) | Atomic operation with image |
@@ -588,6 +591,7 @@ globally available (no import needed):
 | `<Concept>` | `title` (string) | Collapsible background/term |
 | `<Reference>` | `title` (string) | Collapsible lookup table |
 | `<Checkpoint>` | children | End-of-step checklist |
+| `<NextSteps>` | children | End-of-tutorial next actions with links |
 
 ## Non-component tutorials
 
