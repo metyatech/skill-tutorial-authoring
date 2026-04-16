@@ -13,10 +13,11 @@ include = [ ".env", ".env.local", ".env.*.local" ]
 exclude = [ "node_modules/", ".venv/", ".next/", "dist/" ]
 
 [verify]
-# Documentation-only skill repo; no build step to run. `true` is a
-# deliberate no-op so `mwt deliver` can complete without a shell
-# script. Add a real command here if a validator is introduced.
-command = "true"
+# Documentation-only skill repo; no build step to run. `pwsh -c ''`
+# is a cross-platform no-op so `mwt deliver` can complete on both
+# Unix (`true`) and Windows (where `true` is not a command).
+# Add a real command here if a validator is introduced.
+command = "pwsh -c ''"
 
 [policy]
 allow_ignored_seed_changes = true

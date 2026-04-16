@@ -1,14 +1,15 @@
 ---
 name: tutorial-authoring
 description: >-
-  Author, revise, reorganize, or review step-by-step tutorials (software,
-  hardware, any tool) to minimize cognitive load and maximize first-attempt
-  success rate. Use when writing a new guide, improving an existing one,
-  auditing tutorial structure, or reorganizing course content. Apply multimedia
-  learning theory and minimalism automatically. Triggers on: 'tutorial',
-  'step-by-step guide', 'hands-on guide', 'walkthrough', 'how-to', 'reorganize
-  tutorial', 'revise guide', 'improve tutorial quality', 'review tutorial
-  structure', 'チュートリアル', '整理し直す', 'マルチメディア学習'.
+  Author, revise, reorganize, or review step-by-step tutorials for
+  beginner-to-intermediate learners, primarily static text-and-image format.
+  Grounded in Mayer's CTML, Sweller's CLT, and van der Meij & Carroll's
+  minimalism. Use when writing a new guide, improving an existing one,
+  auditing tutorial structure, or reorganizing course content. Triggers
+  on: 'tutorial', 'step-by-step guide', 'hands-on guide', 'walkthrough',
+  'how-to', 'reorganize tutorial', 'revise guide', 'improve tutorial
+  quality', 'review tutorial structure', 'チュートリアル', '整理し直す',
+  'マルチメディア学習'.
 ---
 
 # Tutorial authoring
@@ -596,6 +597,7 @@ using native syntax:
 
 | Component equivalent | Plain Markdown |
 |---|---|
+| Prerequisites | `## 前提条件` + bullet list at page top |
 | `<Step goal="...">` | `## Step N：タイトル` + first line = goal sentence |
 | `<Concept>` | `<details><summary>💡 Title</summary>...</details>` |
 | `<Reference>` | `<details><summary>📖 Title</summary>...</details>` |
@@ -603,6 +605,7 @@ using native syntax:
 | `<Action>` | `![alt](img)` on its own line, then numbered list item |
 | `<Verify>` | `**→ expected result**` |
 | `<Checkpoint>` | `:::tip[確認ポイント]` or equivalent admonition |
+| Next steps | `## 次のステップ` + bullet list with links, after the last Checkpoint |
 
 The hierarchy and writing rules MUST remain identical regardless
 of tooling.
@@ -627,6 +630,10 @@ as explicit review gates, not as automated safety nets.
 | "Does this Exercise serve the stated Step goal?" (Generative activity × Coherence) | Requires semantic alignment with the Step's goal string |
 | "Is this Concept's 'why does the learner need to know now?' actually satisfied?" (Pre-training) | Intent-level check |
 | "Is Signaling density appropriate for the target learner?" (Expertise reversal) | Requires modelling the reader's prior knowledge |
+| "Does this `alt` text convey WHERE information adequately for a screen-reader user?" (Accessibility) | Requires understanding what the image contributes to the step |
+| "Does this Recovery follow symptom → cause → fix, and is the symptom what the learner actually sees?" (ミニマリズム P3) | Requires knowing the real failure mode, not just the technical cause |
+| "Is this Exercise at the right scaffolding phase (1/2/3) for this point in the tutorial?" (Scaffolding) | Requires tracking cumulative learner exposure to the pattern |
+| "Does this Concept's analogy accurately bridge to prior knowledge the target learner has?" (Activation) | Requires modelling the reader's adjacent-domain experience |
 
 ### Generalisation limits of the underlying research
 
