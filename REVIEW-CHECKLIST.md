@@ -13,13 +13,21 @@ the order it appears in the Scientific foundations table.
 - [ ] Every `<Section>` declares a `goal` *(auto)*
 - [ ] Goal is written in future-declarative form *(auto)*
 - [ ] Exactly one `<Checkpoint>` per top-level Section, placed last *(auto)*
-- [ ] Page frontmatter declares `authoringMode: 'tutorial'` for tutorial pages *(auto)*
+- [ ] Components are used where the local task needs them; the
+      page does not depend on a page-wide tutorial/non-tutorial
+      classification *(judgement)*
+- [ ] Explanation, Action, Verify, QuickCheck, Exercise,
+      Reference, and other task components may be mixed locally
+      without forcing a fixed page-wide flow *(judgement)*
 - [ ] No `---` horizontal rules inside a Section *(auto)*
 - [ ] Every `<Action>` has at most one image *(auto)*
 - [ ] No `<Action>` body begins with a positional prefix that
       the image already conveys *(auto)*
 - [ ] `<Verify>` body does not start with a literal `→` *(auto)*
 - [ ] No `<Reference>` whose only content is an image *(auto)*
+- [ ] No `authoringMode` frontmatter or separate Solution
+      block appears; QuickCheck and Exercise use problem
+      content → Hint+ → Answer *(judgement)*
 
 ## Prerequisites *(judgement)*
 
@@ -176,8 +184,12 @@ the order it appears in the Scientific foundations table.
       stating an observable state (not internal mechanics)
 - [ ] Every top-level Section ends with a Checkpoint of
       observable behaviours the learner can self-confirm
+- [ ] QuickChecks (if any) directly retrieve the immediately
+      preceding Concept or Action
 - [ ] Exercises (if any) tie directly to the containing
       top-level Section's goal
+- [ ] QuickCheck and Exercise use problem content first, then
+      one or more Hints, then an Answer
 - [ ] Optional prediction prompts appear at most once per
       top-level Section
 

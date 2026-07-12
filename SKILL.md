@@ -110,24 +110,32 @@ this skill covers these principles; apply them separately from
 Mayer & Fiorella (2021), *Cambridge Handbook of Multimedia
 Learning* (3rd ed.).
 
-## Information hierarchy
+## Task component composition
 
-Every tutorial MUST be composed of exactly these layers:
+Tutorials are composed from local task components, not from a
+page-wide classification. A document may mix explanation,
+Action, Verify, QuickCheck, Exercise, Reference, and other
+components wherever the learner's immediate task requires them.
+There is no fixed page-wide flow; preserve local contiguity,
+task anchoring, and clear feedback instead.
+
+Use these components where needed:
 
 ```
-Tutorial (page)
- ├── Prerequisites — what the learner needs before starting (optional)
- └── Section (depth 0) — milestone ("when done, you can X"); `goal` required
+Document
+ ├── Prerequisites — what the learner needs before a dependent task (optional)
+ ├── Explanation prose — short task context when no component is needed
+ └── Section (recursive) — milestone or sub-goal; `goal` required
       ├── goal — 1 future-tense sentence declaring what the learner will achieve
-      ├── Concept × N — term/background, always collapsible, before first use
-      ├── Reference × N — lookup tables, always collapsible, near relevant sub-section
-      ├── Section × N (depth 1+, nested) — a group of actions toward one sub-goal
-      │    ├── goal — optional at depth > 0 (use to express sub-goal in task language)
-      │    ├── Action × N — the atomic unit (image + instruction + result)
-      │    ├── Recovery — error recovery, inline, after the action that can fail
-      │    └── Verify — "→ expected result" (1 text line; optional result screenshot)
-      ├── Checkpoint — end-of-section checklist (exactly one per top-level Section)
-      └── NextSteps — what to do after the tutorial (final top-level Section only, optional)
+      ├── Concept × N — term/background, collapsible, before first use
+      ├── Reference × N — lookup tables, collapsible, near relevant sub-section
+      ├── Action × N — atomic operation (image + instruction + result)
+      ├── Recovery — error recovery, inline, after the action that can fail
+      ├── Verify — "→ expected result" (1 text line; optional result screenshot)
+      ├── QuickCheck / Exercise — problem content → Hint+ → Answer
+      ├── Section × N — nested group of actions toward one sub-goal
+      ├── Checkpoint — end-of-section checklist when a milestone needs retrieval
+      └── NextSteps — concrete follow-up actions when the document ends
 ```
 
 A single `<Section>` component is used recursively — it replaces what earlier
@@ -135,7 +143,7 @@ versions of this skill called `<Step>` (top-level milestone) and `<Procedure>`
 (sub-goal grouping). Nesting depth is computed at compile time and mapped to
 `h2` (depth 0) → `h3` → `h4` → … capped at `h6`.
 
-## Seven information types and display rules
+## Task component display rules
 
 | Type | Content | Display | Placement |
 |---|---|---|---|
@@ -145,6 +153,8 @@ versions of this skill called `<Step>` (top-level milestone) and `<Procedure>`
 | **Concept** | Term definition, background | Collapsible (`<details>`) | Before the Section that first uses the term |
 | **Reference** | Key tables, panel lists | Collapsible (`<details>`) | Near the Section that needs it |
 | **Recovery** | Error recovery steps | Always visible, short | After the Action that can fail |
+| **QuickCheck** | Short retrieval question | Problem content, one or more Hint blocks, then Answer | Immediately after the concept or action it checks |
+| **Exercise** | Applied practice task | Problem content, one or more Hint blocks, then Answer | After the worked example or guided variation it builds on |
 | **Next steps** | What to do after completing this tutorial | Always visible, bullet list | End of the final top-level Section or after the last Checkpoint |
 
 ## Image / text / video hierarchy
@@ -290,7 +300,8 @@ Surfaces:
 |---|---|
 | Verify | 直前の Section の結果を**観察判断**させる（受動受領でなく能動観察） |
 | Checkpoint | 最上位 Section 末で behavior を**自己確認**させる retrieval 活動 |
-| Exercise (course-docs-platform の `<Exercise>`) | 学習単位の周期的な応用課題 |
+| QuickCheck | 直前の Concept / Action の理解を短く取り出す retrieval 活動 |
+| Exercise | 学習単位の周期的な応用課題 |
 | Recovery | 失敗時の**原因推論**を補助する（一行で原因→回復） |
 
 Rules:
@@ -302,6 +313,9 @@ Rules:
   限定。内部状態や jargon は不可。
 - Exercise は**学習目的に関連**していること。作業量稼ぎの演習、
   本筋と関係ない応用は一貫性原理違反。
+- QuickCheck and Exercise MUST use this internal order:
+  problem content → one or more Hint blocks → Answer. Do not
+  add any separate Solution notation.
 - 予測を促すプロンプト（「実行前に、何が起こるか予想してみて
   ください」）は有効だが、過剰使用は認知負荷を上げる。Step ごとに
   1 回が目安。
@@ -516,7 +530,7 @@ underlying research, so the tool does not over-reach.
 
 | Severity | Semantics | Build effect |
 |---|---|---|
-| **error** | Structural break that makes the MDX incoherent or loses required authoring metadata | Fails the MDX compile |
+| **error** | Structural break that makes the MDX incoherent or loses required authoring structure | Fails the MDX compile |
 | **warn**  | Principle violation with solid empirical support, or a render/technical bug | Emitted via `console.warn` + `file.message()`. Fails under `TUTORIAL_LINT_STRICT=1` |
 | **note**  | Advisory derived from a principle whose specific numeric threshold or lexical pattern is a professional guess rather than a direct research finding | Emitted via `console.info` only. **Never** promoted to an error, even under strict. In collect-all mode, notes appear in the summary but do not by themselves fail the build |
 
@@ -530,9 +544,6 @@ printed via `console.info` and the build still passes.
 
 | Rule ID | Severity | Intent |
 |---|---|---|
-| `tutorial/page-authoring-mode-invalid` | **error** | Frontmatter `authoringMode` must be `tutorial` or `non-tutorial` |
-| `tutorial/page-mode-tutorial-requires-section` | **error** | A page declared `authoringMode: tutorial` must contain at least one `<Section>` |
-| `tutorial/page-mode-non-tutorial-has-section` | **error** | A page without `authoringMode: tutorial` must not use `<Section>` |
 | `tutorial/section-goal-required` | **error** | Every `<Section>` declares its `goal` |
 | `tutorial/action-single-image`   | **error** | One image per Action |
 | `tutorial/checkpoint-placement`  | warn  | Exactly one `<Checkpoint>` per top-level Section, placed last |
@@ -559,43 +570,22 @@ trigger has no direct empirical backing — they are the
 authoring equivalent of professional code review hints, not
 hard gates.
 
-## Page authoring mode (frontmatter)
+## Forbidden notation
 
-Tutorial pages MUST declare their authoring mode in
-frontmatter so the lint plugin can apply tutorial-specific
-rules only to tutorial pages:
-
-```yaml
----
-title: ページタイトル
-authoringMode: 'tutorial'
----
-```
-
-Mode values:
-
-| Value | Meaning | Effect |
-|---|---|---|
-| `tutorial` | This page is a tutorial authored per this skill | Page MUST contain at least one `<Section>`; all tutorial lint rules apply |
-| `non-tutorial` | Reference, overview, or narrative page | Page MUST NOT use `<Section>`; tutorial lint rules are skipped |
-| *(omitted)* | Defaults to `non-tutorial` | Same as explicit `non-tutorial` |
-
-Mixing modes on one page is not supported. A page that mixes
-tutorial structure with free-form narrative MUST either be
-split, or be authored as `non-tutorial` without `<Section>`.
+- Do not add `authoringMode` frontmatter or any tutorial /
+  non-tutorial page classification. Components are used locally
+  where the task needs them.
+- Do not use Solution notation or any separate Solution block. Use
+  `<Answer>` inside QuickCheck or Exercise after one or more
+  `<Hint>` blocks.
 
 ## Component system (course-docs-platform)
 
 When writing for `@metyatech/course-docs-platform`-based sites,
-the author MUST use the provided MDX components. They are
-globally available (no import needed):
+the author MUST use the provided MDX components where they serve
+the local task. They are globally available (no import needed):
 
 ```mdx
----
-title: コリジョンを設定する
-authoringMode: 'tutorial'
----
-
 <Section title="Step N：コリジョンを設定する" goal="アイテムに触れると消えてスコアが増えるようになります">
 
   <Concept title="コリジョンとは">
@@ -611,6 +601,12 @@ authoringMode: 'tutorial'
     </Action>
     <Verify>アイテムをすり抜けて通れる</Verify>
   </Section>
+
+  <QuickCheck>
+    アイテムをすり抜けつつ接触を検知する設定はどれですか？
+    <Hint>ブロックではなく、すり抜けながら検知する設定です。</Hint>
+    <Answer>Overlap です。</Answer>
+  </QuickCheck>
 
   <Checkpoint>
     - アイテムに触れるとスコアが増える
@@ -637,12 +633,16 @@ Nesting depth maps to heading level: `h2` → `h3` → … capped at
 | `<Reference>` | `title: string`, children | Collapsible lookup table |
 | `<Recovery>` | `title: string`, children | Inline error-recovery block attached to the preceding Action |
 | `<Checkpoint>` | children | End-of-Section checklist; exactly one per top-level Section |
+| `<QuickCheck>` | children | Short retrieval prompt using problem content → Hint+ → Answer |
+| `<Exercise>` | children | Applied practice using problem content → Hint+ → Answer |
+| `<Hint>` | children | Progressive support inside QuickCheck or Exercise |
+| `<Answer>` | children | Final answer inside QuickCheck or Exercise |
 | `<NextSteps>` | children | End-of-tutorial next actions with links; placed at the end of the final top-level Section |
 
 ## Non-component tutorials
 
 When components are not available (plain Markdown, Docusaurus,
-etc.), the author MUST apply the same information hierarchy
+etc.), the author MUST preserve the same component semantics
 using native syntax:
 
 | Component equivalent | Plain Markdown |
@@ -656,10 +656,12 @@ using native syntax:
 | `<Verify>` | `**→ expected result**` |
 | `<Recovery>` | `:::caution[〜のとき]` or equivalent admonition right after the Action |
 | `<Checkpoint>` | `:::tip[確認ポイント]` or equivalent admonition |
+| `<QuickCheck>` | Short question, collapsible Hint(s), then `**答え:** ...` |
+| `<Exercise>` | Practice prompt, collapsible Hint(s), then `**答え:** ...` |
 | Next steps | `## 次のステップ` + bullet list with links, after the last Checkpoint |
 
-The hierarchy and writing rules MUST remain identical regardless
-of tooling.
+The component meanings and writing rules MUST remain identical
+regardless of tooling.
 
 ## Limits of principled authoring
 
@@ -678,7 +680,7 @@ as explicit review gates, not as automated safety nets.
 | "Is this bold/highlight serving a learning objective, or decorative?" (Signaling × Coherence) | Requires knowing what is objective-relevant at this step |
 | "Is this image decorative or essential?" (Coherence) | Same |
 | "Is this prose second-person direct address, or third-person description?" (Personalization) | Japanese grammar allows zero-subject sentences; pattern matching over-triggers |
-| "Does this Exercise serve the stated Step goal?" (Generative activity × Coherence) | Requires semantic alignment with the Step's goal string |
+| "Does this Exercise serve the stated Section goal?" (Generative activity × Coherence) | Requires semantic alignment with the Section's goal string |
 | "Is this Concept's 'why does the learner need to know now?' actually satisfied?" (Pre-training) | Intent-level check |
 | "Is Signaling density appropriate for the target learner?" (Expertise reversal) | Requires modelling the reader's prior knowledge |
 | "Does this `alt` text convey WHERE information adequately for a screen-reader user?" (Accessibility) | Requires understanding what the image contributes to the step |

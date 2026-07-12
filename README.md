@@ -35,11 +35,12 @@ The skill activates automatically when working on:
 
 - Scientific foundations table with 20 authoring principles (11 Mayer/CTML + 1 split-attention + 4 minimalism + 4 additional) and 4 noted-but-not-applicable principles
 - Underlying CLT load model with conflict resolution rules
-- Information hierarchy: Prerequisites → Section (recursive; depth 0 = milestone, nested = sub-goal) → Action → Next steps
-- Seven information types with display rules
+- Task component composition with local mixing of explanation, Action, Verify, QuickCheck, Exercise, Reference, and related components; no fixed page-wide flow
+- Task component display rules, including QuickCheck and Exercise as problem content → Hint+ → Answer
 - Atomic unit rules (one image per action, spatial proximity, channel separation, no redundancy)
 - Accessibility authoring obligations (alt text, colour independence, contrast, semantic headings)
 - Progressive independence / scaffolding (Phase 1–3 fading)
+- Forbidden notation guidance for page classifications and separate Solution blocks
 - Anti-patterns table keyed to violated principles
 - Evidence-tiered mechanised lint checks (error / warn / note)
 - MDX component system for [`@metyatech/course-docs-platform`](https://github.com/metyatech/course-docs-platform)
