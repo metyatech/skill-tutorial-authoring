@@ -10,24 +10,16 @@ the order it appears in the Scientific foundations table.
 
 ## Structure *(auto where marked)*
 
-- [ ] Every `<Section>` declares a `goal` *(auto)*
-- [ ] Goal is written in future-declarative form *(auto)*
-- [ ] Exactly one `<Checkpoint>` per top-level Section, placed last *(auto)*
-- [ ] Components are used where the local task needs them; the
-      page does not depend on a page-wide tutorial/non-tutorial
-      classification *(judgement)*
-- [ ] Explanation, Action, Verify, QuickCheck, Exercise,
-      Reference, and other task components may be mixed locally
-      without forcing a fixed page-wide flow *(judgement)*
+- [ ] Every top-level `<Section>` declares a `goal` *(auto)*
+- [ ] Nested `<Section>` goals are present only when they improve orientation *(judgement)*
+- [ ] Goal is written in future-declarative form *(auto advisory)*
+- [ ] Components are used where the local task needs them; the page does not depend on a page-wide tutorial/non-tutorial classification *(judgement)*
+- [ ] Explanation, Action, Verify, QuickCheck, Exercise, Reference, and other task components may be mixed locally without forcing a fixed page-wide flow *(judgement)*
 - [ ] No `---` horizontal rules inside a Section *(auto)*
-- [ ] Every `<Action>` has at most one image *(auto)*
-- [ ] No `<Action>` body begins with a positional prefix that
-      the image already conveys *(auto)*
+- [ ] Multiple images inside one `<Action>` have been reviewed as a possible split/composite opportunity *(auto note)*
 - [ ] `<Verify>` body does not start with a literal `→` *(auto)*
-- [ ] No `<Reference>` whose only content is an image *(auto)*
-- [ ] No `authoringMode` frontmatter or separate Solution
-      block appears; QuickCheck and Exercise use problem
-      content → Hint+ → Answer *(judgement)*
+- [ ] No `<Reference>` whose only content is an image *(auto note)*
+- [ ] No `authoringMode` frontmatter or separate Solution block appears; QuickCheck and Exercise use problem content → Hint+ → Answer *(judgement)*
 
 ## Prerequisites *(judgement)*
 
@@ -46,21 +38,18 @@ the order it appears in the Scientific foundations table.
       that level (no over-scaffolding for experts, no
       under-scaffolding for novices)
 
-## Multimedia / Channel separation *(judgement)*
+## Primary representation / Multimedia *(judgement)*
 
-- [ ] Every operational step has a corresponding image
-- [ ] Image carries WHERE (position, sequence, callouts)
-- [ ] Text carries WHAT (imperative verb + values the image
-      cannot convey)
-- [ ] Typed values, user-specific paths, and gestures/motions
-      are present in text
-- [ ] UI labels clearly visible in the shot are NOT repeated in
-      bold in the text
+- [ ] Each Action deliberately chooses the most efficient primary representation: visual, code/CodePreview, text, diagram, or motion media
+- [ ] Images are used when spatial position, appearance, or visual relation matters; they are not added merely because the step is operational
+- [ ] Code changes use code/CodePreview as primary when that is clearer than a screenshot
+- [ ] Secondary prose contains only complementary information or mapping cues, not a second copy of the complete procedure
+- [ ] Typed values, user-specific paths, and distinctions such as hover vs click remain available in text or another accessible equivalent
+- [ ] Short identity cues may appear in both representations when they help bind them together
 
 ## Spatial / Temporal contiguity *(judgement)*
 
-- [ ] Each image is directly adjacent to its corresponding
-      text, not batched upstream
+- [ ] Corresponding visual/text or code/explanation pairs are directly adjacent rather than separated by unrelated content
 - [ ] (Video only) Narration and image changes are synchronised
 
 ## Split-attention *(judgement)*
@@ -82,11 +71,9 @@ the order it appears in the Scientific foundations table.
 
 ## Redundancy *(judgement)*
 
-- [ ] No text restates information the image already shows
-- [ ] No settings table duplicates numbered-callout pairs
-      row-for-row
-- [ ] No micro-interaction description that an arrow already
-      conveys (unless motion cannot be encoded in a still)
+- [ ] The same complete instruction or explanation is not repeated across two representations
+- [ ] Identity cues, labels, or numbers are retained when they reduce mapping/search cost instead of being removed mechanically
+- [ ] No settings table duplicates a primary visual or CodePreview row-for-row without adding a distinct lookup purpose
 
 ## Segmenting *(judgement)*
 
@@ -113,8 +100,8 @@ the order it appears in the Scientific foundations table.
 
 ## Minimalism P3: Error support *(judgement)*
 
-- [ ] Recovery is present after every action that can plausibly
-      fail
+- [ ] Recovery is present at common or high-impact novice failure
+      points where diagnosis/recovery materially helps
 - [ ] Recovery follows "symptom → cause → fix" structure
 - [ ] Preventive notes appear before high-failure-probability
       actions where appropriate
@@ -134,20 +121,18 @@ the order it appears in the Scientific foundations table.
 ## Signaling *(judgement)*
 
 - [ ] Bold emphasis is used only on learning-objective elements
-      (UI names not in image, typed values, key gestures)
+      (UI identities when useful for mapping, typed values, key gestures)
 - [ ] No sentence contains three or more bold spans
-- [ ] Numbered callouts in images are matched by ①②③ in text
-      (complementary, not redundant)
+- [ ] Numbered callouts, labels, or short identity cues are repeated in text only when they materially improve mapping between representations
 - [ ] No decorative bold/highlight for emotional emphasis
 
 ## Pre-training *(judgement)*
 
-- [ ] Each Concept sits immediately before the Section that
-      first uses the term
-- [ ] No Concept introduces a term that appears much later on
-      the page
-- [ ] Each Concept is ≤ 5 sentences and answers both "what is
-      it?" and "why need to know now?"
+- [ ] Each Concept sits immediately before first use of the term or idea
+- [ ] No Concept introduces a term that appears much later on the page
+- [ ] Each Concept focuses on one new concept and only the information needed now
+- [ ] Roughly 2–5 sentences is preferred; 6+ sentences triggers review for multiple concepts or Reference material rather than automatic failure
+- [ ] Each Concept answers both "what is it?" and "why need to know now?"
 
 ## Activation *(judgement)*
 
@@ -157,41 +142,34 @@ the order it appears in the Scientific foundations table.
 - [ ] Activation is distinct from Pre-training: it recalls
       existing knowledge, not introduces new terms
 
-## Personalization *(judgement)*
+## Personalization / learner-facing prose *(judgement)*
 
-- [ ] Prose addresses the reader in second person (「〜しましょう」
-      「確認してください」)
-- [ ] No third-person description of the reader ("受講者が〜",
-      "学習者は〜", "初学者向け")
-- [ ] No page opens by describing what the document is or who
-      it is for
-- [ ] Friendliness stays at "senior peer teaching next to you"
-      level (no emoji spam, no 余談, no 感情過剰)
+- [ ] Prose is natural, direct, and active; Japanese zero-subject sentences are acceptable
+- [ ] The lesson body does not contain author-facing audience meta prose such as "受講者が〜", "学習者は〜", or "初学者向け"
+- [ ] Ordinary domain uses of 「ユーザー」 remain allowed when they refer to an actual app/product end user rather than the tutorial reader
+- [ ] No page opens by describing what the document is or who it is for when that information does not help perform the task
+- [ ] Friendliness stays restrained (no emoji spam, 余談, or emotional decoration)
 
 ## Accessibility *(judgement)*
 
-- [ ] Every `<Action>` image has an `alt` prop describing the
-      WHERE information (panel, button, area)
-- [ ] Callouts and highlights use shape + colour, not colour
-      alone
-- [ ] Image-only meaning is recovered in nearby text
-- [ ] Text annotations on screenshots meet 3:1 contrast ratio
-- [ ] Heading hierarchy is semantic (`h2` → `h3`)
+- [ ] Every informative Action/Verify image has an `alt` prop that preserves the information needed to follow or verify the step
+- [ ] Callouts and highlights use shape/labels in addition to colour where colour alone would carry meaning
+- [ ] Image-only meaning is recovered in nearby text or another text equivalent
+- [ ] Normal text / images of text in screenshot annotations meet 4.5:1 contrast; large text meets 3:1
+- [ ] Meaningful non-text callout shapes / UI-state indicators meet the applicable 3:1 non-text contrast requirement
+- [ ] Real text is preferred to images of text when the same presentation can be achieved with text
+- [ ] Heading hierarchy remains semantic (`h2` → `h3`)
 
-## Generative activity *(judgement)*
+## Generative activity / aligned closure *(judgement)*
 
-- [ ] Every Section containing Actions ends with a Verify
-      stating an observable state (not internal mechanics)
-- [ ] Every top-level Section ends with a Checkpoint of
-      observable behaviours the learner can self-confirm
-- [ ] QuickChecks (if any) directly retrieve the immediately
-      preceding Concept or Action
-- [ ] Exercises (if any) tie directly to the containing
-      top-level Section's goal
-- [ ] QuickCheck and Exercise use problem content first, then
-      one or more Hints, then an Answer
-- [ ] Optional prediction prompts appear at most once per
-      top-level Section
+- [ ] Every substantive learning goal has a closure that can actually test that goal
+- [ ] Observable behavior/state goals use Verify where appropriate
+- [ ] Retrieval/understanding goals use QuickCheck where appropriate
+- [ ] Multi-condition milestones use Checkpoint only when a checklist is useful
+- [ ] Transfer/application goals use Exercise after sufficient worked/guided support
+- [ ] Recovery is treated as error support, not as goal closure
+- [ ] QuickCheck and Exercise use problem content first, then one or more Hints, then an Answer
+- [ ] No closure component is added mechanically just because a Section exists
 
 ## Scaffolding / Progressive independence *(judgement)*
 
@@ -206,13 +184,9 @@ the order it appears in the Scientific foundations table.
 
 ## Feedback *(judgement)*
 
-- [ ] Verify tells the learner what success looks like, not
-      what the engine did
-- [ ] Recovery is present after every action that can
-      plausibly fail, and names the failure symptom before the
-      fix
-- [ ] Checkpoint allows the learner to confirm top-level
-      Section success independently
+- [ ] Verify tells the learner what observable success looks like, not what the engine internally did
+- [ ] Recovery follows a plausible failure point and names symptom → cause → fix
+- [ ] The selected closure matches the evidence needed by the Section goal instead of forcing Verify + Checkpoint everywhere
 
 ## Worked example *(judgement)*
 
@@ -244,6 +218,4 @@ the order it appears in the Scientific foundations table.
 
 ## Limits acknowledgement
 
-- [ ] The author has reviewed "Limits of principled authoring"
-      in `SKILL.md` and understands that this checklist
-      catches known failure modes, not pedagogical correctness
+- [ ] The author has reviewed the research-limit / boundary-condition section in `SKILL.md` and understands that this checklist catches known failure modes, not universal pedagogical correctness

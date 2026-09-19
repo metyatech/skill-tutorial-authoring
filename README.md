@@ -7,8 +7,9 @@ An [Agent Skills](https://agentskills.io/specification) skill for authoring step
 Provides authoring rules and component guidance derived from:
 
 - **Mayer's Cognitive Theory of Multimedia Learning** (2009; 3rd ed. 2021): multimedia, spatial contiguity, temporal contiguity, coherence, modality, redundancy, segmenting, signaling, pre-training, personalization, split-attention
-- **Sweller's Cognitive Load Theory** (1988): intrinsic, extraneous, and germane load model used as the meta-framework for resolving principle conflicts
+- **Sweller, van Merriënboer & Paas' Cognitive Load Theory update** (2019): intrinsic and extraneous load as the basic categories, with germane processing treated as working-memory resource allocation toward learning-relevant intrinsic processing
 - **van der Meij & Carroll's Minimalism** (1995; Carroll, 1990): four principles — action orientation, task anchoring, error support, flexible use
+- **Cromley & Chen's multimedia-learning meta-analysis** (2025): boundary conditions across principle, medium, learning outcome, age, and domain
 - **Kalyuga's Expertise Reversal Effect** (2007)
 - **Shute's Feedback principle** (2008)
 - **Mayer's Generative Activity** (2014) and **Sweller's Worked Example Effect** (1985)
@@ -34,16 +35,16 @@ The skill activates automatically when working on:
 ## Key guidance provided
 
 - Scientific foundations table with 20 authoring principles (11 Mayer/CTML + 1 split-attention + 4 minimalism + 4 additional) and 4 noted-but-not-applicable principles
-- Underlying CLT load model with conflict resolution rules
+- Current CLT load model and boundary-condition-aware conflict resolution rules
 - Task component composition with local mixing of explanation, Action, Verify, QuickCheck, Exercise, Reference, and related components; no fixed page-wide flow
 - Task component display rules, including QuickCheck and Exercise as problem content → Hint+ → Answer
-- Atomic unit rules (one image per action, spatial proximity, channel separation, no redundancy)
+- Primary Representation rules: choose visual, code/CodePreview, text, or diagram by task; keep secondary representations complementary rather than duplicative
 - Accessibility authoring obligations (alt text, colour independence, contrast, semantic headings)
-- Progressive independence / scaffolding (Phase 1–3 fading)
+- Aligned closure guidance (Verify / QuickCheck / Checkpoint / Exercise) plus progressive independence / scaffolding (Phase 1–3 fading)
 - Forbidden notation guidance for page classifications and separate Solution blocks
 - Anti-patterns table keyed to violated principles
 - Evidence-tiered mechanised lint checks (error / warn / note)
-- MDX component system for [`@metyatech/course-docs-platform`](https://github.com/metyatech/course-docs-platform)
+- MDX component system in [`course-docs-site/packages/platform`](https://github.com/metyatech/course-docs-site/tree/main/packages/platform), published internally as `@metyatech/course-docs-platform`
 - Plain Markdown equivalents for non-component environments
 - Self-review checklist (`REVIEW-CHECKLIST.md`)
 
