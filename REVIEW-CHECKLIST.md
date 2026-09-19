@@ -5,8 +5,9 @@ principle encoded in `SKILL.md`. Items marked *(auto)* are
 already enforced by `remarkTutorialLint` at build time; items
 marked *(judgement)* require human review.
 
-Work top-down: structural items first, then each principle in
-the order it appears in the Scientific foundations table.
+Work top-down: structural/platform items first, then evidence-backed
+principles, quality conventions, and context-dependent heuristics in the
+order used by `SKILL.md`.
 
 ## Structure *(auto where marked)*
 
@@ -61,7 +62,8 @@ the order it appears in the Scientific foundations table.
 
 ## Coherence *(judgement)*
 
-- [ ] No decorative images, sidebars, emoji spam, or余談
+- [ ] No irrelevant decorative images, sidebars, audio, emoji spam, or余談
+- [ ] Sidebars / callouts that remain have a clear task, warning, reference, or feedback role
 - [ ] Every retained element traces to a learning objective
 
 ## Modality *(judgement; video-only)*
@@ -136,9 +138,8 @@ the order it appears in the Scientific foundations table.
 
 ## Activation *(judgement)*
 
-- [ ] New concepts include an analogy or bridge to something
-      the learner already knows (where a plausible prior-
-      knowledge anchor exists)
+- [ ] When a useful prior-knowledge anchor exists, the lesson activates it through recall, comparison, an earlier lesson/task, or a sound analogy
+- [ ] No analogy or metaphor is invented merely to satisfy an Activation checklist item
 - [ ] Activation is distinct from Pre-training: it recalls
       existing knowledge, not introduces new terms
 
@@ -152,7 +153,8 @@ the order it appears in the Scientific foundations table.
 
 ## Accessibility *(judgement)*
 
-- [ ] Every informative Action/Verify image has an `alt` prop that preserves the information needed to follow or verify the step
+- [ ] Every informative Action/Verify image has an `alt` prop that concisely identifies the image's purpose or essential information
+- [ ] Complex annotated screenshots / diagrams do not cram the full procedure into `alt`; detailed equivalent information is available in adjacent learner-visible text or another long-description mechanism
 - [ ] Callouts and highlights use shape/labels in addition to colour where colour alone would carry meaning
 - [ ] Image-only meaning is recovered in nearby text or another text equivalent
 - [ ] Normal text / images of text in screenshot annotations meet 4.5:1 contrast; large text meets 3:1
@@ -167,20 +169,19 @@ the order it appears in the Scientific foundations table.
 - [ ] Retrieval/understanding goals use QuickCheck where appropriate
 - [ ] Multi-condition milestones use Checkpoint only when a checklist is useful
 - [ ] Transfer/application goals use Exercise after sufficient worked/guided support
+- [ ] Immediate closure is described as evidence of current performance, not proof of durable mastery
+- [ ] Where the curriculum owns later practice, important knowledge is revisited through later retrieval / distributed practice rather than assumed mastered after one immediate success
 - [ ] Recovery is treated as error support, not as goal closure
 - [ ] QuickCheck and Exercise use problem content first, then one or more Hints, then an Answer
 - [ ] No closure component is added mechanically just because a Section exists
 
 ## Scaffolding / Progressive independence *(judgement)*
 
-- [ ] The tutorial begins with Phase 1 (complete worked
-      example) before asking for independent work
-- [ ] When the same operation pattern repeats, later
-      occurrences reduce guidance (Phase 2 → Phase 3)
-- [ ] Phase 2 exercises specify only the variation points, not
-      full re-instruction
-- [ ] No Phase 3 (independent exercise) appears before a Phase
-      1 example of the same pattern
+- [ ] Low- or unestablished-prior-knowledge learners receive a complete worked example before substantial independent construction
+- [ ] Starting at guided or independent practice is allowed when relevant prior knowledge has already been established
+- [ ] Guidance is faded, retained, or restored according to learner knowledge/performance rather than a fixed second-/third-occurrence rule
+- [ ] Phase 2 exercises make variation points clear without re-teaching everything
+- [ ] The tutorial is not forced to contain all three phases when the target learner or page scope does not require them
 
 ## Feedback *(judgement)*
 
@@ -190,10 +191,9 @@ the order it appears in the Scientific foundations table.
 
 ## Worked example *(judgement)*
 
-- [ ] New procedures or concepts are introduced with a complete
-      worked example before the learner is asked to vary it
-- [ ] Exercises modify the worked example at specific points
-      (rather than asking the learner to produce from scratch)
+- [ ] Learners without established relevant prior knowledge see a complete worked example before substantial independent variation
+- [ ] Learners with established prior knowledge are not forced through redundant worked examples
+- [ ] Guided exercises vary the worked example at specific points before fully independent production when that support is still useful
 
 ## Expertise reversal *(judgement)*
 

@@ -32,13 +32,30 @@ authoring context or metadata. Do not leak author-facing audience
 labels such as "初心者向け" into learner-facing prose unless the
 reader genuinely needs that information.
 
-## Scientific foundations
+## Research foundations and rule provenance
 
-All authoring rules below derive from the principles in this
-table. Principles are stated so their scopes do NOT overlap;
-when two seem to conflict, the "Scope & limits" column
-resolves the boundary. The agent MUST apply them actively when
-writing new tutorials and when reviewing existing ones.
+The research table below describes the evidence-backed learning principles
+used by this skill. It does **not** imply that every concrete authoring rule
+is a direct scientific finding, nor that principle scopes never overlap.
+Boundary conditions, learner expertise, medium, and local platform needs can
+change which tactic is appropriate.
+
+Classify concrete rules by provenance before enforcing them:
+
+| Rule class | Meaning | Typical examples |
+|---|---|---|
+| **Evidence-backed principle** | Direction or mechanism supported by learning-science evidence, with stated scope and boundary conditions | Coherence, signaling, worked examples, retrieval, expertise reversal |
+| **Quality convention** | Deliberate local writing standard chosen to keep learner-facing material consistent and useful | No author-facing audience meta prose in the lesson body |
+| **Platform contract** | Requirement imposed by the Course Docs component/rendering system rather than by learning science | Top-level `Section` goal, no duplicate `→` in `Verify`, component nesting contracts |
+| **Context-dependent heuristic** | Useful review prompt whose value depends on the current task or whose threshold is not a scientific boundary | Concept sentence-count note, bold-density note, multiple-image review |
+
+A rule MAY be strict because violating a platform contract or local quality
+standard has a high and predictable cost. Conversely, a research-backed
+principle MAY remain advisory when the correct application requires semantic
+judgement. **Evidence strength and enforcement severity are separate axes.**
+The author MUST apply evidence-backed principles within their stated scope and
+must follow explicit quality conventions and platform contracts when using the
+corresponding environment.
 
 ### Underlying load model (current CLT formulation)
 
@@ -88,8 +105,8 @@ intermediate learners.
 | **生成活動の原理** (Mayer, 2014) | 学習者に要約・予測・説明・検索などの学習関連活動を求めると学習が深まる | 活動は**Section の学習目標に整合**していること。単なる作業追加は一貫性原理違反 | 目標に応じて Verify / QuickCheck / Checkpoint / Exercise から適切な closure を選び、学習者自身に結果・理解・転移を確認させる |
 | **熟達度反転効果** (Kalyuga, 2007) | 初心者に効く合図・概念予習・詳細説明は熟達者には逆効果になる | 本スキルは**初〜中級者向け**に最適化。熟達者向け資料では Signaling・Concept 密度・narrative を縮退させる | 対象者は authoring context / metadata で明示し、原理の適用量を対象者に合わせる |
 | **フィードバックの原理** (Shute, 2008) | 学習者が自分の行動・理解・適用結果を具体的に確認できると学習が促進される | すべてのSectionへ同じ部品を強制しない。**substantive learning goal は、その目標を実際に検証できる closure で閉じる**。Recovery は失敗時支援でありclosureの代替ではない | 動作結果なら Verify、概念想起なら QuickCheck、複数条件のmilestone確認なら Checkpoint、別条件への適用なら Exercise を選ぶ |
-| **ワークトエグザンプル効果** (Sweller, 1985; Atkinson et al., 2000) | 完全な解法例を示してから自力演習に移す方が、最初から演習するより初心者には効果的 | 熟達が進むと逆転（Expertise Reversal）して演習先行が有効になる。本スキルは初〜中級向けなので**例→演習**の順を優先 | 新しい手順や概念では、まず適切な primary representation を使った完結した worked example を通しで示してから、変化点を差し替える演習（Exercise）を置く |
-| **既有知識の活性化** (Merrill, 2002) | 新しい知識を学ぶ前に、学習者が既に持っている関連知識を呼び起こすと学習が促進される | 事前トレーニング原理（未知の用語を教える）とは異なり、こちらは**既知の概念との接続**を促す。対象が beginner-to-intermediate であっても、隣接領域の経験は存在する | 新しい概念を導入する際に「〜を使ったことがあれば、それと同じ仕組みです」のような既知概念へのアンカーを Concept 内で提供する |
+| **ワークトエグザンプル効果** (Sweller, 1985; Atkinson et al., 2000) | 関連する既有知識が低い学習者では、最初から問題解決させるより完全な解法例から学ぶ方が有効 | 熟達が進むと逆転（Expertise Reversal）し、詳細な例が冗長になり得る。例→演習はnovice defaultであり固定順序ではない | relevant prior knowledge が低い／未確認なら、適切な primary representation の worked example から始める。既有知識・performanceが十分ならguided/independent practiceから開始してよい |
+| **既有知識の活性化** (Merrill, 2002) | 新しい知識を学ぶ前に、学習者が既に持っている関連知識を呼び起こすと学習が促進される | 事前トレーニング原理（未知の用語を教える）とは異なり、こちらは**既知の概念との接続**を促す。使えるprior-knowledge anchorがない場合に無理な比喩を作らない | 前の課題の想起、比較、既知の操作・概念への参照、妥当なanalogyなどから、その場で自然なbridgeを選ぶ |
 
 **Citation note**: The Mayer principles above cite the 2nd
 edition (Mayer, 2009) which defined 12 principles. The 3rd
@@ -121,8 +138,19 @@ Updated sources used for this revision:
   Mayer's multimedia learning research: Searching for boundary
   conditions of design principles across multiple media types*.
   <https://doi.org/10.1016/j.edurev.2025.100730>
+- Tetzlaff, L., Simonsmeier, B. A., Peters, T., & Brod, G. (2025).
+  *A cornerstone of adaptivity – A meta-analysis of the expertise reversal
+  effect*. <https://doi.org/10.1016/j.learninstruc.2025.102142>
+- Yang, C., Luo, L., Vadillo, M. A., Yu, R., & Shanks, D. R. (2021).
+  *Testing (quizzing) boosts classroom learning: A systematic and
+  meta-analytic review*. <https://pubmed.ncbi.nlm.nih.gov/33683913/>
+- Mawson, R. D., & Kang, S. H. K. (2025). *The Distributed Practice Effect
+  on Classroom Learning: A Meta-Analytic Review of Applied Research*.
+  <https://doi.org/10.3390/bs15060771>
 - W3C. *Web Content Accessibility Guidelines (WCAG) 2.2*.
   <https://www.w3.org/TR/WCAG22/>
+- W3C WAI. *Complex Images*.
+  <https://www.w3.org/WAI/tutorials/images/complex/>
 
 ### Principles not applicable to static text-and-image tutorials
 
@@ -325,6 +353,12 @@ Rules:
   nearby — either in the Action text, a Concept, or a
   Reference — so that the meaning is recoverable without the
   image.
+- Keep `alt` concise. For a complex annotated screenshot, diagram, chart,
+  or other visual whose essential information cannot fit in a short phrase
+  or sentence, use a short `alt` that identifies the visual's purpose and
+  provide the detailed equivalent in adjacent learner-visible text or another
+  long-description mechanism. Do not force the entire procedure or diagram
+  into one oversized `alt` string.
 - Text annotations overlaid on screenshots are text / images of
   text and MUST meet WCAG 2.2 SC 1.4.3: **4.5:1** for normal text,
   or **3:1** for large text. Meaningful non-text callout shapes,
@@ -363,6 +397,12 @@ Rules:
   behavior/state → Verify; retrieval/understanding → QuickCheck; several
   milestone conditions → Checkpoint; transfer to a new condition → Exercise.
   Do not add all four mechanically.
+- Treat closure as **local evidence of current performance**, not proof of
+  durable mastery. Long-term retention and flexible transfer benefit from
+  later retrieval and distributed practice across lessons. Curriculum-level
+  scheduling of those later encounters is outside this page-local skill's
+  scope, but a single immediate success check MUST NOT be described as
+  permanent mastery.
 - Recovery is error support and MUST NOT be counted as closure.
 - Checkpoint の項目は学習者自身が視覚・操作で確かめられる内容に限定する。
 - Exercise は**学習目的に関連**していること。作業量稼ぎの演習は追加しない。
@@ -386,17 +426,24 @@ Rules:
 
 Rules:
 
-- Tutorial の最初の Step は Phase 1（完全例）で始める。
-  いきなり Phase 3 の独立課題を出すのはミニマリズム P1 と
-  ワークトエグザンプル効果に反する。
-- Phase 間の移行は**同種の手順の繰り返し**で自然に起こる。
-  同じ操作パターンが 2 回目に出るときに Phase 2 へ、
-  3 回目以降に Phase 3 へ移行するのが目安。
-- Phase 2 の Exercise では、変更点（差分）を明示し、学習者が
-  ゼロから構成する必要がない形にする。
-- 足場の撤退量は対象読者の熟達度に比例させる。beginner 向け
-  では Phase 1 を長めに、intermediate 向けでは Phase 2 から
-  開始してもよい。
+- For learners with low or unestablished prior knowledge, default to Phase 1:
+  show a complete worked example before asking for substantial independent
+  construction. This is a novice default, not a universal first-Step law.
+- If relevant prior knowledge has already been established by curriculum
+  ordering, a prerequisite, or observed prior performance, starting at
+  Phase 2 — and occasionally Phase 3 — can be appropriate.
+- Fade support according to the learner's demonstrated or reasonably inferred
+  knowledge and performance, not according to a fixed repetition count.
+  "Second occurrence = Phase 2" and "third occurrence = Phase 3" are not
+  scientific thresholds.
+- Phase 2 tasks should make the variation points clear while leaving an
+  appropriate amount of decision-making to the learner; do not make the
+  learner reconstruct the entire procedure unless the target is already
+  suitable for independent practice.
+- If learner performance shows that support is still needed, keep or restore
+  assistance. If the guidance has become redundant for the target learner,
+  fade it. The goal is adaptive assistance, not completing all three phases
+  on every tutorial page.
 
 ## Writing rules
 
@@ -532,16 +579,16 @@ these, so the author is responsible for catching them.
 | Same complete procedure restated in both the primary representation and secondary prose | Redundancy | Keep one primary path and use secondary representation only for complementary or mapping information |
 | Treating a short identity cue repeated across visual and text as automatically redundant | Redundancy (over-applied) | Keep the cue when it helps bind the representations; remove only duplication that makes the learner re-process the full instruction |
 | Mechanical splitting of a single-screen unified task into many Actions (one per item in the same dialog) | Segmenting (misapplied) | Keep 1 screen = 1 Action when the sub-goal is unified; split only on screen/state transitions |
-| Decorative images, fun sidebars, background music | Coherence | Remove entirely; they impair learning |
+| Irrelevant decorative images, sidebars, audio, or digressions that do not serve the learning objective | Coherence | Remove or simplify the irrelevant element; retain sidebars or visuals that carry necessary task, warning, reference, or feedback information |
 | Same content in narration AND on-screen text | Redundancy / Modality | Use narration OR on-screen text, not both |
 | `:::note` for concepts | Segmenting | Not collapsible; use Concept component |
-| Verify after every action | Segmenting | Verify at Section end only |
+| Adding Verify mechanically after every Action | Segmenting / Feedback (misapplied) | Place Verify at a meaningful observable result or sub-goal boundary; do not force it to the Section end if another boundary is more natural |
 | Front-loading reference tables | Minimalism | Use Reference, near first use |
 | Term introduced before it's needed | Minimalism | Concept before first-use Section |
 | Reducing Action text to a bare "クリックします" to avoid redundancy | Redundancy (over-correction) | Keep the imperative WHAT plus the values the image cannot convey |
 | Settings table duplicating the image's numbered callouts row-for-row | Redundancy | Keep in text only the values the image cannot convey (typed input, user-specific paths, dropdown values absent from the shot) |
 | Micro-interaction detail ("空白で離す", "カーソルを乗せ") redundantly described when image's arrows already convey it | Redundancy | Remove — but only after confirming the image truly conveys the gesture; motion attributes ("drop in **empty** space", "hover vs click") often need text because a still image cannot encode them |
-| Opening a page by describing what the document *is* or *who it is for* ("この教材は〜のための資料です", "受講者が〜する授業") | Personalization | Rewrite in second-person direct address; open with the first learner-facing action or an inviting goal |
+| Opening a page with author-facing description of what the document is or who it is for when that does not help the task | Learner-facing prose quality convention | Rewrite as learner-facing task prose; open with useful context, an action, or a goal rather than forcing explicit second-person wording |
 | Author-facing audience meta prose in the tutorial body ("学習者は〜", "初学者向け", "受講者が〜") | Learner-facing prose quality convention | Rewrite as direct task prose; keep audience classification in authoring context/metadata instead of the lesson body |
 | Front-loading a long concept chapter before the first Action (Pre-training misapplied) | Pre-training × Minimalism | Move each term's Concept to immediately before its first-use Section; keep each Concept to name + key features only |
 | Bold/highlight used for emotional emphasis or decoration, not tied to a learning-objective cue | Signaling × Coherence | Reserve bold/highlight for the element the learner must find or type; remove decorative emphasis |
@@ -555,10 +602,10 @@ these, so the author is responsible for catching them.
 | Recovery that says "やり直してください" without diagnosing the cause | ミニマリズム P3 (error support) | Rewrite with concrete symptom, cause, and fix |
 | All Steps require reading every prior Step to make sense; no standalone entry point | ミニマリズム P4 (flexible use) | Make each Step's goal self-explanatory; use collapsible Concepts/References so known readers can skip |
 | Tutorial starts without stating required environment, software version, or prior knowledge | Prerequisites (ISO 26514) | Add a Prerequisites section at the page top listing concrete, verifiable requirements |
-| Images with no `alt` text, or `alt` text that says "screenshot" / "image" | Accessibility (WCAG SC 1.1.1) | Write `alt` that describes WHERE information: which panel, button, or area is shown |
+| Informative images with missing or non-functional text alternatives, including `alt` that only says "screenshot" / "image" | Accessibility (WCAG SC 1.1.1) | Use concise `alt` for the image's purpose; for complex visuals, keep detailed equivalent information in adjacent text or another long-description mechanism |
 | Numbered callouts or highlights that use colour alone (no shape or label) to convey sequence | Accessibility (WCAG SC 1.4.1) | Pair colour with numbered circles, arrows with text labels, or other shape cues |
-| Jumping straight to independent exercises without first showing a complete worked example | Scaffolding / Worked example | Start with Phase 1 (full example), then Phase 2 (guided variation), then Phase 3 (independent) |
-| Introducing a new concept without connecting it to anything the learner already knows | Activation (Merrill) | Add an analogy or reference to a familiar concept in the Concept block |
+| Asking low-prior-knowledge learners for independent construction before enough support has been established | Scaffolding / Worked example | Default novices to a worked example and fade support only as prior knowledge or performance justifies it; do not force every learner through all three phases |
+| Forcing a new concept into an invented analogy when no useful prior-knowledge bridge exists, or failing to activate a clear relevant prior experience when one does exist | Activation (Merrill) | Use the most natural available bridge: recall a prior task, compare with a known concept, reference an earlier lesson, or use a sound analogy; omit the bridge when none is genuinely helpful |
 | Screenshot + explanation table placed far apart, requiring the reader to scroll between them | Split-attention | Place the explanation immediately adjacent to (or overlaid on) the screenshot |
 
 ## Mechanised checks (enforced at MDX build/dev time)
@@ -569,16 +616,20 @@ The following conventions are enforced by the
 `npm run dev` and `npm run build` output; author reliance on
 memory is not required.
 
-### Severity policy (evidence-tiered)
+### Severity policy (impact × machine-confidence)
 
-Severity is tied to how strongly the rule is anchored in the
-underlying research, so the tool does not over-reach.
+Lint severity is based on **the cost of being wrong in the authored artefact**
+and **how confidently the condition can be detected mechanically**. Research
+strength informs the authoring rationale, but it does not by itself determine
+whether a machine check should block a build. A platform contract can be an
+error without being a scientific finding; a strongly research-backed principle
+can remain a note when semantic context determines whether it applies.
 
 | Severity | Semantics | Build effect |
 |---|---|---|
-| **error** | Structural break that makes the MDX incoherent or loses required authoring structure | Fails the MDX compile |
-| **warn**  | Principle violation with solid empirical support, or a render/technical bug | Emitted via `console.warn` + `file.message()`. Fails under `TUTORIAL_LINT_STRICT=1` |
-| **note**  | Advisory derived from a principle whose specific numeric threshold or lexical pattern is a professional guess rather than a direct research finding | Emitted via `console.info` only. **Never** promoted to an error, even under strict. In collect-all mode, notes appear in the summary but do not by themselves fail the build |
+| **error** | Machine-certain structural/contract break whose presence makes the MDX invalid or loses required authoring structure | Fails the MDX compile |
+| **warn**  | Machine-detectable, materially actionable authoring or technical problem with sufficiently low false-positive risk | Emitted via `console.warn` + `file.message()`. Fails under `TUTORIAL_LINT_STRICT=1` |
+| **note**  | Review prompt, lexical/numeric heuristic, or context-dependent quality signal whose automated trigger may over- or under-match | Emitted via `console.info` only. **Never** promoted to an error, even under strict. In collect-all mode, notes appear in the summary but do not by themselves fail the build |
 
 `TUTORIAL_LINT_COLLECT=1` aggregates every finding in a file
 into a single failure message, so a PR author can fix all
@@ -608,11 +659,11 @@ printed via `console.info` and the build still passes.
 | `tutorial/prerequisites-placement` | warn | `<Prerequisites>` appears after the first `<Section>` |
 | `tutorial/nextsteps-placement` | *note* | `<NextSteps>` appears before the last `<Section>` |
 
-The *note* tier exists because these rules are correct in
-principle but their specific numeric boundary or lexical
-trigger has no direct empirical backing — they are the
-authoring equivalent of professional code review hints, not
-hard gates.
+The *note* tier is for review signals whose automated trigger is heuristic,
+lexical, numeric, or otherwise context-dependent. Some are motivated by
+research and some by local quality conventions; neither provenance alone nor
+research strength makes them safe build gates. They are the authoring
+equivalent of professional code-review hints, not hard gates.
 
 ## Forbidden notation
 
@@ -729,8 +780,8 @@ as explicit review gates, not as automated safety nets.
 | "Is Signaling density appropriate for the target learner?" (Expertise reversal) | Requires modelling the reader's prior knowledge |
 | "Does this `alt` text preserve the information the image contributes to this Action or Verify?" (Accessibility) | Requires understanding whether the image contributes location, relationship, sequence, or result-state information |
 | "Does this Recovery follow symptom → cause → fix, and is the symptom what the learner actually sees?" (ミニマリズム P3) | Requires knowing the real failure mode, not just the technical cause |
-| "Is this Exercise at the right scaffolding phase (1/2/3) for this point in the tutorial?" (Scaffolding) | Requires tracking cumulative learner exposure to the pattern |
-| "Does this Concept's analogy accurately bridge to prior knowledge the target learner has?" (Activation) | Requires modelling the reader's adjacent-domain experience |
+| "Is the current amount of assistance appropriate for the learner's prior knowledge and recent performance?" (Scaffolding / expertise reversal) | Requires modelling learner knowledge and judging when support should be retained, faded, or restored |
+| "Does this prior-knowledge bridge accurately activate something the target learner is likely to know, and is a bridge useful here at all?" (Activation) | Requires modelling the reader's prior experience and judging whether recall, comparison, earlier-course reference, analogy, or no bridge is most appropriate |
 
 ### Generalisation limits of the underlying research
 
@@ -743,6 +794,12 @@ as explicit review gates, not as automated safety nets.
   learners mix expertise levels, read non-linearly, and bring prior
   frustration. The skill's rules are a baseline, not a replacement for
   observing real learners.
+- Immediate successful performance is not equivalent to durable mastery.
+  Classroom meta-analytic evidence supports later retrieval and distributed
+  practice for retention, with meaningful moderators such as feedback and
+  timing. This skill can require a local closure, but course-level scheduling
+  of later retrieval/spacing belongs to curriculum design rather than a single
+  tutorial page.
 - Language and cultural effects on Personalization / Voice have been studied
   mainly in English. Japanese-specific wording conventions are transferred
   cautiously and MUST be labelled as local quality conventions when direct

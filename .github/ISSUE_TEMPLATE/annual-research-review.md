@@ -8,13 +8,17 @@ assignees: []
 
 # Annual research review
 
-This skill's principles, scope boundaries, and severity thresholds are
-grounded in the Mayer / Sweller / Kalyuga line of research, including the
-current two-basic-category CLT formulation and multimedia boundary-condition
-evidence. New meta-analyses and primary studies appear every year, so the skill must be
-reviewed annually to stay current. Heuristic advisories that have
-since gained empirical support can be promoted; stale assumptions can
-be retired.
+This skill's **evidence-backed principles** and their scope boundaries draw
+from the Mayer / Sweller / Kalyuga line of research, including the current
+two-basic-category CLT formulation and multimedia boundary-condition evidence.
+Concrete rules may instead be local quality conventions, platform contracts,
+or context-dependent heuristics, and must be labelled accordingly.
+
+New meta-analyses and primary studies appear every year, so the research basis
+must be reviewed annually. Lint severity is reviewed separately: stronger
+research does not automatically promote a rule to `warn` or `error`; severity
+depends on artefact impact and confidence that the condition can be detected
+mechanically without unacceptable false positives.
 
 This issue is the canonical tracker for that review.
 
@@ -25,7 +29,10 @@ Review only work that materially affects this skill:
 - Multimedia learning principles (Mayer et al.) — especially boundary conditions and moderator evidence for Multimedia, Redundancy, Signaling, Personalization, Pre-training, and active-learning interventions.
 - Cognitive Load Theory (Sweller et al.) — current intrinsic / extraneous formulation, germane processing/resource-allocation interpretation, worked-example, and expertise-reversal effects.
 - Minimalism in instructional design (Carroll line).
-- Feedback / retrieval-practice literature (Shute, Karpicke) insofar as it affects aligned closure choices across Verify / QuickCheck / Checkpoint / Exercise and the separate role of Recovery.
+- Feedback / retrieval-practice literature insofar as it affects aligned closure choices, corrective feedback, and the distinction between immediate performance and durable learning.
+- Distributed / spaced practice literature insofar as it affects what belongs at page level versus curriculum level.
+- Expertise-reversal / adaptive-assistance evidence, including whether support should be retained, faded, or restored based on prior knowledge and performance.
+- Accessibility guidance relevant to tutorial representations, especially text alternatives for complex annotated visuals.
 - Culture- or language-specific findings for Japanese learners,
   especially around Personalization and tense/voice conventions.
 
@@ -38,9 +45,14 @@ Review only work that materially affects this skill:
       table and adjust `SKILL.md` Scope & limits accordingly.
 - [ ] Re-check Sweller, van Merriënboer & Paas (2019), "Cognitive Architecture and Instructional Design: 20 Years Later", for any superseding CLT formulation.
 - [ ] Re-check Cromley & Chen (2025), "A meta-analysis of Richard Mayer's multimedia learning research", for later corrections or successor syntheses.
+- [ ] Re-check Tetzlaff et al. (2025), "A cornerstone of adaptivity – A meta-analysis of the expertise reversal effect", for successor work on adaptive assistance.
+- [ ] Re-check classroom retrieval / distributed-practice syntheses for evidence that changes the boundary between immediate page closure and curriculum-level retention practice.
 - [ ] Scan the last 12 months on Google Scholar for:
   - [ ] `author:"Richard Mayer" multimedia learning`
   - [ ] `"cognitive load theory" meta-analysis`
+  - [ ] `"expertise reversal" meta-analysis OR adaptive assistance`
+  - [ ] `"retrieval practice" classroom meta-analysis`
+  - [ ] `"distributed practice" classroom meta-analysis`
   - [ ] `"signaling principle" OR "pre-training principle"`
   - [ ] `multimedia learning Japanese`
 - [ ] Record newly relevant DOIs / citations in this issue as
@@ -48,17 +60,21 @@ Review only work that materially affects this skill:
 
 ### 2. Skill artefact review
 
-- [ ] Decide whether any advisory rule (note tier in remarkTutorialLint)
-      now has direct empirical support, and should be promoted to
-      warn. Document the supporting citation in-line.
-- [ ] Decide whether any warning should be relaxed to note because
-      the effect size turned out smaller than assumed.
-- [ ] Review advisory numeric thresholds such as `ACTION_BOLD_MAX` and the Concept-length note. Keep them advisory unless new evidence supports a defensible hard boundary.
+- [ ] Reclassify each affected rule if necessary as evidence-backed principle,
+      quality convention, platform contract, or context-dependent heuristic.
+      Do not present a local convention as a scientific mandate.
+- [ ] Review lint severity independently from research provenance. Promote or
+      demote only when artefact impact and machine-detection confidence justify
+      the build effect; stronger evidence alone is not a severity upgrade.
+- [ ] Review advisory numeric thresholds such as `ACTION_BOLD_MAX` and the
+      Concept-length note. Keep them advisory unless both the authoring need
+      and machine-detection reliability justify a harder gate.
 - [ ] Update the principle table's *Scope & limits* column for any
       principle whose applicability changed.
 - [ ] Update *Limits of principled authoring* if the research
-      generalisation picture has changed (currently notes that
-      Mayer's results are mostly short-form video evidence).
+      generalisation picture has changed, including media/outcome moderators,
+      expertise effects, and immediate-performance versus durable-learning
+      boundaries.
 - [ ] Sync `REVIEW-CHECKLIST.md` if any rule moved between tiers.
 
 ### 3. Downstream propagation
