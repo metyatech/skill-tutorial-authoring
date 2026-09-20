@@ -1,22 +1,30 @@
 # skill-tutorial-authoring
 
-An [Agent Skills](https://agentskills.io/specification) skill for authoring step-by-step tutorials that minimize cognitive load and maximize first-attempt success rate. Optimised for **beginner-to-intermediate** learners following static text-and-image tutorials.
+An [Agent Skills](https://agentskills.io/specification) skill for authoring step-by-step tutorials that reduce avoidable instructional overhead, manage task complexity for the target learner, support successful task completion, and promote durable learning and transfer. Optimised for **beginner-to-intermediate** learners.
 
 ## What it does
 
 Research foundations used by the skill include:
 
-- **Mayer's Cognitive Theory of Multimedia Learning** (2009; 3rd ed. 2021): multimedia, spatial contiguity, temporal contiguity, coherence, modality, redundancy, segmenting, signaling, pre-training, personalization, split-attention
+- **Mayer's Cognitive Theory of Multimedia Learning** (2009; 3rd ed. 2020): multimedia, contiguity, coherence, modality, redundancy, segmenting, signaling, pre-training, personalization, embodiment, immersion, and generative activity
 - **Sweller, van Merriënboer & Paas' Cognitive Load Theory update** (2019): intrinsic and extraneous load as the basic categories, with germane processing treated as working-memory resource allocation toward learning-relevant intrinsic processing
-- **van der Meij & Carroll's Minimalism** (1995; Carroll, 1990): four principles — action orientation, task anchoring, error support, flexible use
+- **van der Meij & Carroll's Minimalism** (1995; Carroll, 1990): action orientation, task anchoring, error support, and flexible use
 - **Cromley & Chen's multimedia-learning meta-analysis** (2025): boundary conditions across principle, medium, learning outcome, age, and domain
 - **Expertise reversal / adaptive assistance** (Kalyuga, 2007; Tetzlaff et al., 2025)
-- **Shute's Feedback principle** (2008)
-- **Classroom retrieval and distributed-practice evidence** (Yang et al., 2021; Mawson & Kang, 2025): immediate performance is not durable mastery
-- **Mayer's Generative Activity** (2014) and **Sweller's Worked Example Effect** (1985)
-- **Merrill's Activation principle** (2002)
-- **Scaffolding / backward fading** (Van de Pol et al., 2010; Renkl et al., 2002)
-- **WCAG 2.2 / Section 508 E205** accessibility requirements for educational materials
+- **Feedback, retrieval, and distributed-practice evidence**: immediate performance is not durable mastery
+- **Generative learning, worked examples, activation, and scaffolding**
+- **WCAG 2.2** accessibility requirements relevant to tutorial content
+
+## Progressive disclosure
+
+The executable core is kept in `SKILL.md`. Detailed material is loaded only when needed:
+
+- `references/research-foundations.md` — evidence, boundary conditions, citations
+- `references/course-docs-platform.md` — metyatech Course Docs MDX contracts and lint
+- `references/accessibility.md` — visual/text-alternative and accessibility details
+- `REVIEW-CHECKLIST.md` — full reviewer-facing audit
+
+This follows the Agent Skills specification's progressive-disclosure model rather than loading every research and platform detail into the activation-time skill body.
 
 ## Installation
 
@@ -24,30 +32,29 @@ Research foundations used by the skill include:
 npx skills add metyatech/skill-tutorial-authoring --yes --global
 ```
 
+The installer places the skill under the `tutorial-authoring` skill name used by the `SKILL.md` frontmatter.
+
 ## Usage
 
 The skill activates automatically when working on:
 
-- Writing new step-by-step guides or tutorials
-- Reorganizing or revising existing tutorials
-- Auditing tutorial quality against multimedia learning theory
-- Any procedural guide where a learner follows steps to build or achieve something
+- writing new step-by-step guides or tutorials;
+- reorganizing or revising existing tutorials;
+- auditing tutorial quality against evidence-informed instructional design;
+- procedural guides where a learner follows steps to build, configure, understand, or practice something.
 
-## Key guidance provided
+## Key guidance
 
-- Research foundations table plus explicit provenance for evidence-backed principles, local quality conventions, platform contracts, and context-dependent heuristics
-- Current CLT load model and boundary-condition-aware conflict resolution rules
-- Task component composition with local mixing of explanation, Action, Verify, QuickCheck, Exercise, Reference, and related components; no fixed page-wide flow
-- Task component display rules, including QuickCheck and Exercise as problem content → Hint+ → Answer
-- Primary Representation rules: choose visual, code/CodePreview, text, or diagram by task; keep secondary representations complementary rather than duplicative
-- Accessibility authoring obligations (alt text, colour independence, contrast, semantic headings)
-- Aligned closure guidance (Verify / QuickCheck / Checkpoint / Exercise), durable-learning limits, and prior-knowledge/performance-adaptive scaffolding
-- Forbidden notation guidance for page classifications and separate Solution blocks
-- Anti-patterns table keyed to violated principles
-- Mechanised lint severity based on artefact impact and machine-detection confidence (error / warn / note), not research strength alone
-- MDX component system in [`course-docs-site/packages/platform`](https://github.com/metyatech/course-docs-site/tree/main/packages/platform), published internally as `@metyatech/course-docs-platform`
-- Plain Markdown equivalents for non-component environments
-- Self-review checklist (`REVIEW-CHECKLIST.md`)
+- Explicit separation of evidence-backed principles, local quality conventions, platform contracts, and context-dependent heuristics
+- Current CLT framing and boundary-condition-aware conflict resolution
+- Primary Representation: choose visual, code/CodePreview, text, diagram, or motion media by task rather than forcing screenshots
+- Meaningful segmenting and split-attention control rather than “one screen = one segment” rules
+- Prior-knowledge/performance-adaptive scaffolding and worked examples
+- Retrieval/generative activity separated conceptually from feedback and aligned closure
+- Immediate performance distinguished from durable mastery
+- Accessibility equivalents treated as necessary access paths, not gratuitous redundancy
+- Course Docs-specific task/component contracts kept in an on-demand reference rather than generalized as learning science
+- Reviewer checklist and annual research-maintenance process
 
 ## License
 

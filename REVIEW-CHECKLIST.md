@@ -1,221 +1,149 @@
 # Tutorial self-review checklist
 
-Use this list when auditing a draft tutorial against every
-principle encoded in `SKILL.md`. Items marked *(auto)* are
-already enforced by `remarkTutorialLint` at build time; items
-marked *(judgement)* require human review.
+Use this list when auditing a draft tutorial against `SKILL.md`. The checklist
+separates generic tutorial-quality judgements from Course Docs-only platform
+contracts.
 
-Work top-down: structural/platform items first, then evidence-backed
-principles, quality conventions, and context-dependent heuristics in the
-order used by `SKILL.md`.
+## Scope and learner
 
-## Structure *(auto where marked)*
+- [ ] The target learner and relevant prior knowledge are stated or reliably implied.
+- [ ] The page is organised around learner goals rather than software features/menu structure.
+- [ ] Assistance, signaling, Concept density, and narrative depth match the target learner.
+- [ ] Expert or already-trained readers are not forced through redundant novice guidance.
 
-- [ ] Every top-level `<Section>` declares a `goal` *(auto)*
-- [ ] Nested `<Section>` goals are present only when they improve orientation *(judgement)*
-- [ ] Goal is written in future-declarative form *(auto advisory)*
-- [ ] Components are used where the local task needs them; the page does not depend on a page-wide tutorial/non-tutorial classification *(judgement)*
-- [ ] Explanation, Action, Verify, QuickCheck, Exercise, Reference, and other task components may be mixed locally without forcing a fixed page-wide flow *(judgement)*
-- [ ] No `---` horizontal rules inside a Section *(auto)*
-- [ ] Multiple images inside one `<Action>` have been reviewed as a possible split/composite opportunity *(auto note)*
-- [ ] `<Verify>` body does not start with a literal `→` *(auto)*
-- [ ] No `<Reference>` whose only content is an image *(auto note)*
-- [ ] No `authoringMode` frontmatter or separate Solution block appears; QuickCheck and Exercise use problem content → Hint+ → Answer *(judgement)*
+## Primary representation / multimedia
 
-## Prerequisites *(judgement)*
+- [ ] Each learner action deliberately chooses the most efficient primary representation: visual, code/CodePreview, text, diagram, or motion media.
+- [ ] Images are used when spatial position, appearance, or visual relationships matter; they are not added merely because a step is operational.
+- [ ] Code changes use real code/CodePreview rather than screenshots when that is clearer and more accessible.
+- [ ] Secondary prose adds complementary information or mapping cues rather than restating the complete procedure.
+- [ ] Exact values, user-specific paths, and distinctions such as hover vs click remain available in text or another accessible equivalent.
+- [ ] Short identity cues may appear in both representations when they reduce mapping/search cost.
+- [ ] Accessibility-equivalent content is retained even when it repeats essential visual information; it is not removed as “redundancy”.
 
-- [ ] A Prerequisites section exists at the page top (or is
-      intentionally omitted because none are needed)
-- [ ] Each prerequisite is concrete and verifiable (software
-      version, completed prior tutorial, specific prior
-      knowledge)
-- [ ] No vague prerequisites ("基本的な知識があること")
+## Action unit and segmenting
 
-## Target learner *(judgement)*
+- [ ] Each Action is one coherent learner action episode or short locally unified sequence toward an immediate sub-goal.
+- [ ] Actions are not split mechanically per click, field, or callout number.
+- [ ] A multi-step UI navigation sequence remains one Action when it is cognitively one coherent episode.
+- [ ] An Action is split when a meaningful state/sub-goal boundary, recovery point, or verification boundary makes the split useful.
+- [ ] Segments are learner-manageable semantic chunks; “one screen = one segment” is not applied as a universal law.
+- [ ] Screen/state transitions are treated as useful boundary candidates, not mandatory boundaries.
 
-- [ ] The intended learner expertise level is stated or
-      reliably implied by context
-- [ ] Signaling, Concept density, and narrative depth match
-      that level (no over-scaffolding for experts, no
-      under-scaffolding for novices)
+## Contiguity / split attention
 
-## Primary representation / Multimedia *(judgement)*
+- [ ] Mutually dependent visual/text or code/explanation sources are close enough to integrate without unnecessary search.
+- [ ] The learner is not forced to scroll repeatedly between a screenshot and a required settings/value list.
+- [ ] Split attention is judged by the need for mental integration, not physical distance alone.
+- [ ] Video-only: corresponding narration and visual changes are synchronised.
 
-- [ ] Each Action deliberately chooses the most efficient primary representation: visual, code/CodePreview, text, diagram, or motion media
-- [ ] Images are used when spatial position, appearance, or visual relation matters; they are not added merely because the step is operational
-- [ ] Code changes use code/CodePreview as primary when that is clearer than a screenshot
-- [ ] Secondary prose contains only complementary information or mapping cues, not a second copy of the complete procedure
-- [ ] Typed values, user-specific paths, and distinctions such as hover vs click remain available in text or another accessible equivalent
-- [ ] Short identity cues may appear in both representations when they help bind them together
+## Coherence and redundancy
 
-## Spatial / Temporal contiguity *(judgement)*
+- [ ] Every retained element has a task, warning, reference, accessibility, explanation, or feedback role.
+- [ ] Irrelevant decorative images, sidebars, audio, animation, emoji, and digressions are removed.
+- [ ] The same complete instructional path is not presented twice as competing primary routes without benefit.
+- [ ] Mapping cues, labels, numbers, exact values, and accessibility equivalents are not removed mechanically as duplicate content.
+- [ ] A settings table does not duplicate a primary visual/code example row-for-row unless it has a distinct lookup/accessibility purpose.
 
-- [ ] Corresponding visual/text or code/explanation pairs are directly adjacent rather than separated by unrelated content
-- [ ] (Video only) Narration and image changes are synchronised
+## Concepts and pre-training
 
-## Split-attention *(judgement)*
+- [ ] Each Concept focuses on one new idea and only information needed for imminent use.
+- [ ] The Concept is near the first meaningful use in an Action, Section, Verify, QuickCheck, Exercise, or equivalent task surface.
+- [ ] No Concept introduces terminology that appears much later without current need.
+- [ ] Each Concept answers “what is it?” and “why does it matter now?”.
+- [ ] Roughly 2–5 sentences or one short table is preferred; 6+ sentences triggers review rather than automatic failure.
 
-- [ ] No screenshot is explained by a table or text block
-      placed far away on the page (requiring scroll to compare)
-- [ ] Numbered callout explanations appear immediately adjacent
-      to the screenshot, not in a separate section
+## Activation
 
-## Coherence *(judgement)*
+- [ ] When a useful prior-knowledge anchor exists, the lesson activates it through recall, comparison, an earlier task/lesson, or a sound analogy.
+- [ ] No analogy/metaphor is invented merely to satisfy an Activation checklist item.
+- [ ] Activation recalls established knowledge; it is not used as a substitute for teaching an unfamiliar term.
 
-- [ ] No irrelevant decorative images, sidebars, audio, emoji spam, or余談
-- [ ] Sidebars / callouts that remain have a clear task, warning, reference, or feedback role
-- [ ] Every retained element traces to a learning objective
+## Scaffolding / progressive independence
 
-## Modality *(judgement; video-only)*
+- [ ] Learners with low or unestablished relevant prior knowledge receive enough worked/guided support before substantial independent construction.
+- [ ] Learners with established prior knowledge may start at guided or independent application when appropriate.
+- [ ] Guidance is faded, retained, or restored according to prior knowledge/performance rather than a fixed repetition count.
+- [ ] Guided variation makes the learner's decision points clear without unnecessarily re-teaching everything.
+- [ ] The page is not forced to contain worked, guided, and independent phases when its scope does not require all three.
 
-- [ ] (Video only) Narration does not duplicate on-screen text
-- [ ] Static pages: mark this row N/A
+## Practice, retrieval, feedback, and aligned closure
 
-## Redundancy *(judgement)*
+- [ ] Every substantive learning goal has evidence capable of testing that goal.
+- [ ] Observable behavior/state goals use a Verify-like check when appropriate.
+- [ ] Retrieval/understanding goals use a QuickCheck-like retrieval task when appropriate.
+- [ ] Multi-condition milestones use a checklist only when several conditions genuinely define the milestone.
+- [ ] Transfer/application goals use an applied task after sufficient support.
+- [ ] Passive result verification is not mislabeled as generative learning.
+- [ ] Generative activities require learners to retrieve, explain, predict, organise, integrate, or apply information.
+- [ ] Immediate success is described as current performance, not proof of durable mastery.
+- [ ] Important knowledge is revisited later through retrieval/distributed practice when curriculum scope owns that scheduling.
+- [ ] Error recovery is not counted as learning-goal closure.
+- [ ] No closure surface is added mechanically just because a Section exists.
 
-- [ ] The same complete instruction or explanation is not repeated across two representations
-- [ ] Identity cues, labels, or numbers are retained when they reduce mapping/search cost instead of being removed mechanically
-- [ ] No settings table duplicates a primary visual or CodePreview row-for-row without adding a distinct lookup purpose
+## Error prevention and recovery
 
-## Segmenting *(judgement)*
+- [ ] Common/high-impact failure points receive useful prevention and/or diagnosis support.
+- [ ] Preventive warnings appear before the risky action when appropriate.
+- [ ] Reactive recovery appears after the plausible failure point.
+- [ ] Recovery follows symptom → likely cause → concrete fix.
+- [ ] No recovery advice merely says “try again” or “redo it” without diagnosis.
 
-- [ ] Each Section closes one semantically coherent sub-goal
-- [ ] Within a single screen or dialog, operations are grouped
-      into one Action (not mechanically split per field)
-- [ ] Section boundaries align with screen/state transitions
+## Signaling
 
-## Minimalism P1: Action orientation *(judgement)*
+- [ ] Bold/callouts/highlights are tied to task-relevant identities, exact values, sequence, or gestures.
+- [ ] Competing emphasis is limited so the important signal remains visually distinctive.
+- [ ] Any numeric bold-density lint threshold is treated as an advisory heuristic, not a scientific boundary.
+- [ ] Decorative/emotional emphasis is removed.
 
-- [ ] The first Action appears early; no long front-loaded
-      prose
-- [ ] No reference tables or long Concepts appear before the
-      first Action of the top-level Section
+## Learner-facing prose
 
-## Minimalism P2: Task anchoring *(judgement)*
+- [ ] Prose is natural, direct, and active; Japanese zero-subject sentences are acceptable.
+- [ ] The body does not contain author-facing audience meta prose such as 「受講者は〜」「学習者は〜」「初学者向け」 when it does not help the task.
+- [ ] Ordinary domain uses of 「ユーザー」 remain allowed when they refer to a real app/product end user.
+- [ ] The page does not open with authoring rationale or document-description prose when task context would be more useful.
 
-- [ ] Top-level and nested Sections are organised around the
-      learner's task goals, not around software features or
-      menu structure
-- [ ] Each nested Section's `goal` (when present) explains the
-      task-domain reason for that sub-step, not just the
-      technical operation
+## Accessibility
 
-## Minimalism P3: Error support *(judgement)*
+- [ ] Every informative non-text visual has a text alternative that serves the same purpose or conveys the essential information.
+- [ ] Complex annotated screenshots/diagrams/charts use a concise short alternative plus a detailed equivalent rather than one oversized alt string.
+- [ ] Accessibility-equivalent instructions are retained even when the essential information also appears visually.
+- [ ] Callouts/highlights do not rely on colour alone.
+- [ ] Normal text/images of text meet 4.5:1 contrast; large text may use 3:1.
+- [ ] Meaningful non-text UI/graphical indicators meet the applicable 3:1 non-text contrast requirement.
+- [ ] Real text is preferred to images of text when equivalent presentation is practical.
+- [ ] Interactive examples are keyboard operable in a logical order.
+- [ ] Section 508 is invoked only when the content is actually in U.S. federal ICT scope; WCAG 2.2 AA is the default target.
 
-- [ ] Recovery is present at common or high-impact novice failure
-      points where diagnosis/recovery materially helps
-- [ ] Recovery follows "symptom → cause → fix" structure
-- [ ] Preventive notes appear before high-failure-probability
-      actions where appropriate
-- [ ] No Recovery says "やり直してください" without diagnosis
+## Flexible use / re-entry
 
-## Minimalism P4: Flexible use *(judgement)*
+- [ ] Major section goals/headings are self-explanatory enough for a reader arriving mid-tutorial to orient themselves.
+- [ ] Optional background/reference detail can be skipped or collapsed when the platform supports it.
+- [ ] Sequential dependencies are explicit rather than forcing the reader to infer what prior steps were required.
 
-- [ ] Each top-level Section's goal is self-explanatory enough
-      for a reader arriving mid-tutorial to decide if they
-      need this Section
-- [ ] Concepts and References are collapsible so experienced
-      readers can skip them
-- [ ] The tutorial does not require reading every prior
-      top-level Section to understand the current one (within
-      reasonable limits of sequential tutorials)
+## Next actions
 
-## Signaling *(judgement)*
+- [ ] If next-step guidance is useful, it appears at the document end and links to concrete follow-up actions.
+- [ ] A tutorial is not given a meaningless NextSteps block merely to satisfy structure.
+- [ ] No vague “see official docs” pointer appears without a useful destination.
 
-- [ ] Bold emphasis is used only on learning-objective elements
-      (UI identities when useful for mapping, typed values, key gestures)
-- [ ] No sentence contains three or more bold spans
-- [ ] Numbered callouts, labels, or short identity cues are repeated in text only when they materially improve mapping between representations
-- [ ] No decorative bold/highlight for emotional emphasis
+## Course Docs platform contracts *(only when applicable)*
 
-## Pre-training *(judgement)*
+Load `references/course-docs-platform.md` and check these items when the target
+site uses `@metyatech/course-docs-platform`.
 
-- [ ] Each Concept sits immediately before first use of the term or idea
-- [ ] No Concept introduces a term that appears much later on the page
-- [ ] Each Concept focuses on one new concept and only the information needed now
-- [ ] Roughly 2–5 sentences is preferred; 6+ sentences triggers review for multiple concepts or Reference material rather than automatic failure
-- [ ] Each Concept answers both "what is it?" and "why need to know now?"
+- [ ] Every top-level `<Section>` has a non-empty future-declarative `goal`; nested goals are optional.
+- [ ] No `---` horizontal rule appears inside a Section.
+- [ ] `<Verify>` source does not include the leading `→` rendered by the component.
+- [ ] Course Docs QuickCheck/Exercise tasks use problem content → one or more `<Hint>` blocks → exactly one final `<Answer>`.
+- [ ] No `authoringMode` or legacy Solution block is present.
+- [ ] `<Prerequisites>` appears before the first Section when prerequisites exist.
+- [ ] `<NextSteps>` is optional; when used, it is at the document end.
+- [ ] Multiple images, Concept length, bold density, learner-meta prose, and similar note-tier findings are reviewed as heuristics rather than treated as automatic pedagogical failures.
 
-## Activation *(judgement)*
+## Evidence and boundary conditions
 
-- [ ] When a useful prior-knowledge anchor exists, the lesson activates it through recall, comparison, an earlier lesson/task, or a sound analogy
-- [ ] No analogy or metaphor is invented merely to satisfy an Activation checklist item
-- [ ] Activation is distinct from Pre-training: it recalls
-      existing knowledge, not introduces new terms
-
-## Personalization / learner-facing prose *(judgement)*
-
-- [ ] Prose is natural, direct, and active; Japanese zero-subject sentences are acceptable
-- [ ] The lesson body does not contain author-facing audience meta prose such as "受講者が〜", "学習者は〜", or "初学者向け"
-- [ ] Ordinary domain uses of 「ユーザー」 remain allowed when they refer to an actual app/product end user rather than the tutorial reader
-- [ ] No page opens by describing what the document is or who it is for when that information does not help perform the task
-- [ ] Friendliness stays restrained (no emoji spam, 余談, or emotional decoration)
-
-## Accessibility *(judgement)*
-
-- [ ] Every informative Action/Verify image has an `alt` prop that concisely identifies the image's purpose or essential information
-- [ ] Complex annotated screenshots / diagrams do not cram the full procedure into `alt`; detailed equivalent information is available in adjacent learner-visible text or another long-description mechanism
-- [ ] Callouts and highlights use shape/labels in addition to colour where colour alone would carry meaning
-- [ ] Image-only meaning is recovered in nearby text or another text equivalent
-- [ ] Normal text / images of text in screenshot annotations meet 4.5:1 contrast; large text meets 3:1
-- [ ] Meaningful non-text callout shapes / UI-state indicators meet the applicable 3:1 non-text contrast requirement
-- [ ] Real text is preferred to images of text when the same presentation can be achieved with text
-- [ ] Heading hierarchy remains semantic (`h2` → `h3`)
-
-## Generative activity / aligned closure *(judgement)*
-
-- [ ] Every substantive learning goal has a closure that can actually test that goal
-- [ ] Observable behavior/state goals use Verify where appropriate
-- [ ] Retrieval/understanding goals use QuickCheck where appropriate
-- [ ] Multi-condition milestones use Checkpoint only when a checklist is useful
-- [ ] Transfer/application goals use Exercise after sufficient worked/guided support
-- [ ] Immediate closure is described as evidence of current performance, not proof of durable mastery
-- [ ] Where the curriculum owns later practice, important knowledge is revisited through later retrieval / distributed practice rather than assumed mastered after one immediate success
-- [ ] Recovery is treated as error support, not as goal closure
-- [ ] QuickCheck and Exercise use problem content first, then one or more Hints, then an Answer
-- [ ] No closure component is added mechanically just because a Section exists
-
-## Scaffolding / Progressive independence *(judgement)*
-
-- [ ] Low- or unestablished-prior-knowledge learners receive a complete worked example before substantial independent construction
-- [ ] Starting at guided or independent practice is allowed when relevant prior knowledge has already been established
-- [ ] Guidance is faded, retained, or restored according to learner knowledge/performance rather than a fixed second-/third-occurrence rule
-- [ ] Phase 2 exercises make variation points clear without re-teaching everything
-- [ ] The tutorial is not forced to contain all three phases when the target learner or page scope does not require them
-
-## Feedback *(judgement)*
-
-- [ ] Verify tells the learner what observable success looks like, not what the engine internally did
-- [ ] Recovery follows a plausible failure point and names symptom → cause → fix
-- [ ] The selected closure matches the evidence needed by the Section goal instead of forcing Verify + Checkpoint everywhere
-
-## Worked example *(judgement)*
-
-- [ ] Learners without established relevant prior knowledge see a complete worked example before substantial independent variation
-- [ ] Learners with established prior knowledge are not forced through redundant worked examples
-- [ ] Guided exercises vary the worked example at specific points before fully independent production when that support is still useful
-
-## Expertise reversal *(judgement)*
-
-- [ ] Signaling density, Concept presence, and narrative depth
-      are scaled appropriately for the declared target learner
-- [ ] Expert-facing sections (if any) use compact Reference
-      tables instead of full Action sequences
-
-## Next steps *(judgement)*
-
-- [ ] The final top-level Section (or page end) includes
-      concrete next actions with links
-- [ ] No vague pointers ("公式ドキュメントを参照" without URL)
-
-## Principles not applicable to static tutorials (video / audio / VR)
-
-- [ ] If the artefact is narrated video, Voice / Image /
-      Embodiment principles have been applied from primary
-      sources (this skill does NOT cover them)
-- [ ] If the artefact is VR/immersive, Immersion principle is
-      addressed separately
-
-## Limits acknowledgement
-
-- [ ] The author has reviewed the research-limit / boundary-condition section in `SKILL.md` and understands that this checklist catches known failure modes, not universal pedagogical correctness
+- [ ] The author has loaded `references/research-foundations.md` when a disputed or high-impact pedagogical rule needs evidence review.
+- [ ] Research principles are not presented as universal formatting laws when medium, expertise, outcome, or population changes the boundary conditions.
+- [ ] Course Docs contracts and local quality conventions are not misrepresented as direct scientific findings.
+- [ ] Real learner evidence takes priority over an assumed heuristic when the heuristic demonstrably harms task performance or learning.
