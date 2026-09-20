@@ -1,13 +1,14 @@
 # skill-tutorial-authoring
 
-An [Agent Skills](https://agentskills.io/specification) skill for authoring step-by-step tutorials that reduce avoidable instructional overhead, manage task complexity for the target learner, support successful task completion, and promote durable learning and transfer. Optimised for **beginner-to-intermediate** learners.
+An [Agent Skills](https://agentskills.io/specification) skill for authoring step-by-step tutorials that reduce avoidable instructional overhead, manage task complexity for the target learner, and deliberately distinguish **immediate task performance**, **retention**, and **transfer**. Optimised for **beginner-to-intermediate** learners.
 
 ## What it does
 
 Research foundations used by the skill include:
 
-- **Mayer's Cognitive Theory of Multimedia Learning** (2009; 3rd ed. 2020): multimedia, contiguity, coherence, modality, redundancy, segmenting, signaling, pre-training, personalization, embodiment, immersion, and generative activity
-- **Sweller, van Merriënboer & Paas' Cognitive Load Theory update** (2019): intrinsic and extraneous load as the basic categories, with germane processing treated as working-memory resource allocation toward learning-relevant intrinsic processing
+- **Mayer's Cognitive Theory of Multimedia Learning** (3rd ed.; Cambridge metadata spans 2020/2021): multimedia, coherence, signaling, redundancy, spatial contiguity, temporal contiguity, segmenting, pre-training, modality, personalization, voice, image, embodiment, immersion, and generative activity
+- **Cognitive Load Theory**: Sweller, van Merriënboer & Paas (2019) as the dual-source operational baseline, plus Kalyuga & Plass' 2025 goal-driven revision proposal integrating instructional goals, prior knowledge, motivation, and affect
+- **Procedural instruction goals** (Eiriksdottir & Catrambone, 2011): distinguish initial performance, retention/learning, and transfer before choosing instruction structure
 - **van der Meij & Carroll's Minimalism** (1995; Carroll, 1990): action orientation, task anchoring, error support, and flexible use
 - **Cromley & Chen's multimedia-learning meta-analysis** (2025): boundary conditions across principle, medium, learning outcome, age, and domain
 - **Expertise reversal / adaptive assistance** (Kalyuga, 2007; Tetzlaff et al., 2025)
@@ -46,8 +47,9 @@ The skill activates automatically when working on:
 ## Key guidance
 
 - Explicit separation of evidence-backed principles, local quality conventions, platform contracts, and context-dependent heuristics
-- Current CLT framing and boundary-condition-aware conflict resolution
-- Primary Representation: choose visual, code/CodePreview, text, diagram, or motion media by task rather than forcing screenshots
+- 2019 CLT operational baseline plus the 2025 goal-driven revision proposal, with boundary-condition-aware conflict resolution
+- Explicit instructional horizon: immediate performance, retention, transfer, or a deliberate combination
+- Primary Representation: choose visual, code/CodePreview, text, diagram, or motion media by task and instructional horizon rather than forcing screenshots
 - Meaningful segmenting and split-attention control rather than “one screen = one segment” rules
 - Prior-knowledge/performance-adaptive scaffolding and worked examples
 - Retrieval/generative activity separated conceptually from feedback and aligned closure

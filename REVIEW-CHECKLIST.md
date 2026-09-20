@@ -7,19 +7,22 @@ contracts.
 ## Scope and learner
 
 - [ ] The target learner and relevant prior knowledge are stated or reliably implied.
+- [ ] The intended instructional horizon is identified: immediate performance, retention, transfer, or a deliberate combination.
+- [ ] First-attempt speed is not treated as the sole quality metric when retention or transfer is an explicit goal.
 - [ ] The page is organised around learner goals rather than software features/menu structure.
 - [ ] Assistance, signaling, Concept density, and narrative depth match the target learner.
 - [ ] Expert or already-trained readers are not forced through redundant novice guidance.
 
 ## Primary representation / multimedia
 
-- [ ] Each learner action deliberately chooses the most efficient primary representation: visual, code/CodePreview, text, diagram, or motion media.
+- [ ] Each learner action deliberately chooses the most efficient primary representation for both the task and intended instructional horizon: visual, code/CodePreview, text, diagram, or motion media.
 - [ ] Images are used when spatial position, appearance, or visual relationships matter; they are not added merely because a step is operational.
 - [ ] Code changes use real code/CodePreview rather than screenshots when that is clearer and more accessible.
 - [ ] Secondary prose adds complementary information or mapping cues rather than restating the complete procedure.
 - [ ] Exact values, user-specific paths, and distinctions such as hover vs click remain available in text or another accessible equivalent.
 - [ ] Short identity cues may appear in both representations when they reduce mapping/search cost.
 - [ ] Accessibility-equivalent content is retained even when it repeats essential visual information; it is not removed as “redundancy”.
+- [ ] A visual-primary Action is executable as a whole without requiring visible prose to restate the complete visual path; a complete accessible equivalent exists separately when needed.
 
 ## Action unit and segmenting
 
@@ -69,7 +72,7 @@ contracts.
 
 ## Practice, retrieval, feedback, and aligned closure
 
-- [ ] Every substantive learning goal has evidence capable of testing that goal.
+- [ ] Every substantive learning goal has evidence capable of testing that goal and its intended instructional horizon.
 - [ ] Observable behavior/state goals use a Verify-like check when appropriate.
 - [ ] Retrieval/understanding goals use a QuickCheck-like retrieval task when appropriate.
 - [ ] Multi-condition milestones use a checklist only when several conditions genuinely define the milestone.
@@ -136,6 +139,7 @@ site uses `@metyatech/course-docs-platform`.
 - [ ] No `---` horizontal rule appears inside a Section.
 - [ ] `<Verify>` source does not include the leading `→` rendered by the component.
 - [ ] Course Docs QuickCheck/Exercise tasks use problem content → one or more `<Hint>` blocks → exactly one final `<Answer>`.
+- [ ] Each `<Answer>` gives instructive feedback beyond a bare final token/value; it explains correctness and addresses a plausible misconception when one exists without inventing one.
 - [ ] No `authoringMode` or legacy Solution block is present.
 - [ ] `<Prerequisites>` appears before the first Section when prerequisites exist.
 - [ ] `<NextSteps>` is optional; when used, it is at the document end.

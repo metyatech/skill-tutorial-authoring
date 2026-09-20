@@ -26,7 +26,8 @@ mechanically without unacceptable false positives.
 Review only work that materially affects this skill:
 
 - multimedia-learning principles and boundary conditions;
-- Cognitive Load Theory, worked examples, and expertise reversal;
+- Cognitive Load Theory, including goal-driven revisions, worked examples, motivation/affect, and expertise reversal;
+- procedural-instruction trade-offs among immediate performance, retention, and transfer;
 - Minimalism / task-oriented instructional design;
 - feedback, retrieval practice, generative learning, and durable learning;
 - distributed/spaced practice where it affects page-vs-curriculum scope;
@@ -36,9 +37,10 @@ Review only work that materially affects this skill:
 
 ## 1. New or updated sources
 
-- [ ] Check for a new edition of Mayer's *Multimedia Learning* (3rd ed. was published in **2020**). If a later edition exists, compare its principle set and boundary conditions.
-- [ ] Keep Mayer's *Multimedia Learning* (3rd ed., 2020) distinct from Mayer & Fiorella's *Cambridge Handbook of Multimedia Learning* (3rd ed., 2021).
-- [ ] Re-check Sweller, van Merriënboer & Paas (2019) for any superseding CLT formulation.
+- [ ] Check for a new edition of Mayer's *Multimedia Learning*. For the 3rd edition, preserve the Cambridge 2020/2021 bibliographic ambiguity rather than forcing one year unless the citation style has a defined source of record.
+- [ ] Keep Mayer's *Multimedia Learning* distinct from Mayer & Fiorella's *Cambridge Handbook of Multimedia Learning* (3rd ed., 2021).
+- [ ] Re-check Sweller, van Merriënboer & Paas (2019) and Kalyuga & Plass (2025) for later CLT formulations or evidence affecting the goal-driven account.
+- [ ] Re-check procedural-instruction evidence on initial performance versus retention/transfer, including whether representation or fading guidance should change.
 - [ ] Re-check Cromley & Chen (2025) for corrections or successor multimedia-learning syntheses.
 - [ ] Re-check Tetzlaff et al. (2025) for successor expertise-reversal/adaptive-assistance evidence.
 - [ ] Re-check classroom retrieval/distributed-practice syntheses for evidence that changes the boundary between immediate page closure and curriculum-level retention practice.
@@ -67,7 +69,9 @@ the skill activates, while `references/` files are loaded only as needed.
 - [ ] Check for accidental conversion of a software-tutorial heuristic into the literal statement of a research principle (for example, “one screen = one segment”).
 - [ ] Check that expertise reversal is applied to forms of assistance rather than claimed as a universal reversal of every multimedia principle.
 - [ ] Check that retrieval, generative activity, feedback, and aligned closure remain conceptually distinct.
+- [ ] Check that the skill distinguishes immediate performance, retention, and transfer before selecting representation, support, or closure.
 - [ ] Check that immediate performance is not described as durable mastery.
+- [ ] Check that visual-primary Actions are judged as a complete action unit rather than requiring visible prose to duplicate the full visual procedure.
 - [ ] Check that accessibility-equivalent content is not removed as gratuitous redundancy.
 - [ ] Check that Section 508 language is limited to applicable U.S. federal ICT scope rather than presented as universal law.
 - [ ] Update `REVIEW-CHECKLIST.md` when the executable core or reviewer-facing semantics change.
@@ -75,6 +79,7 @@ the skill activates, while `references/` files are loaded only as needed.
 
 ## 4. Course Docs downstream propagation
 
+- [ ] Compare `references/course-docs-platform.md` against the live `metyatech/course-docs-site/packages/platform` source/tests so copied lint IDs and severities do not drift.
 - [ ] If a Course Docs platform contract, lint rule ID, severity, threshold, or parser structure changes, update `metyatech/course-docs-site/packages/platform` and its tests.
 - [ ] If Course Docs authoring behavior changes, update `metyatech/agent-rules/rules/domains/course-docs/authoring.md`.
 - [ ] Regenerate consuming repositories with `compose-agentsmd --refresh`; do not hand-edit generated `AGENTS.md`.

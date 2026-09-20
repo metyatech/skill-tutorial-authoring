@@ -59,38 +59,62 @@ judgement.
 
 When creating or reviewing a tutorial, follow this order.
 
-1. Identify the **target learner**, relevant prior knowledge, and concrete task
-   outcome.
-2. Organise the material around **learner goals**, not software menus or feature
+1. Identify the **target learner**, relevant prior knowledge, and intended
+   instructional horizon: **immediate performance**, **retention**, **transfer**,
+   or a deliberate combination.
+2. Define the concrete learner goal and evidence that would show success.
+3. Organise the material around **learner goals**, not software menus or feature
    lists.
-3. For each learner action, choose the **primary representation** that makes the
-   operation easiest to understand and execute.
-4. Introduce concepts **just before first meaningful use**, not in a long
+4. For each learner action, choose the **primary representation** that best fits
+   both the task and the intended instructional horizon.
+5. Introduce concepts **just before first meaningful use**, not in a long
    front-loaded theory section.
-5. Add only the guidance, signaling, examples, and recovery support that the
-   current learner needs.
-6. Close substantive learning goals with a **matching form of evidence**.
-7. Check accessibility, coherence, and representation redundancy.
-8. Perform a literal **cold read** from top to bottom: every term, value, or
+6. Add only the guidance, signaling, examples, and recovery support that the
+   current learner and goal need.
+7. Close substantive learning goals with a **matching form of evidence**.
+8. Check accessibility, coherence, and representation redundancy.
+9. Perform a literal **cold read** from top to bottom: every term, value, or
    metaphor must be understandable when first encountered.
 
-## Current cognitive-load model
+## Instructional horizon
 
-Use the current CLT framing rather than the older three-additive-load shorthand.
+Do not optimise every tutorial for the same outcome.
 
-- **Intrinsic load** depends on element interactivity and learner expertise.
-  Manage it through sequencing, pre-training when needed, worked examples, and
-  appropriate segmentation.
-- **Extraneous load** comes from avoidable presentation or instructional
-  overhead. Reduce unnecessary search, split attention, irrelevant detail,
-  confusing navigation, and role-less duplication.
+- **Immediate performance / job aid:** prioritise fast, accurate execution while
+  the instructions are available. Detailed task-matching directions or a
+  visual-primary path can be appropriate.
+- **Retention:** include opportunities to retrieve, explain, or reproduce the
+  procedure with less support rather than measuring only first-attempt speed.
+- **Transfer:** include principles, variation, or application under changed
+  conditions so success is not limited to copying one worked path.
+
+A tutorial may serve more than one horizon. When goals compete, do not maximise
+first-attempt completion speed at the expense of an explicitly required
+retention or transfer outcome. Fading and mixed instruction can support both.
+
+## Cognitive-load framing used by this skill
+
+Use the 2019 dual-source formulation as the operational baseline rather than the
+older three-additive-load shorthand. Also account for the 2025 Kalyuga & Plass
+**goal-driven revision proposal**: whether a demand is useful or extraneous can
+depend on the instructional goal, learner prior knowledge, motivation, and
+affect. Treat that proposal as an important extension, not settled consensus.
+
+- **Intrinsic load** depends on interacting task elements relative to learner
+  expertise and the goal being pursued. Manage it through sequencing,
+  pre-training when needed, worked examples, and appropriate segmentation.
+- **Extraneous load** comes from avoidable processing relative to the current
+  instructional goal. Reduce unnecessary search, split attention, irrelevant
+  detail, confusing navigation, and role-less duplication.
 - **Germane processing** is not a third independent load to maximise. Create
   room for useful retrieval, self-explanation, practice, and feedback after
-  avoidable extraneous demands are controlled.
+  avoidable demands are controlled.
 
-When tactics conflict: first reduce avoidable extraneous processing, then manage
-task complexity for the learner, then add learning-relevant activity that still
-fits available capacity.
+When tactics conflict: identify the instructional goal first, reduce avoidable
+processing relative to that goal, manage task complexity for the learner, then
+add learning-relevant activity that still fits available capacity. Consider
+motivation and affect when they materially change the learner's ability or
+willingness to engage with the task.
 
 See [references/research-foundations.md](references/research-foundations.md)
 for sources and limits.
@@ -98,7 +122,8 @@ for sources and limits.
 ## Primary representation
 
 Choose the representation that communicates the learner's operation with the
-least avoidable integration work. Images are an option, not a default.
+least avoidable integration work **while supporting the intended instructional
+horizon**. Images are an option, not a default.
 
 | Task | Typical primary representation |
 |---|---|
@@ -136,8 +161,16 @@ Split an Action when doing so creates a meaningful state/sub-goal boundary,
 reduces integration cost, or makes recovery/verification clearer. Do not split
 mechanically per field, click, or numbered callout.
 
-Action prose must remain sufficient to act without guessing. Do not “fix”
-redundancy by reducing instructions to bare verbs such as 「クリックします」.
+The **Action as a whole** must let the learner act without guessing. For a
+visual-primary Action, visible prose may contain only complementary information
+instead of restating the complete visual path. Preserve a complete accessible
+text-equivalent route for essential visual instructions, but do not force that
+route to compete visually with the primary path when the platform can expose it
+programmatically or on demand.
+
+Do not “fix” redundancy by leaving an underspecified instruction such as
+「クリックします」 when neither the primary representation nor its accessible
+equivalent identifies the target and operation clearly.
 
 ## Segmenting and split attention
 
@@ -197,7 +230,8 @@ may appropriately start later in the progression.
 
 ## Practice, retrieval, feedback, and aligned closure
 
-A substantive learning goal should have evidence appropriate to that goal.
+A substantive learning goal should have evidence appropriate to that goal and
+its intended instructional horizon.
 
 | Goal/evidence need | Suitable closure |
 |---|---|
@@ -302,6 +336,8 @@ claims or force them onto unrelated Markdown/tutorial systems.
 
 Before delivering or approving a tutorial:
 
+- verify the intended instructional horizon (performance, retention, transfer,
+  or a combination) is explicit enough to guide design decisions;
 - verify the page is organised by learner goals;
 - cold-read every heading, term, value, metaphor, and code comment in rendered
   order;

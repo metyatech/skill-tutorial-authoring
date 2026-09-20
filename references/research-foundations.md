@@ -4,22 +4,32 @@ Load this reference when a tutorial-authoring decision needs research rationale,
 a boundary-condition check, or source verification. Do not treat every concrete
 Course Docs convention as a scientific mandate.
 
-## Current cognitive-load formulation
+## Cognitive-load framing used by this skill
 
-Use Sweller, van Merriënboer & Paas (2019), not the older shorthand that treats
-intrinsic, extraneous, and germane load as three independent additive loads.
+Sweller, van Merriënboer & Paas (2019) provide the operational baseline used by
+this skill: do not treat intrinsic, extraneous, and germane load as three
+independent additive loads.
 
-- **Intrinsic load** reflects element interactivity relative to the learner's
-  current knowledge.
-- **Extraneous load** reflects avoidable element interactivity introduced by
-  presentation or instructional procedure.
+- **Intrinsic load** reflects interacting task elements relative to learner
+  knowledge.
+- **Extraneous load** reflects avoidable processing introduced by presentation
+  or instructional procedure relative to the instructional goal.
 - What older literature called **germane load** is better understood as
-  working-memory resources devoted to learning-relevant intrinsic processing,
-  not a third independent load that should be maximised.
+  working-memory resources devoted to learning-relevant processing, not a third
+  independent load that should simply be maximised.
 
-Authoring implication: reduce avoidable extraneous processing, manage intrinsic
-complexity for the target learner, then use remaining capacity for useful
-retrieval, explanation, practice, and feedback.
+Kalyuga & Plass (2025) propose a further **integrated, goal-driven revision** of
+CLT. Their framework makes load classification explicitly relative to
+instructional goals and incorporates learner characteristics including prior
+knowledge, motivation, and affect. They also discuss evidence from productive
+failure/desirable-difficulty research where higher initial load can support
+conceptual learning or transfer under some conditions.
+
+Treat this 2025 account as an important proposed revision rather than claiming
+that one formulation is universally settled. Authoring implication: define the
+instructional goal first, reduce processing that is avoidable relative to that
+goal, manage task complexity for the learner, and consider motivation/affect
+when they materially affect engagement or capacity.
 
 ## Rule provenance
 
@@ -35,6 +45,32 @@ them:
 
 Evidence strength does not determine lint severity. Machine confidence and cost
 of an artefact defect are separate concerns.
+
+## Instructional goal: performance, retention, and transfer
+
+Procedural instructions do not have one universal objective. Eiriksdottir &
+Catrambone (2011) distinguish **initial performance**, **learning/retention**,
+and **transfer** and review trade-offs among them. Highly specific procedural
+directions often support immediate execution, while learning and transfer can
+benefit from principles, problem solving, fading, examples, or variation that
+require more active processing. Their review also notes that these goals can be
+combined rather than treated as mutually exclusive.
+
+Authoring implication:
+
+- decide the intended horizon before choosing representation or assistance;
+- do not use fastest first-attempt completion as the sole quality metric when
+  retention or transfer is required;
+- a one-time job aid can legitimately optimise differently from a lesson meant
+  to be recalled later without the instructions;
+- fading and combined instruction can preserve usability while building
+  independence.
+
+Lemarié, Castillan & Eyrolle (2016) found in one procedural domain that novices
+executed better with text-plus-picture than picture-only instructions, while
+experts did not show the same need. Treat that study as domain-specific evidence
+that representation needs depend on expertise, not as a universal
+text-plus-picture mandate.
 
 ## Multimedia-learning principles
 
@@ -208,23 +244,24 @@ Do not read Minimalism as “remove all explanation”. Remove information that 
 not needed now; retain complementary information needed to act, understand,
 recover, or verify.
 
-## Mayer 3rd edition correction
+## Mayer 3rd edition date and principle set
 
-Richard E. Mayer's *Multimedia Learning, Third Edition* was published in
-**2020**, not 2021. The book presents 15 principles. In its table of contents,
-the final three principle chapters are **Embodiment**, **Immersion**, and
-**Generative Activity**.
+Do not force a single year onto Mayer's *Multimedia Learning, Third Edition*
+without qualification. Cambridge's current product metadata lists digital and
+print publication dates in **2020**, while Cambridge's own frontmatter states
+`© 2021`, `First published 2021`, and `Third edition 2021`; the same frontmatter
+also reproduces Library of Congress cataloguing data that names 2020. Treat the
+2020/2021 difference as a bibliographic metadata issue, not a pedagogical fact.
 
-Do not describe Split-attention and Transient Information as the three additions
-that expanded the second edition to 15. Split-attention and transient-information
-research are discussed in the broader multimedia/CLT literature, including the
-*Cambridge Handbook of Multimedia Learning*.
+The principle set is clearer: the third edition presents 15 multimedia-design
+principles, with **Embodiment**, **Immersion**, and **Generative Activity** as
+the final three principle chapters. Do not describe Split-attention and
+Transient Information as those three additions. Split-attention and
+transient-information research belong to the broader multimedia/CLT literature,
+including the *Cambridge Handbook of Multimedia Learning*.
 
-Distinguish:
-
-- Mayer, *Multimedia Learning*, 3rd ed. — **2020**.
-- Mayer & Fiorella (eds.), *The Cambridge Handbook of Multimedia Learning*,
-  3rd ed. — **2021**.
+Keep Mayer's *Multimedia Learning* distinct from Mayer & Fiorella's edited
+*Cambridge Handbook of Multimedia Learning* (3rd ed., 2021).
 
 ## Boundary conditions
 
@@ -242,13 +279,26 @@ Therefore:
 
 ## Sources
 
-- Mayer, R. E. (2020). *Multimedia Learning* (3rd ed.). Cambridge
-  University Press. https://doi.org/10.1017/9781316941355
+- Mayer, R. E. *Multimedia Learning* (3rd ed.). Cambridge University Press.
+  Cambridge product metadata lists 2020 publication dates, while the official
+  frontmatter states first published / third edition 2021.
+  https://doi.org/10.1017/9781316941355
+  Product metadata: https://www.cambridge.org/highereducation/books/multimedia-learning/FB7E79A165D24D47CEACEB4D2C426ECD/frontmatter/7E943DC693864D29EAFD709969EE629F
+  Official frontmatter: https://assets.cambridge.org/97813166/38088/frontmatter/9781316638088_frontmatter.pdf
 - Mayer, R. E., & Fiorella, L. (Eds.). (2021). *The Cambridge Handbook of
   Multimedia Learning* (3rd ed.). Cambridge University Press.
 - Sweller, J., van Merriënboer, J. J. G., & Paas, F. (2019).
   *Cognitive Architecture and Instructional Design: 20 Years Later*.
   https://doi.org/10.1007/s10648-019-09465-5
+- Kalyuga, S., & Plass, J. L. (2025). *Rethinking Cognitive Load Theory*.
+  Oxford University Press. https://doi.org/10.1093/9780190078539.001.0001
+- Eiriksdottir, E., & Catrambone, R. (2011). *Procedural Instructions,
+  Principles, and Examples: How to Structure Instructions for Procedural Tasks
+  to Enhance Performance, Learning, and Transfer*.
+  https://doi.org/10.1177/0018720811419154
+- Lemarié, J., Castillan, L., & Eyrolle, H. (2016). *Effects of expertise and
+  multimedia presentation on the enactment and recall of procedural
+  instructions*. https://doi.org/10.1016/j.psfr.2016.07.002
 - Cromley, J. G., & Chen, R. (2025). *A meta-analysis of Richard Mayer's
   multimedia learning research: Searching for boundary conditions of design
   principles across multiple media types*.

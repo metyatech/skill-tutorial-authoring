@@ -34,6 +34,17 @@ Available components:
 A single `<Section>` is recursive. Heading depth is injected automatically:
 depth 0 → `h2`, depth 1 → `h3`, and so on, capped at `h6`.
 
+## Instructional horizon
+
+Before choosing representation or assistance, identify whether the lesson or
+Section is intended mainly for **immediate task performance**, **later
+retention**, **transfer**, or a deliberate combination. This is a Course Docs
+quality convention rather than an MDX parser requirement.
+
+Do not optimise only first-attempt speed when retention or transfer is an
+explicit goal. Representation, fading, QuickChecks, and Exercises should follow
+the intended horizon.
+
 ## Section goals
 
 Every top-level `<Section>` must declare a non-empty `goal`. Nested Section goals
@@ -69,6 +80,9 @@ The tense check is heuristic/advisory; the required-goal check is structural.
 An Action may be text-primary, code-primary, or visual-primary. `img` is
 optional. A short coherent navigation sequence may remain one Action when it
 serves one immediate sub-goal; do not split mechanically per click or field.
+The Action **as a whole** must be executable without guessing; visible prose
+does not need to duplicate a complete visual-primary path when the visual and a
+separate accessible text-equivalent route already carry that information.
 
 Multiple images are an advisory smell, not a structural error. Consider one
 annotated composite or multiple Actions when that reduces integration cost.
@@ -126,9 +140,11 @@ This structure is local to Course Docs. A generic tutorial outside this platform
 may use a different exercise/feedback structure when pedagogically appropriate.
 
 Hints must not reveal the answer immediately and should rely only on material
-already established by the lesson/curriculum. Answers should explain likely
-misconceptions rather than provide only the final token/value when explanation
-is useful.
+already established by the lesson/curriculum. An Answer must provide enough
+explanation to make the feedback instructive rather than returning only a bare
+final token/value. Explain why the answer is correct and address a likely
+misconception when one genuinely exists; do not invent a misconception merely
+to satisfy the template.
 
 ## Aligned closure
 
@@ -191,6 +207,7 @@ research strength.
 | `tutorial/action-single-image` | note | Multiple images in one Action; review integration |
 | `tutorial/section-no-hrule` | warn | Horizontal rule inside a Section |
 | `tutorial/verify-no-duplicate-arrow` | warn | Verify source starts with `→` |
+| `tutorial/verify-shot-action-role` | warn | Verify shot manifest contains action-role annotations |
 | `tutorial/section-lacks-closure` | warn | Local Action without aligned closure |
 | `tutorial/section-goal-tense` | note | Goal-tense heuristic |
 | `tutorial/reference-image-only` | note | Image-only Reference |
@@ -207,6 +224,11 @@ research strength.
 
 Warnings become build-failing only under `TUTORIAL_LINT_STRICT=1`. Notes never
 become errors. `TUTORIAL_LINT_COLLECT=1` aggregates findings for review.
+
+The live platform source and tests are the final source of truth for exact rule
+IDs, severities, and parser behavior. Keep this reference synchronized with
+`packages/platform/src/mdx/tutorial/remark-tutorial-lint.ts` rather than treating
+a copied table as independently authoritative.
 
 ## Example
 
@@ -228,7 +250,7 @@ become errors. `TUTORIAL_LINT_COLLECT=1` aggregates findings for review.
   <QuickCheck>
     ブロックせず接触を検知する設定は何ですか？
     <Hint>すり抜けながら検知する設定名を思い出してください。</Hint>
-    <Answer>Overlap です。</Answer>
+    <Answer>Overlap です。相手をブロックせず、接触だけを検知する設定です。</Answer>
   </QuickCheck>
 </Section>
 ```
