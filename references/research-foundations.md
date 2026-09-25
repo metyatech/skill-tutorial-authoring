@@ -85,9 +85,11 @@ learners (grades 2–5) and domain-general skills. Productive Failure is therefo
 a high-fidelity subset/variant of PS-I, not a synonym for PS-I generally. A
 deliberately designed, supported problem-before-instruction experience is not
 unguided struggle. Inquiry-Based Learning is a broader Strategy and does not
-mean unguided discovery. Use a Strategy only when compatible with the Pattern
-and objectives; smaller techniques such as worked examples, self-explanation,
-and retrieval practice need not be forced into a single taxonomy.
+mean unguided discovery: a meta-analysis of 72 studies found that guidance
+facilitated inquiry learning activities, performance success, and learning
+outcomes. Use a Strategy only when compatible with the Pattern and objectives;
+smaller techniques such as worked examples, self-explanation, and retrieval
+practice need not be forced into a single taxonomy.
 
 Course progression is the ordered recurrence of Events. Consider later
 retrieval and distributed practice, cumulative/mixed practice, interleaving
@@ -369,6 +371,9 @@ Therefore:
 - Sinha, T., & Kapur, M. (2021). *When Problem Solving Followed by Instruction
   Works: Evidence for Productive Failure*.
   https://doi.org/10.3102/00346543211019105
+- Lazonder, A. W., & Harmsen, R. (2016). *Meta-Analysis of Inquiry-Based
+  Learning: Effects of Guidance*. *Review of Educational Research, 86*(3),
+  681–718. https://doi.org/10.3102/0034654315627366
 - Yang, C., Luo, L., Vadillo, M. A., Yu, R., & Shanks, D. R. (2021).
   *Testing (quizzing) boosts classroom learning: A systematic and
   meta-analytic review*. https://doi.org/10.1037/bul0000309

@@ -33,13 +33,16 @@ boundaries around meaningful sub-goals and learner-managed chunks.
   for speech and meaningful sounds. A transcript is useful for scanning and
   reference, but does not replace captions when synchronized captions are
   required.
-- Make a transcript or audio description available when essential visual
-  information is not conveyed by the audio. WCAG 2.2 requires a descriptive
-  transcript or audio description for prerecorded video-only content at Level
-  A, a media alternative or audio description for synchronized media at Level
-  A, and audio description for prerecorded synchronized media at Level AA.
-  If the audio already conveys all essential visual information, additional
-  description is not needed for that purpose.
+- For prerecorded video-only media, WCAG 2.2 SC 1.2.1 (Level A) requires
+  either an alternative for time-based media or an audio track that presents
+  equivalent information.
+- For prerecorded synchronized media, WCAG 2.2 SC 1.2.3 (Level A) requires an
+  alternative for time-based media or audio description. SC 1.2.5 (Level AA)
+  requires audio description; a transcript or other media alternative does
+  not replace this AA requirement. A transcript remains useful for searching,
+  reference, and alternative access. If the main audio already conveys all
+  important visual information, no additional audio description is needed for
+  that information.
 - Ensure player controls and interactive captions/transcripts can be operated
   with a keyboard and expose understandable names and states. Check that focus
   order is usable and keyboard users can leave the player.
@@ -70,6 +73,12 @@ assuming a video format guarantees learning.
   https://doi.org/10.1187/cbe.16-03-0125
 - W3C, *Web Content Accessibility Guidelines (WCAG) 2.2*:
   https://www.w3.org/TR/WCAG22/
+- W3C WAI, *Understanding SC 1.2.1: Audio-only and Video-only (Prerecorded)*:
+  https://www.w3.org/WAI/WCAG22/Understanding/audio-only-and-video-only-prerecorded.html
+- W3C WAI, *Understanding SC 1.2.3: Audio Description or Media Alternative (Prerecorded)*:
+  https://www.w3.org/WAI/WCAG22/Understanding/audio-description-or-media-alternative-prerecorded.html
+- W3C WAI, *Understanding SC 1.2.5: Audio Description (Prerecorded)*:
+  https://www.w3.org/WAI/WCAG22/Understanding/audio-description-prerecorded.html
 - W3C WAI, *Captions/Subtitles*:
   https://www.w3.org/WAI/media/av/captions/
 - W3C WAI, *Description of Visual Information*:
