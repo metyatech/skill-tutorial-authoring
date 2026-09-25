@@ -27,12 +27,14 @@ Review only work that materially affects this skill:
 
 - multimedia-learning principles and boundary conditions;
 - Cognitive Load Theory, including goal-driven revisions, worked examples, motivation/affect, and expertise reversal;
-- procedural-instruction trade-offs among immediate performance, retention, and transfer;
+- procedural-instruction trade-offs among initial performance, learning (including retention), and transfer;
+- Learning Unit / Learning Event distinctions, constructive alignment, and course-progression evidence for recurrence over time;
 - Minimalism / task-oriented instructional design;
 - feedback, retrieval practice, generative learning, and durable learning;
 - distributed/spaced practice where it affects page-vs-curriculum scope;
 - adaptive assistance / scaffolding and fading;
 - accessibility guidance relevant to tutorial representations;
+- instructional-video design and accessible time-based media;
 - culture/language-specific evidence relevant to Japanese learner-facing prose.
 
 ## 1. New or updated sources
@@ -43,7 +45,9 @@ Review only work that materially affects this skill:
 - [ ] Re-check procedural-instruction evidence on initial performance versus retention/transfer, including whether representation or fading guidance should change.
 - [ ] Re-check Cromley & Chen (2025) for corrections or successor multimedia-learning syntheses.
 - [ ] Re-check Tetzlaff et al. (2025) for successor expertise-reversal/adaptive-assistance evidence.
-- [ ] Re-check classroom retrieval/distributed-practice syntheses for evidence that changes the boundary between immediate page closure and curriculum-level retention practice.
+- [ ] Re-check classroom retrieval/distributed-practice syntheses for evidence that changes the boundary between page-level closure and curriculum-level learning/retention practice.
+- [ ] Re-check research on PS-I/I-PS patterns, productive failure, interleaving, active learning, and transfer before changing course-progression guidance.
+- [ ] Re-check educational-video design guidance and applicable WCAG time-based-media criteria.
 - [ ] Re-check W3C WCAG guidance for informative and complex non-text content.
 - [ ] Scan the last 12 months for relevant meta-analyses or systematic reviews on signaling, pre-training, worked examples, scaffolding, retrieval, generative activity, and software/tutorial media.
 - [ ] Record newly relevant DOIs/citations in this issue with a one-sentence takeaway and population/medium limits.
@@ -59,6 +63,7 @@ the skill activates, while `references/` files are loaded only as needed.
 - [ ] Move detailed research rationale to `references/research-foundations.md`.
 - [ ] Move Course Docs-specific component/lint contracts to `references/course-docs-platform.md`.
 - [ ] Move detailed accessibility patterns to `references/accessibility.md`.
+- [ ] Keep progressive-disclosure video guidance in `references/video.md`.
 - [ ] Confirm every reference linked by `SKILL.md` exists and is still needed.
 
 ## 3. Skill artefact review
@@ -69,8 +74,9 @@ the skill activates, while `references/` files are loaded only as needed.
 - [ ] Check for accidental conversion of a software-tutorial heuristic into the literal statement of a research principle (for example, “one screen = one segment”).
 - [ ] Check that expertise reversal is applied to forms of assistance rather than claimed as a universal reversal of every multimedia principle.
 - [ ] Check that retrieval, generative activity, feedback, and aligned closure remain conceptually distinct.
-- [ ] Check that the skill distinguishes immediate performance, retention, and transfer before selecting representation, support, or closure.
-- [ ] Check that immediate performance is not described as durable mastery.
+- [ ] Check that the skill distinguishes initial performance, learning (including retention), and transfer before selecting representation, support, or closure.
+- [ ] Check that Learning Units, Learning Events, aligned evidence, and pages-as-presentation are still distinct and do not imply an unimplemented platform API.
+- [ ] Check that initial performance is not described as durable learning or transfer.
 - [ ] Check that visual-primary Actions are judged as a complete action unit rather than requiring visible prose to duplicate the full visual procedure.
 - [ ] Check that accessibility-equivalent content is not removed as gratuitous redundancy.
 - [ ] Check that Section 508 language is limited to applicable U.S. federal ICT scope rather than presented as universal law.

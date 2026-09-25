@@ -121,13 +121,11 @@ For structural diagrams:
 
 ## Motion media
 
-For GIF/video used because motion is essential:
-
-- provide an equivalent explanation of the action/outcome;
-- preserve exact values/commands in text for scanning and copying;
-- consider pause/control requirements when the media is time-based;
-- consult the relevant WCAG time-based-media criteria rather than assuming this
-  static-tutorial skill covers every video requirement.
+Video is within the tutorial-authoring scope. For detailed guidance on when
+motion helps, learner control, signaling, segmenting, synchronization, captions,
+transcripts, audio description, and keyboard-accessible controls, load
+[`video.md`](video.md). Keep exact values/commands in accessible text and
+provide an equivalent explanation of the essential action/outcome.
 
 ## Interactive examples
 

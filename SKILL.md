@@ -19,6 +19,8 @@ needs them:
 
 - Research rationale, evidence boundaries, and citations:
   [references/research-foundations.md](references/research-foundations.md)
+- Motion-based instruction and accessible video:
+  [references/video.md](references/video.md)
 - Course Docs MDX contracts and mechanised lint:
   [references/course-docs-platform.md](references/course-docs-platform.md)
 - Accessibility details and text-alternative patterns:
@@ -60,31 +62,70 @@ judgement.
 When creating or reviewing a tutorial, follow this order.
 
 1. Identify the **target learner**, relevant prior knowledge, and intended
-   instructional horizon: **immediate performance**, **retention**, **transfer**,
-   or a deliberate combination.
-2. Define the concrete learner goal and evidence that would show success.
-3. Organise the material around **learner goals**, not software menus or feature
-   lists.
-4. For each learner action, choose the **primary representation** that best fits
-   both the task and the intended instructional horizon.
-5. Introduce concepts **just before first meaningful use**, not in a long
-   front-loaded theory section.
-6. Add only the guidance, signaling, examples, and recovery support that the
-   current learner and goal need.
-7. Close substantive learning goals with a **matching form of evidence**.
-8. Check accessibility, coherence, and representation redundancy.
-9. Perform a literal **cold read** from top to bottom: every term, value, or
-   metaphor must be understandable when first encountered.
+   horizon: **initial performance**, **learning (including retention)**,
+   **transfer**, or a deliberate combination.
+2. Define what the learner should know or be able to do, then identify evidence
+   aligned to that objective.
+3. Organise learner-facing material around meaningful goals and actions, not
+   software menus or feature lists.
+4. Choose the primary representation and assistance that fit the task, learner,
+   and intended horizon.
+5. Introduce concepts near meaningful use, in the order Need/Context → Name and
+   meaning → Use; a first appearance may itself introduce and define a term.
+6. Add only the guidance, signaling, examples, and recovery support the learner
+   and goal need.
+7. Check accessibility, coherence, and representation redundancy.
+8. Cold-read the page in its rendered order, allowing a first appearance to
+   introduce and define a term before later use.
+
+## Learning system and tutorial pages
+
+For curriculum-level design, distinguish the stable objective from each
+occasion on which learners work toward it:
+
+- A **Learning Unit** is a stable learning objective or capability: what is to
+  be learned. Units may form a hierarchy from broader objectives to leaf
+  objectives. A page is not a Learning Unit.
+- A **Learning Event** is one occurrence of learning or practice targeting one
+  or more Learning Units: how learners engage this time. The same Unit may
+  recur in multiple Events, with different activities and evidence.
+- **Course progression** is the ordered recurrence of Events over time. Plan
+  later retrieval and distributed practice, cumulative or mixed practice,
+  interleaving where the content and goal support it, and transfer. These are
+  evidence-informed design aims, not a locally synthesized fixed sequence
+  claimed as a research-proven optimum.
+- **Evidence / Assessment** is observable evidence aligned with a Learning
+  Unit's objective. An **Exercise** is a task or container format; it may be
+  ordinary practice or transfer. Transfer evidence requires meaningfully
+  changed conditions and selection or adaptation of the learned principle.
+- A **Page** is a presentation and distribution unit. It may present part of an
+  Event or material for several Events; one Event may span pages or other
+  formats. A Page does not define the objective or the occurrence. Teaching
+  can normally follow the learner-visible material in Event order; do not
+  require a duplicate teacher lesson plan.
+
+For initial-learning order, use **I-PS** (instruction-first, then problem
+solving) and **PS-I** (problem-solving-first, then instruction). This Pattern
+describes the order of instruction and problem solving, not a whole-page
+template. A larger Strategy may be used inside a compatible Pattern when it
+helps enact the Event. **Productive Failure** is a specific high-fidelity
+subset/variant of PS-I, not a synonym for all PS-I; a deliberately designed
+problem-before-instruction Event is not unguided struggle. **Inquiry-Based
+Learning** is a broader Strategy and does not mean unguided discovery. Keep
+smaller techniques such as worked examples, self-explanation, and retrieval
+practice distinct where useful; do not impose a taxonomy that makes authoring
+heavier without improving execution.
 
 ## Instructional horizon
 
 Do not optimise every tutorial for the same outcome.
 
-- **Immediate performance / job aid:** prioritise fast, accurate execution while
+- **Initial performance / job aid:** prioritise fast, accurate execution while
   the instructions are available. Detailed task-matching directions or a
   visual-primary path can be appropriate.
-- **Retention:** include opportunities to retrieve, explain, or reproduce the
-  procedure with less support rather than measuring only first-attempt speed.
+- **Learning (including retention):** include opportunities to retrieve,
+  explain, or reproduce the procedure over time rather than measuring only
+  first-attempt speed.
 - **Transfer:** include principles, variation, or application under changed
   conditions so success is not limited to copying one worked path.
 
@@ -94,11 +135,12 @@ retention or transfer outcome. Fading and mixed instruction can support both.
 
 ## Cognitive-load framing used by this skill
 
-Use the 2019 dual-source formulation as the operational baseline rather than the
-older three-additive-load shorthand. Also account for the 2025 Kalyuga & Plass
-**goal-driven revision proposal**: whether a demand is useful or extraneous can
-depend on the instructional goal, learner prior knowledge, motivation, and
-affect. Treat that proposal as an important extension, not settled consensus.
+Use Sweller, van Merriënboer & Paas (2019) as the operational baseline rather
+than the older three-additive-load shorthand. Also account for the 2025 Kalyuga
+& Plass **goal-driven revision proposal**: whether a demand is useful or
+extraneous can depend on the instructional goal, learner prior knowledge,
+motivation, and affect. Treat that proposal as an important extension, not
+settled consensus.
 
 - **Intrinsic load** depends on interacting task elements relative to learner
   expertise and the goal being pursued. Manage it through sequencing,
@@ -131,7 +173,7 @@ horizon**. Images are an option, not a default.
 | Code authoring or code change | Code / CodePreview |
 | Short non-spatial command or setting | Text |
 | Structural relationship or state flow | Diagram |
-| Motion-dependent continuous operation | Video/GIF when supported |
+| Motion, timing, or continuous change is instructional | Video/animation when supported; see [references/video.md](references/video.md) |
 
 Secondary representations should add **complementary** information: exact typed
 values, hover-vs-click distinctions, user-specific paths, labels that map prose
@@ -211,12 +253,20 @@ existing knowledge; pre-training teaches knowledge that is not yet established.
 
 ## Scaffolding and progressive independence
 
-For low or unestablished relevant prior knowledge, default to enough worked or
-guided support before substantial independent construction.
+For low or unknown relevant prior knowledge, default to enough worked or guided
+support before substantial independent construction. This default does not
+prohibit a high-fidelity, supported Productive Failure PS-I design where it
+fits: deliberately designed problem-before-instruction is not unguided
+struggle. See the boundaries in
+[references/research-foundations.md](references/research-foundations.md).
 
 Fade, retain, or restore support according to prior knowledge and learner
 performance. Do **not** use fixed thresholds such as “second occurrence =
 guided” and “third occurrence = independent”.
+
+Adjust assistance to available knowledge about the intended learner and observed
+performance; individualized adaptive-mastery tracking is future scope, not a
+required implementation for this skill.
 
 Useful progression when appropriate:
 
@@ -238,7 +288,7 @@ its intended instructional horizon.
 | Observable behavior or state | Verify |
 | Retrieval / understanding | QuickCheck |
 | Several observable conditions forming a milestone | Checkpoint |
-| Transfer / application to a new condition | Exercise |
+| Application or transfer task | Exercise |
 
 This mapping is a **quality convention for choosing useful closure**, not a claim
 that every closure is a generative-learning activity.
@@ -250,10 +300,10 @@ Verify may be valuable feedback without being generative activity.
 
 Recovery is error-support, not learning-goal closure.
 
-Immediate closure is evidence of **current performance**, not durable mastery.
-Important knowledge should be revisited later through retrieval/distributed
-practice when curriculum scope permits. Do not claim permanent mastery from one
-immediate success.
+Immediate closure is evidence of **initial performance**, not durable learning
+or transfer. Important knowledge should recur later through retrieval and
+distributed practice when curriculum scope permits. Do not claim mastery from
+one immediate success.
 
 ## Recovery and error support
 
@@ -274,9 +324,11 @@ goal-relevant information.
 Good signals include a concise goal, visual callouts, an important UI label, an
 exact value to type, or a key gesture. Decorative emphasis is not signaling.
 
-Avoid irrelevant images, sidebars, audio, animations, emoji, or digressions. A
-sidebar or visual is fine when it has a real task, warning, reference,
-accessibility, or feedback role.
+Remove decoration or emotional stimulation that is irrelevant to the learning
+goal. Deliberate affective design may support motivation or attention when it
+remains aligned with the goal and does not create competing processing. A
+sidebar, visual, audio, or motion is appropriate when it has a real task,
+warning, reference, accessibility, explanation, or feedback role.
 
 Do not enforce arbitrary emphasis counts as scientific laws. If a platform lint
 flags unusually dense bolding, treat it as a review prompt for competing visual
@@ -316,6 +368,12 @@ Load [references/accessibility.md](references/accessibility.md) when authoring o
 reviewing informative images, diagrams, charts, annotated screenshots, or
 interactive examples.
 
+Video is within this skill's scope. Use it when motion, timing, or continuous
+change is important to understanding or performing the task; keep exact values
+and commands available in accessible text. Load
+[references/video.md](references/video.md) for learner control, signaling,
+segmenting, synchronization, and time-based-media accessibility.
+
 ## Course Docs environments
 
 When the target site uses `@metyatech/course-docs-platform`, load
@@ -336,8 +394,9 @@ claims or force them onto unrelated Markdown/tutorial systems.
 
 Before delivering or approving a tutorial:
 
-- verify the intended instructional horizon (performance, retention, transfer,
-  or a combination) is explicit enough to guide design decisions;
+- verify the intended instructional horizon (initial performance, learning
+  including retention, transfer, or a combination) is explicit enough to guide
+  design decisions;
 - verify the page is organised by learner goals;
 - cold-read every heading, term, value, metaphor, and code comment in rendered
   order;

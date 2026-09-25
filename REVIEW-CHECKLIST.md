@@ -7,11 +7,24 @@ contracts.
 ## Scope and learner
 
 - [ ] The target learner and relevant prior knowledge are stated or reliably implied.
-- [ ] The intended instructional horizon is identified: immediate performance, retention, transfer, or a deliberate combination.
+- [ ] The intended instructional horizon is identified: initial performance, learning (including retention), transfer, or a deliberate combination.
 - [ ] First-attempt speed is not treated as the sole quality metric when retention or transfer is an explicit goal.
 - [ ] The page is organised around learner goals rather than software features/menu structure.
 - [ ] Assistance, signaling, Concept density, and narrative depth match the target learner.
 - [ ] Expert or already-trained readers are not forced through redundant novice guidance.
+
+## Learning system
+
+- [ ] Each stable learning objective/capability is treated as a Learning Unit; pages are not treated as Learning Units.
+- [ ] A Learning Event is one occurrence of learning/practice targeting one or more Learning Units.
+- [ ] Course progression represents the ordered recurrence of Events, with later retrieval/distributed practice, cumulative or mixed practice, appropriate interleaving, and transfer considered where they fit the objectives.
+- [ ] A locally designed course sequence is not presented as a single research-proven optimum.
+- [ ] Observable evidence/assessment is aligned to the Learning Unit objective.
+- [ ] An Exercise is treated as a task/container format that may be ordinary practice or transfer; transfer evidence uses meaningfully changed conditions and requires selecting/adapting the learned principle.
+- [ ] Pages are treated as presentation/distribution units; teaching can normally follow learner-visible material in Event order without a duplicate teacher lesson plan.
+- [ ] Initial-learning order, when relevant, is described as I-PS (instruction-first) or PS-I (problem-solving-first), rather than a global page template.
+- [ ] Strategies are optional and compatible with the selected Pattern; Productive Failure is a high-fidelity PS-I subset/variant, and Inquiry-Based Learning is not unguided discovery.
+- [ ] Smaller techniques remain conceptually separate where useful without requiring a heavy taxonomy.
 
 ## Primary representation / multimedia
 
@@ -38,7 +51,9 @@ contracts.
 - [ ] Mutually dependent visual/text or code/explanation sources are close enough to integrate without unnecessary search.
 - [ ] The learner is not forced to scroll repeatedly between a screenshot and a required settings/value list.
 - [ ] Split attention is judged by the need for mental integration, not physical distance alone.
-- [ ] Video-only: corresponding narration and visual changes are synchronised.
+- [ ] Video: motion is used when it contributes to understanding/performance; relevant narration and visual changes are synchronised, and signaling/segments help learners follow the material.
+- [ ] Video: learners can control playback; exact values/commands remain available in text; captions, transcripts, and audio description are provided as applicable.
+- [ ] Video controls and any required interaction are keyboard accessible; gratuitous motion is removed.
 
 ## Coherence and redundancy
 
@@ -50,6 +65,8 @@ contracts.
 
 ## Concepts and pre-training
 
+- [ ] Need/context comes before the term where useful; a first appearance may itself name and define the term before later use.
+- [ ] No term is used as if already known, and no glossary is front-loaded just to satisfy a definition-first rule.
 - [ ] Each Concept focuses on one new idea and only information needed for imminent use.
 - [ ] The Concept is near the first meaningful use in an Action, Section, Verify, QuickCheck, Exercise, or equivalent task surface.
 - [ ] No Concept introduces terminology that appears much later without current need.
@@ -65,6 +82,7 @@ contracts.
 ## Scaffolding / progressive independence
 
 - [ ] Learners with low or unestablished relevant prior knowledge receive enough worked/guided support before substantial independent construction.
+- [ ] Default novice scaffolding allows a suitable, high-fidelity, supported PS-I/Productive Failure design; it is not mistaken for unguided struggle.
 - [ ] Learners with established prior knowledge may start at guided or independent application when appropriate.
 - [ ] Guidance is faded, retained, or restored according to prior knowledge/performance rather than a fixed repetition count.
 - [ ] Guided variation makes the learner's decision points clear without unnecessarily re-teaching everything.
@@ -76,10 +94,10 @@ contracts.
 - [ ] Observable behavior/state goals use a Verify-like check when appropriate.
 - [ ] Retrieval/understanding goals use a QuickCheck-like retrieval task when appropriate.
 - [ ] Multi-condition milestones use a checklist only when several conditions genuinely define the milestone.
-- [ ] Transfer/application goals use an applied task after sufficient support.
+- [ ] Applied tasks may test ordinary practice or transfer; transfer goals use a task with meaningfully changed conditions and selection/adaptation of the learned principle.
 - [ ] Passive result verification is not mislabeled as generative learning.
 - [ ] Generative activities require learners to retrieve, explain, predict, organise, integrate, or apply information.
-- [ ] Immediate success is described as current performance, not proof of durable mastery.
+- [ ] Immediate success is described as initial performance, not proof of durable learning or transfer.
 - [ ] Important knowledge is revisited later through retrieval/distributed practice when curriculum scope owns that scheduling.
 - [ ] Error recovery is not counted as learning-goal closure.
 - [ ] No closure surface is added mechanically just because a Section exists.
@@ -97,7 +115,7 @@ contracts.
 - [ ] Bold/callouts/highlights are tied to task-relevant identities, exact values, sequence, or gestures.
 - [ ] Competing emphasis is limited so the important signal remains visually distinctive.
 - [ ] Any numeric bold-density lint threshold is treated as an advisory heuristic, not a scientific boundary.
-- [ ] Decorative/emotional emphasis is removed.
+- [ ] Goal-irrelevant decoration/emotional stimulation is removed; deliberate affective design is retained only when aligned with the goal and not creating competing processing.
 
 ## Learner-facing prose
 

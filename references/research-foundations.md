@@ -46,11 +46,80 @@ them:
 Evidence strength does not determine lint severity. Machine confidence and cost
 of an artefact defect are separate concerns.
 
-## Instructional goal: performance, retention, and transfer
+## Learning objectives, events, and aligned evidence
+
+Biggs's constructive alignment connects intended learning outcomes, teaching
+and learning activities, and assessment: activities and evidence should call on
+the kinds of learning named in the objectives. This grounds the design
+relationship among **Learning Units** (stable objectives/capabilities),
+**Learning Events** (individual learning/practice occurrences targeting Units),
+and **Evidence / Assessment** (observable evidence aligned to the objective).
+The distinction between Learning Unit and Event is a useful local model, not a
+standardized taxonomy imposed by Biggs.
+
+A **Page** is a presentation/distribution unit, not an objective or learning
+occurrence. One Unit may recur in Events across multiple pages or occasions; an
+Event may target more than one Unit. Teaching material can normally be followed
+in Event order without a separate teacher lesson plan duplicating the
+learner-visible experience.
+
+An **Exercise** names a task/container format, not an evidence level. It can
+support ordinary practice or transfer. Evidence counts as transfer when the
+conditions meaningfully differ and learners must select or adapt a learned
+principle; relabeling routine practice as an Exercise does not establish
+transfer.
+
+## Initial-learning order and course progression
+
+Use **I-PS** for instruction-first followed by problem solving, and **PS-I** for
+problem-solving-first followed by instruction. These labels describe the order
+of the initial instructional/problem-solving phases, not a page template or a
+full course sequence.
+
+Sinha and Kapur's meta-analysis compared PS-I with I-PS across 53 studies and
+166 comparisons and found an average advantage for PS-I (Hedges' *g* = .36).
+Effects were stronger in studies implementing PS-I with high fidelity to
+Productive Failure principles (*g* range .37–.58). Grade level, intervention
+duration, and study design moderated outcomes; trends favored I-PS for younger
+learners (grades 2–5) and domain-general skills. Productive Failure is therefore
+a high-fidelity subset/variant of PS-I, not a synonym for PS-I generally. A
+deliberately designed, supported problem-before-instruction experience is not
+unguided struggle. Inquiry-Based Learning is a broader Strategy and does not
+mean unguided discovery. Use a Strategy only when compatible with the Pattern
+and objectives; smaller techniques such as worked examples, self-explanation,
+and retrieval practice need not be forced into a single taxonomy.
+
+Course progression is the ordered recurrence of Events. Consider later
+retrieval and distributed practice, cumulative/mixed practice, interleaving
+where it fits the material and objective, and transfer. No meta-analysis below
+establishes one universal event order or locally synthesized sequence as an
+optimal recipe:
+
+- Yang et al. synthesized 222 classroom studies involving 48,478 students;
+  classroom testing/quizzing improved achievement overall (Hedges' *g* = .499),
+  with effects moderated by factors such as corrective feedback, repetition,
+  timing, and test/material alignment.
+- Mawson and Kang reviewed 22 applied classroom reports (31 effect sizes,
+  *N* > 3,000) and found a moderate benefit for distributed over massed
+  practice (*d* = .54). A quantitative moderator analysis was not possible due
+  to the number of included studies.
+- Brunmair and Richter synthesized 59 studies (238 effect sizes) and found an
+  overall interleaving effect (*g* = .42), but the advantage varied by material:
+  it was stronger for paintings/visual materials, smaller for mathematical
+  tasks, nonsignificant for expository text and taste, and blocking favored for
+  word material. Treat interleaving as conditional, not a universal schedule.
+- Freeman et al. meta-analysed 225 undergraduate STEM studies. In the 158
+  studies reporting exam/concept-inventory outcomes, active-learning designs
+  improved performance by 0.47 SD; in the 67 failure-rate studies, students in
+  traditional lecture courses were about 1.5 times as likely to fail. This
+  supports meaningful learner engagement, not a fixed page/event structure or
+  any particular engagement technique.
+
+## Instructional goal: initial performance, learning, and transfer
 
 Procedural instructions do not have one universal objective. Eiriksdottir &
-Catrambone (2011) distinguish **initial performance**, **learning/retention**,
-and **transfer** and review trade-offs among them. Highly specific procedural
+Catrambone (2011) distinguish **initial performance**, **learning (including
+retention)**, and **transfer** and review trade-offs among them. Highly specific procedural
 directions often support immediate execution, while learning and transfer can
 benefit from principles, problem solving, fading, examples, or variation that
 require more active processing. Their review also notes that these goals can be
@@ -99,12 +168,22 @@ Synchronise corresponding words and visuals in media with a time axis, such as
 narrated video or animation. For a static page, spatial contiguity is the more
 relevant principle.
 
-### Coherence
+### Coherence and emotional design
 
 Remove information, decoration, media, or digressions that do not serve the
 learning objective. “Decorative” is not a property of a visual format by itself:
 a sidebar, image, or callout is appropriate when it carries task, warning,
 reference, accessibility, or feedback information.
+
+Goal-irrelevant decoration and emotional stimulation can capture attention and
+add competing processing. Emotional-design studies also find that selected,
+goal-aligned affective features can support learning or motivation in some
+multimedia contexts. A 2021 meta-analysis of 28 studies reported positive
+effects for the examined design features, while other syntheses identify
+variation by feature, outcome, and learner/material conditions. Treat emotional
+design as purposeful and conditional: use it when it can support motivation or
+attention without distracting from the learning goal or increasing competing
+processing; do not equate all affective design with decoration.
 
 ### Redundancy
 
@@ -159,11 +238,17 @@ The local prohibition on phrases such as 「受講者は〜」「初学者向け
 lesson body is a **quality convention**, not a direct scientific consequence of
 the personalization principle.
 
+### Video and other multimedia principles
+
+Video is within scope; see [`video.md`](video.md) for practical authoring and
+accessibility guidance. Apply multimedia evidence with attention to the
+specific medium, goal, learner, and outcome.
+
 ### Modality, voice, image, embodiment, immersion
 
 These principles require audio, speaker imagery/voice, embodiment, or immersive
-media. They are outside the default static-page scope of this skill. Consult the
-primary source when working with those media.
+media. They are outside the default scope of this skill. Consult the primary
+source when working with those media.
 
 ## Split attention
 
@@ -279,6 +364,27 @@ Therefore:
 
 ## Sources
 
+- Biggs, J. (1996). *Enhancing teaching through constructive alignment*.
+  https://doi.org/10.1007/BF00138871
+- Sinha, T., & Kapur, M. (2021). *When Problem Solving Followed by Instruction
+  Works: Evidence for Productive Failure*.
+  https://doi.org/10.3102/00346543211019105
+- Yang, C., Luo, L., Vadillo, M. A., Yu, R., & Shanks, D. R. (2021).
+  *Testing (quizzing) boosts classroom learning: A systematic and
+  meta-analytic review*. https://doi.org/10.1037/bul0000309
+- Mawson, R. D., & Kang, S. H. K. (2025). *The Distributed Practice Effect
+  on Classroom Learning: A Meta-Analytic Review of Applied Research*.
+  https://doi.org/10.3390/bs15060771
+- Brunmair, M., & Richter, T. (2019). *Similarity matters: A meta-analysis of
+  interleaved learning and its moderators*. https://doi.org/10.1037/bul0000209
+- Freeman, S., et al. (2014). *Active learning increases student performance in
+  science, engineering, and mathematics*. https://doi.org/10.1073/pnas.1319030111
+- Wong, R. M., & Adesope, O. O. (2021). *Meta-Analysis of Emotional Designs in
+  Multimedia Learning: A Replication and Extension Study*.
+  https://doi.org/10.1007/s10648-020-09545-x
+- Brame, C. J. (2016). *Effective Educational Videos: Principles and
+  Guidelines for Maximizing Student Learning from Video Content*.
+  https://doi.org/10.1187/cbe.16-03-0125
 - Mayer, R. E. *Multimedia Learning* (3rd ed.). Cambridge University Press.
   Cambridge product metadata lists 2020 publication dates, while the official
   frontmatter states first published / third edition 2021.
@@ -313,12 +419,6 @@ Therefore:
 - Carroll, J. M. (1990). *The Nurnberg Funnel*.
 - Shute, V. J. (2008). Focus on formative feedback.
 - Merrill, M. D. (2002). First principles of instruction.
-- Yang, C., Luo, L., Vadillo, M. A., Yu, R., & Shanks, D. R. (2021).
-  *Testing (quizzing) boosts classroom learning: A systematic and
-  meta-analytic review*. https://pubmed.ncbi.nlm.nih.gov/33683913/
-- Mawson, R. D., & Kang, S. H. K. (2025). *The Distributed Practice Effect
-  on Classroom Learning: A Meta-Analytic Review of Applied Research*.
-  https://doi.org/10.3390/bs15060771
 - Désiron, J. C., Endres, T., & Schneider, S. (2026). *Is it not too
   redundant? When signaling overlap reduces extraneous load and enhances
   retention in a software video tutorial*.

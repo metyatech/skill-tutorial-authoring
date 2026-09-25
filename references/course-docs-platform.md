@@ -7,6 +7,10 @@ These rules are **local platform contracts and quality conventions**. Do not
 present them as universal learning-science requirements and do not force them on
 unrelated Markdown/tutorial systems.
 
+This reference documents the learner-facing MDX composition and lint
+conventions. Its components are presentation/task formats; do not infer a
+platform-level Learning Unit or Learning Event data model from them.
+
 ## Component composition
 
 Course Docs tutorials are composed from local task components. There is no
@@ -26,7 +30,7 @@ Available components:
 | `<Recovery>` | Reactive diagnosis/recovery support near a failure point |
 | `<Checkpoint>` | Optional checklist for a meaningful multi-condition milestone |
 | `<QuickCheck>` | Short retrieval/understanding task |
-| `<Exercise>` | Applied/transfer task |
+| `<Exercise>` | Applied task for practice or transfer, depending on its design |
 | `<Hint>` | Progressive support inside QuickCheck or Exercise |
 | `<Answer>` | Final answer/explanation inside QuickCheck or Exercise |
 | `<NextSteps>` | Optional concrete follow-up actions, normally at document end |
@@ -37,8 +41,8 @@ depth 0 → `h2`, depth 1 → `h3`, and so on, capped at `h6`.
 ## Instructional horizon
 
 Before choosing representation or assistance, identify whether the lesson or
-Section is intended mainly for **immediate task performance**, **later
-retention**, **transfer**, or a deliberate combination. This is a Course Docs
+Section is intended mainly for **initial performance**, **learning (including
+retention)**, **transfer**, or a deliberate combination. This is a Course Docs
 quality convention rather than an MDX parser requirement.
 
 Do not optimise only first-attempt speed when retention or transfer is an
@@ -49,6 +53,10 @@ the intended horizon.
 
 Every top-level `<Section>` must declare a non-empty `goal`. Nested Section goals
 are optional and should be used when they improve orientation.
+
+This learner-facing Section goal is local to the rendered material; it does not
+by itself define a curriculum-level Learning Unit or prove that aligned evidence
+has been collected.
 
 Goal text is rendered verbatim below the heading. Write a complete
 future-declarative sentence describing what the learner will achieve by the end
@@ -154,7 +162,11 @@ learning goal. The platform recognises these closure surfaces:
 - `<Verify>` — observable state/behavior;
 - `<QuickCheck>` — retrieval/understanding;
 - `<Checkpoint>` — meaningful multi-condition milestone;
-- `<Exercise>` — transfer/application.
+- `<Exercise>` — applied practice or transfer, depending on task conditions.
+
+An Exercise is a task format, not automatic transfer evidence. To support a
+transfer claim, change conditions meaningfully and require learners to select or
+adapt the learned principle. Align the evidence to the Section's learning goal.
 
 `<Recovery>` does not count as closure.
 
