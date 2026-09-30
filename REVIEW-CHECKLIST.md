@@ -4,22 +4,30 @@ Use this list when auditing a draft tutorial against `SKILL.md`. The checklist
 separates generic tutorial-quality judgements from Course Docs-only platform
 contracts.
 
-## Scope and learner
+## Purpose / outcome alignment
+
+- [ ] The adopted normative purpose guides capability growth and positive learning; it is not presented as an empirical research finding.
+- [ ] Outcomes, learner experience, and evidence are designed before selecting presentation components.
+- [ ] A component's existence or prop does not impose a learning activity, fixed ordering, or local ending.
+
+## Learner state / prior knowledge
 
 - [ ] The target learner and relevant prior knowledge are stated or reliably implied.
+- [ ] Prior instruction is considered rather than treating every first textual appearance as unfamiliar knowledge.
 - [ ] The intended instructional horizon is identified: initial performance, learning (including retention), transfer, or a deliberate combination.
 - [ ] First-attempt speed is not treated as the sole quality metric when retention or transfer is an explicit goal.
 - [ ] The page is organised around learner goals rather than software features/menu structure.
 - [ ] Assistance, signaling, Concept density, and narrative depth match the target learner.
 - [ ] Expert or already-trained readers are not forced through redundant novice guidance.
 
-## Learning system
+## Learning Unit / Event / Evidence
 
 - [ ] Each stable learning objective/capability is treated as a Learning Unit; pages are not treated as Learning Units.
 - [ ] A Learning Event is one occurrence of learning/practice targeting one or more Learning Units.
 - [ ] Course progression represents the ordered recurrence of Events, with later retrieval/distributed practice, cumulative or mixed practice, appropriate interleaving, and transfer considered where they fit the objectives.
 - [ ] A locally designed course sequence is not presented as a single research-proven optimum.
 - [ ] Observable evidence/assessment is aligned to the Learning Unit objective.
+- [ ] Evidence is placed at useful Event/progression points; Section boundaries do not require local closure.
 - [ ] An Exercise is treated as a task/container format that may be ordinary practice or transfer; transfer evidence uses meaningfully changed conditions and requires selecting/adapting the learned principle.
 - [ ] Pages are treated as presentation/distribution units; teaching can normally follow learner-visible material in Event order without a duplicate teacher lesson plan.
 - [ ] Initial-learning order, when relevant, is described as I-PS (instruction-first) or PS-I (problem-solving-first), rather than a global page template.
@@ -67,11 +75,11 @@ contracts.
 
 - [ ] Need/context comes before the term where useful; a first appearance may itself name and define the term before later use.
 - [ ] No term is used as if already known, and no glossary is front-loaded just to satisfy a definition-first rule.
-- [ ] Each Concept focuses on one new idea and only information needed for imminent use.
-- [ ] The Concept is near the first meaningful use in an Action, Section, Verify, QuickCheck, Exercise, or equivalent task surface.
-- [ ] No Concept introduces terminology that appears much later without current need.
-- [ ] Each Concept answers “what is it?” and “why does it matter now?”.
-- [ ] Roughly 2–5 sentences or one short table is preferred; 6+ sentences triggers review rather than automatic failure.
+- [ ] Each Concept supports knowledge needed for current or near activity; near-first-use is a default with intentional pre-training, summary, retrieval, or reference exceptions.
+- [ ] Placement is judged by the learner's activity and knowledge rather than a component-position template.
+- [ ] Each Concept makes its meaning and relevance to the intended activity clear.
+- [ ] Length serves clarity; 6+ sentences triggers review for mixed ideas rather than a hard limit or scientific threshold. There is no preferred sentence-count target.
+- [ ] Need → Name → Use is a context-dependent heuristic, not mandatory or default sequencing.
 
 ## Activation
 
@@ -79,7 +87,9 @@ contracts.
 - [ ] No analogy/metaphor is invented merely to satisfy an Activation checklist item.
 - [ ] Activation recalls established knowledge; it is not used as a substitute for teaching an unfamiliar term.
 
-## Scaffolding / progressive independence
+## Appropriate assistance / progressive independence
+
+- [ ] Assistance fits learner knowledge, performance, and goal; guidance minimization is not an objective.
 
 - [ ] Learners with low or unestablished relevant prior knowledge receive enough worked/guided support before substantial independent construction.
 - [ ] Default novice scaffolding allows a suitable, high-fidelity, supported PS-I/Productive Failure design; it is not mistaken for unguided struggle.
@@ -88,9 +98,21 @@ contracts.
 - [ ] Guided variation makes the learner's decision points clear without unnecessarily re-teaching everything.
 - [ ] The page is not forced to contain worked, guided, and independent phases when its scope does not require all three.
 
-## Practice, retrieval, feedback, and aligned closure
+## Meaningful learner activity
 
-- [ ] Every substantive learning goal has evidence capable of testing that goal and its intended instructional horizon.
+- [ ] Relevant processing may include prediction, comparison, selection, organization, debugging, adaptation, creation, retrieval, explanation, or application.
+- [ ] Active/generative learning is not mechanically required on every job-aid or initial-performance-only page.
+
+## Engagement / meaningful challenge
+
+- [ ] Enjoyment is not equated with ease; rigor is not equated with unnecessary frustration.
+- [ ] Authentic relevance, visible progress, competence-supportive feedback, meaningful choice, or learner control are considered where useful, without requiring every option.
+- [ ] Relevance is not fabricated and choice is not added for its own sake.
+- [ ] Both actual capability evidence and learner experience inform revision; felt fluency alone does not establish learning.
+
+## Durable learning / progression and aligned evidence
+
+- [ ] Unit outcomes have appropriate evidence at useful Event/progression points, rather than a Section-local closure requirement.
 - [ ] Observable behavior/state goals use a Verify-like check when appropriate.
 - [ ] Retrieval/understanding goals use a QuickCheck-like retrieval task when appropriate.
 - [ ] Multi-condition milestones use a checklist only when several conditions genuinely define the milestone.
@@ -117,12 +139,20 @@ contracts.
 - [ ] Any numeric bold-density lint threshold is treated as an advisory heuristic, not a scientific boundary.
 - [ ] Goal-irrelevant decoration/emotional stimulation is removed; deliberate affective design is retained only when aligned with the goal and not creating competing processing.
 
-## Learner-facing prose
+## Prose clarity
+
+- [ ] Clarity takes priority over brevity; necessary causality, UI/state correspondence, action purpose, state transitions, and term meanings are retained.
+- [ ] Headings predict the task, topic, or capability; terms are explained before their understanding is required, not necessarily before their first appearance.
 
 - [ ] Prose is natural, direct, and active; Japanese zero-subject sentences are acceptable.
 - [ ] The body does not contain author-facing audience meta prose such as 「受講者は〜」「学習者は〜」「初学者向け」 when it does not help the task.
 - [ ] Ordinary domain uses of 「ユーザー」 remain allowed when they refer to a real app/product end user.
 - [ ] The page does not open with authoring rationale or document-description prose when task context would be more useful.
+
+## Accidental difficulty cold-read
+
+- [ ] Cold-read review detects unexplained prerequisites, ambiguity, missing state, unnecessary backtracking, undefined assumptions, terminology gaps, and visual/prose mismatches.
+- [ ] Review preserves retrieval effort, problem solving, decision making, productive struggle, and changed-condition transfer.
 
 ## Accessibility
 
@@ -153,10 +183,10 @@ contracts.
 Load `references/course-docs-platform.md` and check these items when the target
 site uses `@metyatech/course-docs-platform`.
 
-- [ ] Every top-level `<Section>` has a non-empty future-declarative `goal`; nested goals are optional.
+- [ ] Section goals are optional orientation at all depths, including Event-bearing Sections; goals are neither canonical Unit objectives nor Evidence.
 - [ ] No `---` horizontal rule appears inside a Section.
 - [ ] `<Verify>` source does not include the leading `→` rendered by the component.
-- [ ] Course Docs QuickCheck/Exercise tasks use problem content → one or more `<Hint>` blocks → exactly one final `<Answer>`.
+- [ ] Course Docs QuickCheck/Exercise tasks use problem content → zero or more `<Hint>` blocks → exactly one non-empty final `<Answer>`; optional Hints are non-empty direct children before Answer.
 - [ ] Each `<Answer>` gives instructive feedback beyond a bare final token/value; it explains correctness and addresses a plausible misconception when one exists without inventing one.
 - [ ] No `authoringMode` or legacy Solution block is present.
 - [ ] `<Prerequisites>` appears before the first Section when prerequisites exist.

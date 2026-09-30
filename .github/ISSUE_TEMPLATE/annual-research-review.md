@@ -12,7 +12,7 @@ This issue is the canonical yearly tracker for reviewing the evidence-backed
 principles, boundary conditions, and downstream authoring rules used by the
 `tutorial-authoring` skill.
 
-Concrete rules may be evidence-backed principles, local quality conventions,
+Concrete rules may be normative purposes, evidence-backed principles, local quality conventions,
 platform contracts, or context-dependent heuristics. Reclassify them when
 needed; do not present local conventions as scientific mandates.
 
@@ -33,6 +33,11 @@ Review only work that materially affects this skill:
 - feedback, retrieval practice, generative learning, and durable learning;
 - distributed/spaced practice where it affects page-vs-curriculum scope;
 - adaptive assistance / scaffolding and fading;
+- motivation / affect, academic enjoyment, and meaningful engagement;
+- autonomy support, meaningful choice, learner control, and utility value;
+- instructional-language evidence: clarity, elaboration, headings/structural
+  signaling, and preinstructional objectives;
+- actual learning versus feeling of learning, and seductive-details boundaries;
 - accessibility guidance relevant to tutorial representations;
 - instructional-video design and accessible time-based media;
 - culture/language-specific evidence relevant to Japanese learner-facing prose.
@@ -45,8 +50,10 @@ Review only work that materially affects this skill:
 - [ ] Re-check procedural-instruction evidence on initial performance versus retention/transfer, including whether representation or fading guidance should change.
 - [ ] Re-check Cromley & Chen (2025) for corrections or successor multimedia-learning syntheses.
 - [ ] Re-check Tetzlaff et al. (2025) for successor expertise-reversal/adaptive-assistance evidence.
-- [ ] Re-check classroom retrieval/distributed-practice syntheses for evidence that changes the boundary between page-level closure and curriculum-level learning/retention practice.
+- [ ] Re-check classroom retrieval/distributed-practice syntheses for evidence affecting Unit-aligned evidence and curriculum-level learning/retention practice.
 - [ ] Re-check research on PS-I/I-PS patterns, productive failure, interleaving, active learning, and transfer before changing course-progression guidance.
+- [ ] Re-check motivation/affect, enjoyment, autonomy, choice/utility value, and engagement evidence together with actual learning outcomes.
+- [ ] Re-check instructional-language, heading, preinstructional-objective, and seductive-details evidence within population and task boundaries.
 - [ ] Re-check educational-video design guidance and applicable WCAG time-based-media criteria.
 - [ ] Re-check W3C WCAG guidance for informative and complex non-text content.
 - [ ] Scan the last 12 months for relevant meta-analyses or systematic reviews on signaling, pre-training, worked examples, scaffolding, retrieval, generative activity, and software/tutorial media.
@@ -68,13 +75,16 @@ the skill activates, while `references/` files are loaded only as needed.
 
 ## 3. Skill artefact review
 
-- [ ] Reclassify each affected rule as evidence-backed principle, quality convention, platform contract, or context-dependent heuristic.
+- [ ] Reclassify each affected rule as normative purpose, evidence-backed principle, quality convention, platform contract, or context-dependent heuristic.
+- [ ] Keep the adopted educational purpose distinct from empirical findings; assess means and side effects rather than claiming research proves the purpose.
+- [ ] Check that appropriate assistance has not become guidance minimization, and that enjoyment is not equated with ease.
+- [ ] Keep Need → Name → Use and numeric review triggers contextual; do not promote them to scientific thresholds.
 - [ ] Review lint severity independently from research provenance.
 - [ ] Review advisory numeric thresholds such as bold density and Concept length; keep them advisory unless both impact and machine confidence justify a harder gate.
 - [ ] Check for accidental conversion of a software-tutorial heuristic into the literal statement of a research principle (for example, “one screen = one segment”).
 - [ ] Check that expertise reversal is applied to forms of assistance rather than claimed as a universal reversal of every multimedia principle.
-- [ ] Check that retrieval, generative activity, feedback, and aligned closure remain conceptually distinct.
-- [ ] Check that the skill distinguishes initial performance, learning (including retention), and transfer before selecting representation, support, or closure.
+- [ ] Check that retrieval, generative activity, feedback, and aligned evidence remain conceptually distinct without requiring Section-local closure.
+- [ ] Check that the skill distinguishes initial performance, learning (including retention), and transfer before selecting representation, support, or evidence.
 - [ ] Check that Learning Units, Learning Events, aligned evidence, and pages-as-presentation are still distinct and do not imply an unimplemented platform API.
 - [ ] Check that initial performance is not described as durable learning or transfer.
 - [ ] Check that visual-primary Actions are judged as a complete action unit rather than requiring visible prose to duplicate the full visual procedure.

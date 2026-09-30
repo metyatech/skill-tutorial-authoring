@@ -33,11 +33,17 @@ when they materially affect engagement or capacity.
 
 ## Rule provenance
 
+The adopted educational purpose is normative: enjoyable, positive learning with
+actual capability growth and increasing ability to think, create, and continue
+learning independently. Empirical research evaluates means, side effects, and
+boundary conditions; it does not uniquely determine this value judgment.
+
 Classify concrete rules separately from the research principles motivating
 them:
 
 | Class | Meaning | Example |
 |---|---|---|
+| Normative purpose | Adopted educational value, not a research finding | positive learning and actual capability growth |
 | Evidence-backed principle | Direction supported by research within boundary conditions | coherence, worked examples, retrieval |
 | Quality convention | Local standard chosen for learner-facing quality | no author-facing audience meta prose |
 | Platform contract | Rendering/component-system requirement | Course Docs task-block structure |
@@ -68,6 +74,128 @@ support ordinary practice or transfer. Evidence counts as transfer when the
 conditions meaningfully differ and learners must select or adapt a learned
 principle; relabeling routine practice as an Exercise does not establish
 transfer.
+
+Section-local closure is not part of this Learning System model. Evidence is
+aligned to Unit outcomes at suitable Event/progression points; presentation
+boundaries and goal banners do not establish assessment or mastery.
+
+## Academic enjoyment and achievement emotions
+
+**Evidence:** Camacho-Morles et al. (2021) found positive associations between
+academic enjoyment and performance and negative associations for anger and
+boredom, with variation by school level and measurement.
+
+**Boundary / what this does NOT prove:** Associations do not establish that
+making every task easy causes learning. Enjoyment, felt fluency, and achievement
+are different outcomes; this evidence does not prove the normative purpose.
+
+**Authoring implication:** Attend to positive engagement and unnecessary
+frustration alongside capability evidence. Preserve meaningful challenge and
+competence-supportive feedback; do not treat constant comfort as a criterion.
+
+## Autonomy support
+
+**Evidence:** Mammadov and Schroeder (2023) synthesized perceived teacher/parent
+autonomy support and positive learning outcomes. Relationships were strongest
+for autonomous motivation, engagement, and self-beliefs and weaker for academic
+performance, with substantial heterogeneity.
+
+**Boundary / what this does NOT prove:** Correlational evidence does not show
+that removing instruction or adding choices causes mastery. Autonomy support is
+compatible with structure and appropriate assistance.
+
+**Authoring implication:** Respect learner agency and offer useful control while
+keeping expectations, support, and feedback clear. Guidance minimization is not
+the aim; use enough support for the learner and task.
+
+## Meaningful choice and utility value
+
+**Evidence:** Patall, Cooper, and Robinson (2008) found benefits of choice for
+motivation and related outcomes across varied child/adult settings, with
+moderators. Hulleman and Harackiewicz (2009) tested learner-generated relevance
+connections in high-school science; interest and grades improved particularly
+for students with low success expectations.
+
+**Boundary / what this does NOT prove:** Choice is not itself a learning
+objective; no choice-count recipe follows. A specific relevance intervention
+does not justify fabricated relevance or guarantee benefits in every domain.
+
+**Authoring implication:** Offer meaningful choices when they serve agency or
+learning, and help learners identify authentic uses of what they learn. Do not
+add choice merely to satisfy a template.
+
+## Actual learning versus feeling of learning
+
+**Evidence:** Deslauriers et al. (2019) compared active and passive instruction
+in introductory college physics. Students could learn more under active
+instruction while feeling that they learned less.
+
+**Boundary / what this does NOT prove:** This setting does not establish that
+all difficulty is beneficial or that learner experience should be ignored.
+
+**Authoring implication:** Use outcome-aligned evidence alongside experience
+feedback. Make progress visible and explain the role of meaningful effort;
+retain retrieval, problem solving, and decisions while removing accidental
+confusion. Neither enjoyment nor perceived ease demonstrates mastery alone.
+
+## Linguistic clarity and elaboration
+
+**Evidence:** Strohmaier et al. (2023) synthesized experimental modifications
+of STEM texts. Clarity, elaboration, and personalization showed benefits;
+reducing complexity alone did not show a significant average benefit. Relevant
+prior knowledge moderated the results.
+
+**Boundary / what this does NOT prove:** This does not establish sentence-count
+limits or prove that shorter prose is clearer. STEM text findings are not a
+universal Japanese writing template.
+
+**Authoring implication:** Clarity > brevity is a local quality convention
+consistent with these boundaries. Keep causal relations, term meanings,
+UI/state correspondence, action purposes, and state transitions when needed;
+review length semantically rather than targeting 2–5 sentences.
+
+## Headings and structural signaling
+
+**Evidence:** Lorch, Lemarié, and Chen (2013) compared headings and preview
+sentences in two text-processing experiments. Effects depended on the reading
+task and whether memory for topics, facts, or outlining was assessed.
+
+**Boundary / what this does NOT prove:** Headings do not prescribe one teaching
+order, numbering format, or goal-first page layout.
+
+**Authoring implication:** Use headings that predict the task, topic, or
+capability and expose useful structure. A title can name a new term before it
+is explained; explain it before its understanding is required.
+
+## Preinstructional objectives
+
+**Evidence:** Klauer (1984) synthesized preinstructional objectives,
+directions, and questions for instructional text. Goal-relevant learning could
+improve while learning of other material decreased; text/task characteristics
+moderated the outcomes.
+
+**Boundary / what this does NOT prove:** This historical text literature does
+not make every Section goal banner mandatory, prescribe Japanese verb tense,
+or make a goal statement evidence of attainment.
+
+**Authoring implication:** Offer learner-facing orientation when useful; keep
+canonical Unit objectives separate from optional Section goals. An example,
+problem, context, action, or goal may each orient a learner appropriately.
+
+## Seductive details
+
+**Evidence:** Cheng, Wu, Wang, and Wang (2026) synthesized effects of seductive
+details on recall, comprehension, and transfer. Average effects were negative,
+with moderators including language and learning environment.
+
+**Boundary / what this does NOT prove:** Interesting features are not all
+irrelevant details. The synthesis does not establish an emoji ban or disallow
+goal-aligned emotional design; its mediation model is not a mandate to revert
+to a three-additive-load account.
+
+**Authoring implication:** Review whether an element supports explanation,
+signaling, accessibility, or engagement, or competes for attention without a
+learning role. Do not convert an average effect into a hard formatting rule.
 
 ## Initial-learning order and course progression
 
@@ -284,7 +412,8 @@ A useful progression when it matches the task is:
 2. completion/guided variation;
 3. independent application.
 
-Starting later is appropriate when relevant prior knowledge is already
+The objective is appropriate assistance, not minimizing guidance. Starting
+later is appropriate when relevant prior knowledge is already
 established. Restoring guidance is appropriate when performance shows that
 fading was premature.
 
@@ -304,8 +433,8 @@ These constructs overlap in practice but are not interchangeable.
 - **Generative activity** asks the learner to select, organise, integrate,
   explain, predict, or apply information.
 - **Feedback** gives information about performance or understanding.
-- **Aligned closure** is this skill's local quality convention: a substantive
-  goal should end with evidence capable of testing that goal.
+- **Aligned evidence** connects an assessment surface to a Unit outcome at a
+  suitable Event/progression point; it is not a Section-local ending contract.
 
 A visual Verify can provide useful feedback without being a generative-learning
 activity. A QuickCheck that requires retrieval or explanation can be generative.
@@ -313,7 +442,7 @@ An Exercise may or may not be generative depending on its design.
 
 Immediate success is not durable mastery. Classroom meta-analytic evidence
 supports later retrieval and distributed practice, with moderators such as
-feedback and timing. Page-local closure can show current performance; later
+feedback and timing. Immediate evidence can show current performance; later
 curriculum encounters are needed when retention/transfer matters.
 
 ## Minimalism
@@ -365,6 +494,32 @@ Therefore:
 - keep local Course Docs contracts explicitly labelled as local contracts.
 
 ## Sources
+
+- Camacho-Morles, J., Slemp, G. R., Pekrun, R., Loderer, K., Hou, H., &
+  Oades, L. G. (2021). *Activity Achievement Emotions and Academic Performance:
+  A Meta-analysis*. https://doi.org/10.1007/s10648-020-09585-3
+- Mammadov, S., & Schroeder, K. (2023). *A meta-analytic review of the
+  relationships between autonomy support and positive learning outcomes*.
+  https://doi.org/10.1016/j.cedpsych.2023.102235
+- Patall, E. A., Cooper, H., & Robinson, J. C. (2008). *The effects of choice
+  on intrinsic motivation and related outcomes: A meta-analysis of research
+  findings*. https://doi.org/10.1037/0033-2909.134.2.270
+- Hulleman, C. S., & Harackiewicz, J. M. (2009). *Promoting interest and
+  performance in high school science classes*.
+  https://doi.org/10.1126/science.1177067
+- Deslauriers, L., McCarty, L. S., Miller, K., Callaghan, K., & Kestin, G.
+  (2019). *Measuring actual learning versus feeling of learning in response to
+  being actively engaged in the classroom*. https://doi.org/10.1073/pnas.1821936116
+- Strohmaier, A. R., Ehmke, T., Härtig, H., & Leiss, D. (2023). *On the role
+  of linguistic features for comprehension and learning from STEM texts.
+  A meta-analysis*. https://doi.org/10.1016/j.edurev.2023.100533
+- Lorch, R. F., Lemarié, J., & Chen, H. T. (2013). *Signaling topic structure
+  via headings or preview sentences*. https://doi.org/10.1016/S1135-755X(13)70011-3
+- Klauer, K. J. (1984). *Intentional and Incidental Learning with Instructional
+  Texts: A Meta-Analysis for 1970–1980*. https://doi.org/10.3102/00028312021002323
+- Cheng, C., Wu, Y., Wang, R., & Wang, Z. (2026). *Seductive Details,
+  Cognitive Load, and Learning Outcomes: A Multi-level Meta-analysis and MASEM*.
+  https://doi.org/10.1007/s10648-025-10099-z
 
 - Biggs, J. (1996). *Enhancing teaching through constructive alignment*.
   https://doi.org/10.1007/BF00138871

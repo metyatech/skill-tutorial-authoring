@@ -1,6 +1,8 @@
 # skill-tutorial-authoring
 
-An [Agent Skills](https://agentskills.io/specification) skill for authoring step-by-step tutorials that reduce avoidable instructional overhead, manage task complexity for the target learner, and deliberately distinguish **initial performance**, **learning (including retention)**, and **transfer**. Optimised for **beginner-to-intermediate** learners.
+An [Agent Skills](https://agentskills.io/specification) skill for designing effective and engaging learning experiences: actual capability growth, appropriate assistance, retention and transfer, progressive independence, and accessibility. Optimised for **beginner-to-intermediate** learners.
+
+Its normative educational purpose is that learners enjoy learning with a positive outlook while increasing what they can actually do, then use that learning to think, create, and continue learning for themselves. This is an adopted value judgment; research informs the means and boundary conditions rather than proving a unique educational purpose. Enjoyment does not mean ease.
 
 ## What it does
 
@@ -47,7 +49,8 @@ The skill activates automatically when working on:
 
 ## Key guidance
 
-- Explicit separation of evidence-backed principles, local quality conventions, platform contracts, and context-dependent heuristics
+- Explicit separation of normative purpose, evidence-backed principles, local quality conventions, platform contracts, and context-dependent heuristics
+- Design from purpose and learner state through Learning Unit / Event / Evidence to course progression, before choosing presentation components
 - 2019 CLT operational baseline plus the 2025 goal-driven revision proposal, with boundary-condition-aware conflict resolution
 - Explicit instructional horizon: initial performance, learning (including retention), transfer, or a deliberate combination
 - Curriculum-level distinction among stable Learning Units, recurring Learning Events, aligned evidence, and presentation-only pages
@@ -55,11 +58,14 @@ The skill activates automatically when working on:
 - Primary Representation: choose visual, code/CodePreview, text, diagram, or motion media by task and instructional horizon rather than forcing screenshots
 - Meaningful segmenting and split-attention control rather than “one screen = one segment” rules
 - Prior-knowledge/performance-adaptive scaffolding and worked examples
-- Retrieval/generative activity separated conceptually from feedback and aligned closure
+- Meaningful activity and engagement, preserving productive challenge while reducing accidental difficulty
+- Retrieval/generative activity separated conceptually from feedback and aligned Evidence; no Section-local closure mandate
 - Initial performance distinguished from durable learning and transfer
 - Accessibility equivalents treated as necessary access paths, not gratuitous redundancy
 - Course Docs-specific task/component contracts kept in an on-demand reference rather than generalized as learning science
 - Reviewer checklist and annual research-maintenance process
+
+Minimalism is one research/design foundation, not the highest educational purpose. `Need → Name → Use` is a context-dependent explanation heuristic. Concept length is determined by clarity, not a sentence-count target.
 
 ## License
 

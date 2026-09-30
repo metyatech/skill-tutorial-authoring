@@ -7,9 +7,11 @@ These rules are **local platform contracts and quality conventions**. Do not
 present them as universal learning-science requirements and do not force them on
 unrelated Markdown/tutorial systems.
 
-This reference documents the learner-facing MDX composition and lint
-conventions. Its components are presentation/task formats; do not infer a
-platform-level Learning Unit or Learning Event data model from them.
+Design Unit outcomes, Event experiences, and aligned Evidence before choosing
+MDX components. Components express those choices. See the platform's
+[Learning System documentation](https://github.com/metyatech/course-docs-site/blob/main/docs/learning-system.md)
+for metadata contracts; component names or Section boundaries do not determine
+pedagogy.
 
 ## Component composition
 
@@ -22,10 +24,10 @@ Available components:
 | Component | Contract / role |
 |---|---|
 | `<Prerequisites>` | Page-level requirements before the first Section |
-| `<Section>` | Recursive milestone/sub-goal container; `title` required; `goal` required only at depth 0 |
+| `<Section>` | Recursive presentation container; `title` required; `goal` optional at all depths |
 | `<Action>` | Coherent learner action episode; optional `img` / `alt` |
 | `<Verify>` | Observable result evidence; optional expected-result image |
-| `<Concept>` | Collapsible need-now term/background |
+| `<Concept>` | Conceptual support for current/near activity, pre-training, summary, retrieval, or reference |
 | `<Reference>` | Collapsible lookup material |
 | `<Recovery>` | Reactive diagnosis/recovery support near a failure point |
 | `<Checkpoint>` | Optional checklist for a meaningful multi-condition milestone |
@@ -34,6 +36,8 @@ Available components:
 | `<Hint>` | Progressive support inside QuickCheck or Exercise |
 | `<Answer>` | Final answer/explanation inside QuickCheck or Exercise |
 | `<NextSteps>` | Optional concrete follow-up actions, normally at document end |
+| `<Instruction>` / `<ProblemSolving>` | Direct-child initial Event stage markers ordered by `pattern` |
+| `<Evidence>` | Metadata-only binding to one existing assessment surface |
 
 A single `<Section>` is recursive. Heading depth is injected automatically:
 depth 0 → `h2`, depth 1 → `h3`, and so on, capped at `h6`.
@@ -41,7 +45,7 @@ depth 0 → `h2`, depth 1 → `h3`, and so on, capped at `h6`.
 ## Instructional horizon
 
 Before choosing representation or assistance, identify whether the lesson or
-Section is intended mainly for **initial performance**, **learning (including
+Learning Unit/Event is intended mainly for **initial performance**, **learning (including
 retention)**, **transfer**, or a deliberate combination. This is a Course Docs
 quality convention rather than an MDX parser requirement.
 
@@ -51,27 +55,13 @@ the intended horizon.
 
 ## Section goals
 
-Every top-level `<Section>` must declare a non-empty `goal`. Nested Section goals
-are optional and should be used when they improve orientation.
+Section `goal` is optional at all depths, including Event-bearing Sections.
+Use it when learner-facing orientation helps. It is neither the canonical Unit
+objective (defined once in course-root `learning-units.yaml`) nor Evidence;
+do not duplicate Unit objectives into it.
 
-This learner-facing Section goal is local to the rendered material; it does not
-by itself define a curriculum-level Learning Unit or prove that aligned evidence
-has been collected.
-
-Goal text is rendered verbatim below the heading. Write a complete
-future-declarative sentence describing what the learner will achieve by the end
-of that Section.
-
-Good patterns:
-
-- 「キューブを1つ置きます」
-- 「キャラクターを操作できるようになります」
-- 「触れたら消えるようになります」
-
-Avoid retrospective/completed wording such as 「〜した」「〜された」 or bare
-noun phrases such as 「〜した状態」.
-
-The tense check is heuristic/advisory; the required-goal check is structural.
+Non-empty goal text renders verbatim below the heading. Empty/whitespace-only
+values render no goal banner. No tense pattern is required or linted.
 
 ## Action
 
@@ -114,13 +104,13 @@ an image.
 
 ## Concept
 
-A Concept should contain one need-now idea and be near its first meaningful
-use. The platform lint recognises Action, Section, Verify, QuickCheck, and
-Exercise as plausible following usage sites.
+A Concept supports conceptual knowledge needed for current or near learning
+activity. Near meaningful first use is a default; intentional pre-training,
+summary, retrieval, or reference placement is also valid.
 
-Roughly 2–5 sentences or one short table is preferred. Six or more sentences
-triggers a note to review whether multiple concepts/reference details are mixed;
-it is not a hard failure.
+The following-usage-site detector is an advisory approximation, not semantic
+validation. Six or more sentences prompts review for mixed concepts/reference
+detail; no preferred sentence count, hard limit, or research threshold follows.
 
 ## Recovery
 
@@ -136,13 +126,17 @@ In Course Docs, both task components have this **platform contract**:
 
 ```text
 problem content
-→ one or more <Hint> blocks
+→ zero or more <Hint> blocks
 → exactly one final <Answer>
 ```
 
 Hints and Answer must be direct children of the task block. Content after
 `<Answer>`, a Hint after Answer, nested task blocks, or the removed legacy
 Solution component are invalid.
+
+The contract is `problem → Hint* → Answer`. Problem content and exactly one
+non-empty final Answer are required. Hints are optional; when supplied they
+must be non-empty and precede Answer, with no later problem content.
 
 This structure is local to Course Docs. A generic tutorial outside this platform
 may use a different exercise/feedback structure when pedagogically appropriate.
@@ -154,10 +148,10 @@ final token/value. Explain why the answer is correct and address a likely
 misconception when one genuinely exists; do not invent a misconception merely
 to satisfy the template.
 
-## Aligned closure
+## Unit/Event/Evidence alignment
 
-A Section containing learner work should have evidence capable of testing its
-learning goal. The platform recognises these closure surfaces:
+Design evidence for Unit objectives at useful points in Event/course
+progression. Section-local closure is not required. Assessment surfaces include:
 
 - `<Verify>` — observable state/behavior;
 - `<QuickCheck>` — retrieval/understanding;
@@ -166,12 +160,13 @@ learning goal. The platform recognises these closure surfaces:
 
 An Exercise is a task format, not automatic transfer evidence. To support a
 transfer claim, change conditions meaningfully and require learners to select or
-adapt the learned principle. Align the evidence to the Section's learning goal.
+adapt the learned principle. Align evidence to the targeted Unit outcome.
 
-`<Recovery>` does not count as closure.
+`<Recovery>` provides error support rather than objective Evidence.
 
-Do not add every closure component mechanically. A grouping Section with no
-local Action does not inherit child-Section Actions merely to satisfy closure.
+Do not add assessment components mechanically. Bind an existing surface with
+`<Evidence>` when explicit Unit/Event mapping is needed. A goal banner does not
+establish evidence.
 
 ## Prerequisites and NextSteps
 
@@ -215,21 +210,18 @@ research strength.
 
 | Rule ID | Severity | Intent |
 |---|---|---|
-| `tutorial/section-goal-required` | error | Missing/empty top-level Section goal |
 | `tutorial/action-single-image` | note | Multiple images in one Action; review integration |
 | `tutorial/section-no-hrule` | warn | Horizontal rule inside a Section |
 | `tutorial/verify-no-duplicate-arrow` | warn | Verify source starts with `→` |
 | `tutorial/verify-shot-action-role` | warn | Verify shot manifest contains action-role annotations |
-| `tutorial/section-lacks-closure` | warn | Local Action without aligned closure |
-| `tutorial/section-goal-tense` | note | Goal-tense heuristic |
 | `tutorial/reference-image-only` | note | Image-only Reference |
 | `tutorial/action-bold-overuse` | note | Six or more bold spans in one Action |
 | `tutorial/third-person-reader` | note | Learner-audience meta-prose heuristic |
 | `tutorial/page-opens-with-doc-description` | note | Document-description opener heuristic |
 | `tutorial/verify-internal-mechanics` | note | Verify appears to describe internal mechanics |
 | `tutorial/concept-length` | note | Six or more Concept sentences |
-| `tutorial/concept-placement` | note | No plausible following usage site |
-| `tutorial/decorative-emoji` | note | Non-allowlisted emoji outside signaling surfaces |
+| `tutorial/concept-placement` | note | Review meaningful-use, pre-training, summary, retrieval, or reference placement |
+| `tutorial/decorative-emoji` | note | Review goal-aligned signaling/affect versus competing ornament |
 | `tutorial/verify-visual-workaround-as-action` | note | Action image looks like Verify result state |
 | `tutorial/prerequisites-placement` | warn | Prerequisites after first Section |
 | `tutorial/nextsteps-placement` | note | NextSteps before last Section |

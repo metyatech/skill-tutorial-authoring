@@ -41,16 +41,32 @@ Keep author-facing audience labels in authoring context or metadata. Do not leak
 phrases such as 「初学者向け」 into learner-facing prose unless the learner
 genuinely needs that information.
 
+## Educational purpose
+
+Adopt this **normative purpose**: learners enjoy learning with a positive
+outlook while increasing what they can actually do, and use what they learn to
+think, create, and continue learning for themselves.
+
+This is the educational system's value judgment, not a unique purpose proved by
+research. Learning science informs the means, side effects, and boundary
+conditions for pursuing it. Enjoyment does not mean constant ease; rigor does
+not require unnecessary frustration. Preserve meaningful retrieval, decisions,
+problem solving, and productive struggle while reducing accidental difficulty.
+
 ## Rule provenance
 
 Do not present every concrete rule as a scientific finding. Classify rules as:
 
 | Class | Meaning |
 |---|---|
+| **Normative purpose** (`normative-purpose`) | Adopted educational value judgment, not an empirical finding |
 | **Evidence-backed principle** | Direction supported by learning-science evidence, applied within stated boundary conditions |
 | **Quality convention** | Deliberate local writing standard for consistency or usability |
 | **Platform contract** | Requirement imposed by the rendering/component system |
 | **Context-dependent heuristic** | Review prompt whose usefulness depends on task, medium, or learner |
+
+The remaining class identifiers are `evidence-backed-principle`,
+`quality-convention`, `platform-contract`, and `context-dependent-heuristic`.
 
 Evidence strength and enforcement severity are separate axes. A platform
 contract may be strict without being a scientific finding; a strong research
@@ -61,24 +77,36 @@ judgement.
 
 When creating or reviewing a tutorial, follow this order.
 
-1. Identify the **target learner**, relevant prior knowledge, and intended
-   horizon: **initial performance**, **learning (including retention)**,
-   **transfer**, or a deliberate combination.
-2. Define what the learner should know or be able to do, then identify evidence
-   aligned to that objective.
-3. Organise learner-facing material around meaningful goals and actions, not
-   software menus or feature lists.
-4. Choose the primary representation and assistance that fit the task, learner,
-   and intended horizon.
-5. Introduce concepts near meaningful use, in the order Need/Context → Name and
-   meaning → Use; a first appearance may itself introduce and define a term.
-6. Add only the guidance, signaling, examples, and recovery support the learner
-   and goal need.
-7. Check accessibility, coherence, and representation redundancy.
-8. Cold-read the page in its rendered order, allowing a first appearance to
-   introduce and define a term before later use.
+1. **Purpose / intended outcome:** decide what worthwhile capability the learner
+   should gain in service of the educational purpose.
+2. **Learner state:** identify relevant prior knowledge, prior instruction, and
+   intended horizon: initial performance, retention, transfer, or a combination.
+3. **Learning Unit + aligned Evidence:** define what is learned and what
+   observable evidence would demonstrate the intended outcome.
+4. **Learning Event design:** choose the learning experience for this occasion,
+   including a suitable Pattern/Strategy and meaningful activities.
+5. **Appropriate assistance:** supply explanations, models, feedback, and
+   recovery support matched to the learner, performance, and goal.
+6. **Engagement / meaningful challenge:** support willingness to learn and
+   achievable progress without making ease the measure of quality.
+7. **Active learner processing:** design relevant retrieval, explanation,
+   prediction, comparison, decisions, application, debugging, or creation.
+8. **Course progression:** plan later practice, retrieval, and changed-condition
+   transfer when the curriculum owns that horizon.
+9. **Presentation / accessibility / cold-read:** choose representations and
+   components, then check access, clarity, and accidental difficulty.
+
+`Need / Context → Name + meaning → Use` is a context-dependent heuristic for
+some explanations, not a fixed required or default authoring sequence.
 
 ## Learning system and tutorial pages
+
+Design from purpose → Unit/intended outcome → Event/learner experience →
+Evidence → progression over time. Units are **WHAT**, Events **HOW / NOW**,
+Evidence **EVIDENCE**, and progression **OVER TIME**. Page / Section are
+presentation/distribution choices below that model. Components express the
+chosen experience; their props do not determine pedagogy. A Section does not
+require local closure, a Concept, or a Hint merely because it exists.
 
 For curriculum-level design, distinguish the stable objective from each
 occasion on which learners work toward it:
@@ -151,6 +179,11 @@ settled consensus.
 - **Germane processing** is not a third independent load to maximise. Create
   room for useful retrieval, self-explanation, practice, and feedback after
   avoidable demands are controlled.
+
+Reduce avoidable processing relative to the goal so learners can use capacity
+for learning-relevant thinking. Retrieval, self-explanation, problem solving,
+choosing, debugging, adapting, and transfer may be productive difficulty.
+Do not remove them merely to lower reported effort.
 
 When tactics conflict: identify the instructional goal first, reduce avoidable
 processing relative to that goal, manage task complexity for the learner, then
@@ -230,15 +263,17 @@ integrate without unnecessary search.
 
 ## Concepts and pre-training
 
-A Concept introduces one need-now term or idea.
+A Concept supports conceptual knowledge needed to understand or perform a
+current or near learning activity.
 
-- Place it near the first meaningful use: Action, Section, Verify, QuickCheck,
-  or Exercise as appropriate.
-- Explain **what it is** and **why it matters now**.
-- Do not introduce distant-future material.
-- Roughly 2–5 sentences or one short table is a useful heuristic, not a hard
-  scientific threshold. At 6+ sentences, review whether the block contains
-  multiple concepts or reference detail.
+- Near-first-use is a default, not an exclusive placement contract. Earlier
+  pre-training may prepare learners for a complex activity; summary, retrieval,
+  or reference placement may also be semantically appropriate.
+- Explain what it is and why it matters for the activity; avoid unrelated
+  distant-future material.
+- Use the length needed for clarity. Six or more sentences may trigger review
+  for mixed concepts or reference detail; this is neither a hard limit nor a
+  research threshold, and shorter blocks are not inherently better.
 
 If the learner already knows the concept, a collapsible/reference form or no
 Concept at all may be better.
@@ -252,6 +287,9 @@ Do not invent an analogy merely to satisfy a checklist. Activation recalls
 existing knowledge; pre-training teaches knowledge that is not yet established.
 
 ## Scaffolding and progressive independence
+
+Aim for **appropriate assistance**, not guidance minimization. Increasing
+independence is a capability outcome, not a requirement to withhold useful help.
 
 For low or unknown relevant prior knowledge, default to enough worked or guided
 support before substantial independent construction. This default does not
@@ -278,29 +316,43 @@ Useful progression when appropriate:
 Not every page needs all three phases. Learners with established prior knowledge
 may appropriately start later in the progression.
 
-## Practice, retrieval, feedback, and aligned closure
+## Engagement, enjoyment, and autonomy
+
+Consider authentic relevance, meaningful challenge, visible progress,
+competence-supportive feedback, meaningful choice, learner control, and positive
+engagement where they support the outcome. These are design options, not a
+checklist to include on every page. Do not invent relevance or make choice an
+end in itself. Enjoyment ≠ ease; rigor ≠ unnecessary frustration.
+
+Evaluate both learning and experience: pleasant fluency or a feeling of learning
+does not by itself demonstrate capability growth, and useful effort may feel
+difficult. Use appropriate evidence and learner feedback together.
+
+## Practice, retrieval, feedback, and aligned evidence
 
 A substantive learning goal should have evidence appropriate to that goal and
 its intended instructional horizon.
 
-| Goal/evidence need | Suitable closure |
+| Goal/evidence need | Possible evidence surface |
 |---|---|
 | Observable behavior or state | Verify |
 | Retrieval / understanding | QuickCheck |
 | Several observable conditions forming a milestone | Checkpoint |
 | Application or transfer task | Exercise |
 
-This mapping is a **quality convention for choosing useful closure**, not a claim
-that every closure is a generative-learning activity.
+This mapping is a **quality convention for choosing evidence surfaces**, not a
+Section-local closure contract. Align Evidence to Units and Events at useful
+points in progression, rather than adding a check to every Section.
 
 Generative activity specifically asks learners to select, organise, integrate,
-retrieve, explain, predict, or apply information. QuickChecks,
+retrieve, explain, predict, compare, apply, debug, adapt, or create. QuickChecks,
 self-explanation, and suitably designed Exercises can serve this role. A passive
 Verify may be valuable feedback without being generative activity.
 
-Recovery is error-support, not learning-goal closure.
+Recovery is error-support, not objective Evidence. Active/generative activity
+is not required on every job aid or initial-performance-only page.
 
-Immediate closure is evidence of **initial performance**, not durable learning
+Immediate success is evidence of **initial performance**, not durable learning
 or transfer. Important knowledge should recur later through retrieval and
 distributed practice when curriculum scope permits. Do not claim mastery from
 one immediate success.
@@ -336,6 +388,12 @@ signals.
 
 ## Learner-facing prose
 
+**Clarity > brevity.** Do not shorten away causal relationships, UI/state
+correspondence, why an action matters, state transitions, or term meanings that
+learners need. A term may appear in a heading or title before definition, but
+explain it before requiring understanding of it. Prefer headings that predict
+the task, topic, or capability.
+
 Use natural, direct, active language. Japanese zero-subject sentences are fine;
 explicit 「あなた」 is not required.
 
@@ -343,6 +401,17 @@ Keep authoring rationale and audience classification out of learner-facing prose
 when they do not help the task. Rewrite 「受講者は〜」「学習者は〜」
 「初学者向け」 as task-facing prose. Do not ban 「ユーザー」 when it refers
 to a real product/domain end user.
+
+## Cold-read: accidental difficulty detector
+
+Read the material in rendered order to detect unexplained prerequisites,
+ambiguous instructions, missing state, unnecessary backtracking, undefined
+assumptions, terminology gaps, and visual/prose mismatches. Re-entry should be
+understandable where the material supports it.
+
+Preserve intended retrieval effort, problem solving, decision making,
+productive struggle, and changed-condition transfer. Cold-read review should
+remove accidental confusion, not solve the learner's meaningful challenge.
 
 ## Accessibility essentials
 
@@ -381,8 +450,8 @@ When the target site uses `@metyatech/course-docs-platform`, load
 
 That reference contains local MDX contracts such as:
 
-- top-level `<Section>` goal requirements;
-- QuickCheck/Exercise `problem → Hint+ → Answer` structure;
+- optional `<Section>` orientation goals at every depth;
+- QuickCheck/Exercise `problem → Hint* → Answer` structure;
 - `Verify` source notation;
 - component placement conventions;
 - lint rule IDs and severities.
@@ -401,9 +470,12 @@ Before delivering or approving a tutorial:
 - cold-read every heading, term, value, metaphor, and code comment in rendered
   order;
 - confirm representation choice and accessibility equivalents;
-- confirm Concepts occur near meaningful first use;
-- confirm guidance matches prior knowledge;
-- confirm practice/closure tests the stated goal;
+- confirm Concept placement serves meaningful use or intentional pre-training,
+  summary, retrieval, or reference;
+- confirm appropriate assistance matches prior knowledge/performance;
+- confirm Evidence tests Unit outcomes at useful points in progression;
+- confirm engagement supports meaningful challenge without equating enjoyment
+  with ease;
 - confirm failure support addresses plausible failures;
 - remove irrelevant or duplicate processing;
 - use [REVIEW-CHECKLIST.md](REVIEW-CHECKLIST.md) for a full audit.
