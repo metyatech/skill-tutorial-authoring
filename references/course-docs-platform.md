@@ -141,12 +141,17 @@ must be non-empty and precede Answer, with no later problem content.
 This structure is local to Course Docs. A generic tutorial outside this platform
 may use a different exercise/feedback structure when pedagogically appropriate.
 
-Hints must not reveal the answer immediately and should rely only on material
-already established by the lesson/curriculum. An Answer must provide enough
-explanation to make the feedback instructive rather than returning only a bare
-final token/value. Explain why the answer is correct and address a likely
-misconception when one genuinely exists; do not invent a misconception merely
-to satisfy the template.
+The first Hint should avoid unnecessarily revealing the answer immediately.
+Multiple Hints may become progressively stronger or more explicit. Default to
+material already established by this or a guaranteed earlier lesson, but a Hint
+may explicitly teach new information. Do not require unfamiliar information as
+already known without explaining it.
+
+An Answer must provide feedback that lets learners understand correctness.
+For simple, self-explanatory tasks, a concise Answer is appropriate when
+additional explanation adds no learning value. Explain the reasoning or address
+a likely misconception when it helps the learner; do not invent a misconception
+merely to satisfy the template.
 
 ## Unit/Event/Evidence alignment
 

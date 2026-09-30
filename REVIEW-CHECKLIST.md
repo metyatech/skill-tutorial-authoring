@@ -187,7 +187,9 @@ site uses `@metyatech/course-docs-platform`.
 - [ ] No `---` horizontal rule appears inside a Section.
 - [ ] `<Verify>` source does not include the leading `→` rendered by the component.
 - [ ] Course Docs QuickCheck/Exercise tasks use problem content → zero or more `<Hint>` blocks → exactly one non-empty final `<Answer>`; optional Hints are non-empty direct children before Answer.
-- [ ] Each `<Answer>` gives instructive feedback beyond a bare final token/value; it explains correctness and addresses a plausible misconception when one exists without inventing one.
+- [ ] The first Hint avoids unnecessarily revealing the answer immediately; later Hints may become progressively stronger or more explicit.
+- [ ] Hints default to established material but may explicitly teach new information; unfamiliar information is explained before it is required as known.
+- [ ] Each `<Answer>` lets learners understand correctness; simple, self-explanatory tasks may use concise answers when additional explanation adds no learning value. Reasoning or a plausible misconception is addressed when useful without inventing one.
 - [ ] No `authoringMode` or legacy Solution block is present.
 - [ ] `<Prerequisites>` appears before the first Section when prerequisites exist.
 - [ ] `<NextSteps>` is optional; when used, it is at the document end.
