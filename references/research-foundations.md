@@ -425,6 +425,71 @@ comparison with a known concept, an earlier lesson, or a sound analogy.
 
 Do not manufacture an analogy where no helpful bridge exists.
 
+## Retrieval practice and generation effect: pre-attempt conditions
+
+When a learning event intentionally targets unaided retrieval or learner generation
+(e.g., a retrieval-practice QuickCheck, problem-solving task, or discovery-based
+activity), learner-visible prompt material and default pre-attempt content should
+not reveal the target response or provide a decisive cue that removes the intended
+retrieval or generation opportunity before the learner's first attempt.
+
+**Evidence — Retrieval Practice:**
+
+Agarwal, Nunes & Blunt (2021) synthesized 50 classroom experiments investigating
+retrieval practice across diverse learners, materials, and settings. The review
+included 49 effect sizes across *n* = 5,374 students. Retrieval practice showed
+consistent benefits for long-term learning: 57% of the observed effect sizes
+indicated medium or large benefits, with an overall trend toward positive outcomes.
+
+**Boundary / what this does NOT prove:**
+
+- This evidence is drawn from classroom contexts and may not generalise uniformly
+  to all digital or self-paced environments.
+- The review notes heterogeneity in effect magnitudes and calls for continued
+  study of moderator variables.
+- Consistent benefits does not mean retrieval practice is universally superior for
+  every learning context; initial performance, transfer, and other goals may have
+  different demand profiles.
+
+**Evidence — Generation Effect:**
+
+Bertsch, Pesta, Wiscott & McDaniel (2007) meta-analyzed 86 studies spanning 445
+effect sizes. The generation effect (learning gains from producing or generating
+information vs. passive reading) showed an average benefit with Hedges' *g* = .40.
+The meta-analysis identified substantial moderator variability, indicating that
+conditions and presentation context shape the magnitude of the advantage.
+
+**Boundary / what this does NOT prove:**
+
+- Generation advantage varies with learner characteristics, task type, and retention
+  interval.
+- An immediate, unsupported generation attempt does not universally outperform
+  guided generation or worked examples for all learners.
+- This evidence supports generation as beneficial when conditions are suited; it
+  does not mandate unguided struggle or eliminate the role of guided practice and
+  scaffolding.
+
+**Authoring implication:**
+
+If a task is intentionally designed to elicit unaided retrieval (e.g., a
+QuickCheck testing memory for previously taught material) or learner generation
+(e.g., problem solving before instruction), avoid presenting the target response,
+complete worked solutions, or decisive cues in the learner-visible prompt or
+default pre-attempt state. Doing so removes the retrieval or generation opportunity
+before the learner's first attempt.
+
+If the response is deliberately supplied as worked instruction, guided modeling,
+or scaffolded support (e.g., a worked example, completion task, or faded support),
+that design choice serves a different instructional purpose. The learner's
+interaction is then guided practice or verification, not unaided retrieval or
+generation evidence. This is compatible with retrieval-practice and generation
+principles; it reflects a deliberate choice about the form of support.
+
+This does NOT imply that all exercises must hide answers, that guidance should
+always be minimized, or that every learning event must maximize generative
+difficulty. Choose task design to fit the instructional goal, learner knowledge,
+and evidence for the tactic being applied.
+
 ## Retrieval, generative activity, feedback, and durable learning
 
 These constructs overlap in practice but are not interchangeable.
@@ -495,7 +560,11 @@ Therefore:
 
 ## Sources
 
-- Camacho-Morles, J., Slemp, G. R., Pekrun, R., Loderer, K., Hou, H., &
+- Agarwal, P. K., Nunes, L. D., & Blunt, J. R. (2021). *Retrieval Practice
+  Consistently Benefits Student Learning: A Systematic Review of Applied Research
+  in Schools and Classrooms*. https://doi.org/10.1007/s10648-021-09595-9
+- Bertsch, S., Pesta, B. J., Wiscott, R., & McDaniel, M. A. (2007). *The
+  generation effect: A meta-analytic review*. https://doi.org/10.3758/BF03193441
   Oades, L. G. (2021). *Activity Achievement Emotions and Academic Performance:
   A Meta-analysis*. https://doi.org/10.1007/s10648-020-09585-3
 - Mammadov, S., & Schroeder, K. (2023). *A meta-analytic review of the

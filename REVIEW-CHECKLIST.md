@@ -124,6 +124,12 @@ contracts.
 - [ ] Error recovery is not counted as learning-goal closure.
 - [ ] No closure surface is added mechanically just because a Section exists.
 
+## Pre-attempt conditions for retrieval and generation
+
+- [ ] When a task is intentionally designed to elicit unaided retrieval (e.g., a QuickCheck testing recall) or learner generation (e.g., problem-solving before instruction), learner-visible prompt material and default pre-attempt state do not reveal the target response or decisive cues that remove the intended retrieval/generation opportunity before the learner's first attempt.
+- [ ] When a response is deliberately supplied as worked instruction, guided modeling, or scaffolded support, that design choice is recognised as guided practice, not unaided retrieval/generation evidence.
+- [ ] Task design reflects the instructional goal, learner knowledge, and evidence for the tactic; exercises do not uniformly hide answers or minimise guidance.
+
 ## Error prevention and recovery
 
 - [ ] Common/high-impact failure points receive useful prevention and/or diagnosis support.
@@ -201,3 +207,13 @@ site uses `@metyatech/course-docs-platform`.
 - [ ] Research principles are not presented as universal formatting laws when medium, expertise, outcome, or population changes the boundary conditions.
 - [ ] Course Docs contracts and local quality conventions are not misrepresented as direct scientific findings.
 - [ ] Real learner evidence takes priority over an assumed heuristic when the heuristic demonstrably harms task performance or learning.
+
+## Review-execution policy *(user-specific QA procedure)*
+
+These items represent user-adopted quality assurance practice and process policy,
+not empirical learning-science claims. They are encoded here as explicit
+user-specific execution standards for tutorial approval and review.
+
+- [ ] Final tutorial approval and review inspect the complete final artifact, not only the diff or a subset of changes.
+- [ ] For sequential or cumulative tutorials, review proceeds in learner-visible order while carrying forward the state produced by each required step and by each optional branch when evaluating consequences.
+- [ ] When an out-of-edit-scope issue violates applicable rules or is blocking, do not silently ignore it; report it and do not claim a clean PASS status.

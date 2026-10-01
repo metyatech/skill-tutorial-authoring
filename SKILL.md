@@ -357,6 +357,29 @@ or transfer. Important knowledge should recur later through retrieval and
 distributed practice when curriculum scope permits. Do not claim mastery from
 one immediate success.
 
+## Pre-attempt conditions for retrieval and generation activities
+
+When a task is intentionally designed to elicit unaided retrieval or learner
+generation (a QuickCheck testing recall, a problem-solving task before
+instruction, or a discovery activity), learner-visible prompt material and
+default pre-attempt state should not reveal the target response or decisive
+cues that remove the intended retrieval or generation opportunity before the
+learner's first attempt.
+
+See [references/research-foundations.md](references/research-foundations.md)
+for evidence and boundaries on retrieval practice and generation effect.
+
+If the response is deliberately supplied as worked instruction, guided modeling,
+or scaffolded support (worked examples, completion tasks, faded support), that
+learner interaction serves guided practice or verification, not unaided retrieval
+or generation. This is compatible with retrieval and generation principles; it
+reflects a deliberate choice about support form.
+
+This does NOT imply that all exercises must hide answers, that guidance should
+always be minimized, or that every learning event must maximize generative
+difficulty. Choose task design to fit instructional goal, learner knowledge, and
+evidence for the tactic being applied.
+
 ## Recovery and error support
 
 Minimalist error support covers prevention, detection, diagnosis, and recovery.
