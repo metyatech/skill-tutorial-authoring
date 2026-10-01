@@ -86,11 +86,14 @@ boundaries and goal banners do not establish assessment or mastery.
 
 ## Learner-facing orientation
 
-**Evidence:** Hamilton (1985) reviewed effects of adjunct questions and
-objectives in instructional prose through a framework attentive to text
-structure and learner characteristics. Luiten, Ames, and Ackerson's (1980)
-meta-analysis of 135 published and unpublished studies found facilitative
-effects of advance organizers on learning and retention.
+**Evidence:** Hamilton (1985) proposed a context-sensitive framework for
+evaluating adjunct questions and objectives in instructional prose that
+accounts for text structure and learner characteristics. This framework is not
+direct evidence that objectives are effective. Luiten, Ames, and Ackerson's
+(1980) meta-analysis of 135 published and unpublished studies found that
+advance organizers can facilitate learning and retention. For findings on
+preinstructional objectives, directions, and questions, see
+[`Preinstructional objectives`](#preinstructional-objectives).
 
 **Boundary / what this does NOT prove:** These findings support keeping useful
 objectives and organizers available as options; they do not make an orientation
@@ -106,12 +109,15 @@ sequence, a canonical Unit objective, or information not yet usable. This is
 a context-dependent review heuristic, not a ban on orientation.
 
 An unfamiliar term may appear before its explanation, including in a heading.
-When understanding is needed, explain the name and relevant characteristics or
-relations before relying on it. Mayer's **Pre-training Principle** concerns
-learning names and key characteristics of unfamiliar components before a
-complex task depends on coordinating them; a name-only list is not
-pre-training. This does not require defining every term before its first
-appearance.
+When understanding is needed, explain its meaning before relying on it. Mayer's
+**Pre-training Principle** is research-backed for multimedia learning: people
+learn better when a complex lesson is preceded by training in the names and
+characteristics of its main concepts. Applying this principle to Course Docs
+text/code tutorials by explaining a relation before a later activity depends on
+it is a bounded application; Mayer did not directly establish that result for
+these tutorial formats or that relations must always be pre-taught. Do not
+require defining every term before its first appearance or pre-training in
+every lesson.
 
 Prior knowledge can matter without requiring prerequisite UI on every page.
 In a guaranteed linear sequence, a callout with no added preparation, re-entry,
@@ -225,9 +231,9 @@ is explained; explain it before its understanding is required.
 ## Preinstructional objectives
 
 **Evidence:** Klauer (1984) synthesized preinstructional objectives,
-directions, and questions for instructional text. Goal-relevant learning could
-improve while learning of other material decreased; text/task characteristics
-moderated the outcomes.
+directions, and questions shown before instructional text. Goal-relevant
+learning improved, goal-irrelevant learning decreased, and overall learning was
+slightly improved. Effects depended on text/task conditions.
 
 **Boundary / what this does NOT prove:** This historical text literature does
 not make every Section goal banner mandatory, prescribe Japanese verb tense,
