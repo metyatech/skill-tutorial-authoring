@@ -650,10 +650,11 @@ Therefore:
 - Klauer, K. J. (1984). *Intentional and Incidental Learning with Instructional
   Texts: A Meta-Analysis for 1970–1980*. https://doi.org/10.3102/00028312021002323
 - Hamilton, R. J. (1985). *A Framework for the Evaluation of the Effectiveness
-  of Adjunct Questions and Objectives*. https://doi.org/10.3102/00346543055001047
+  of Adjunct Questions and Objectives*.
+  [https://doi.org/10.3102/00346543055001047](https://doi.org/10.3102/00346543055001047)
 - Luiten, J. W., Ames, W. S., & Ackerson, G. (1980). *A Meta-analysis of the
   Effects of Advance Organizers on Learning and Retention*.
-  https://doi.org/10.3102/00028312017002211
+  [https://doi.org/10.3102/00028312017002211](https://doi.org/10.3102/00028312017002211)
 - Cheng, C., Wu, Y., Wang, R., & Wang, Z. (2026). *Seductive Details,
   Cognitive Load, and Learning Outcomes: A Multi-level Meta-analysis and MASEM*.
   https://doi.org/10.1007/s10648-025-10099-z
