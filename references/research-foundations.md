@@ -124,6 +124,71 @@ In a guaranteed linear sequence, a callout with no added preparation, re-entry,
 or recovery value is a candidate for removal; retain it when it supports an
 actual learner decision or use.
 
+## Instructional continuity and local coherence
+
+Keep the research findings separate from the local Course Docs heuristic.
+
+### McNamara, Kintsch, Songer, and Kintsch (1996)
+
+**Direct research finding:** Two experiments studied junior-high students'
+comprehension of science texts with different levels of coherence. Coherence
+helped readers with low domain knowledge. Readers with sufficient background
+knowledge could benefit from minimally coherent text that prompted them to
+infer unstated relations, including deeper understanding in some measures
+([McNamara et al., 1996](https://doi.org/10.1207/s1532690xci1401_1)).
+
+**Boundary:** These were science-text comprehension studies, not tests of
+Course Docs paragraph order, transition sentences, or the timing of a tool or
+concept in a tutorial. The results do not show that adding explanations or
+transitions is always better.
+
+**Course Docs bounded implication:** For novice-oriented initial instruction,
+review whether each new topic or operation follows intelligibly from the
+learner's preceding goal, observation, unresolved problem, or stated need. This
+is a local sequence / discourse continuity heuristic, not a research-validated
+requirement for particular transitions or for every audience.
+
+### McNamara and Kintsch (1996)
+
+**Direct research finding:** In two experiments using high- and low-coherence
+history texts, low-coherence text required more inference processing. Readers'
+prior knowledge affected whether those inferences were successful and useful;
+high-knowledge readers did better on some deep-comprehension measures after
+low-coherence text ([McNamara & Kintsch, 1996](https://doi.org/10.1080/01638539609544975)).
+
+**Boundary:** The authors studied history-text comprehension and specific
+outcomes. The finding does not prescribe low coherence as an instructional
+strategy, nor does it test transition wording or Course Docs sequencing.
+
+**Course Docs bounded implication:** Do not turn local coherence into a
+universal maximum-coherence rule. Preserve inference deliberately required by
+retrieval or problem-solving activities, and do not require novice-level
+bridging for learners whose relevant prior knowledge supports the intended
+inference.
+
+### Renkl (2014)
+
+**Direct research finding:** Example-based learning is effective for initial
+cognitive skill acquisition. Renkl's theory integrates work on worked
+examples, observational learning, and analogical reasoning; it emphasizes
+learner processing of solution rationales and structural relations so that
+examples support principle-based understanding, rather than assuming that
+watching an example alone guarantees abstraction
+([Renkl, 2014](https://doi.org/10.1111/cogs.12086)).
+
+**Boundary:** This theory does not test the specific CSS example sequence
+`class="nedan"` → `.nedan`, nor establish one universal placement for a
+general rule, Verify, or QuickCheck in Course Docs.
+
+**Course Docs bounded implication:** When a concrete example introduces a new
+principle, review `concrete need → example operation → result check → principle
+/ general rule → understanding check` as one candidate progression. Keep a
+principle needed for the main path or a later QuickCheck on that path. Review
+whether Verify is close to the operation whose result it checks; when it fits,
+consider `operation → result check → generalization`. These are local review
+heuristics, not fixed templates. A Hint, collapsed block, or optional callout
+may add support, but does not replace essential explanation on the main path.
+
 ## Bounded quality heuristic: guided observation
 
 When observing or comparing an operation's result is itself meaningful learner
@@ -692,6 +757,16 @@ Therefore:
 - Luiten, J. W., Ames, W. S., & Ackerson, G. (1980). *A Meta-analysis of the
   Effects of Advance Organizers on Learning and Retention*.
   [https://doi.org/10.3102/00028312017002211](https://doi.org/10.3102/00028312017002211)
+- McNamara, D. S., Kintsch, E., Songer, N. B., & Kintsch, W. (1996). *Are
+  Good Texts Always Better? Interactions of Text Coherence, Background
+  Knowledge, and Levels of Understanding in Learning From Text*.
+  [DOI](https://doi.org/10.1207/s1532690xci1401_1)
+- McNamara, D. S., & Kintsch, W. (1996). *Learning from texts: Effects of
+  prior knowledge and text coherence*. *Discourse Processes, 22*(3), 247–288.
+  [DOI](https://doi.org/10.1080/01638539609544975)
+- Renkl, A. (2014). *Toward an Instructionally Oriented Theory of
+  Example-Based Learning*. *Cognitive Science, 38*(1), 1–37.
+  [DOI](https://doi.org/10.1111/cogs.12086)
 - Cheng, C., Wu, Y., Wang, R., & Wang, Z. (2026). *Seductive Details,
   Cognitive Load, and Learning Outcomes: A Multi-level Meta-analysis and MASEM*.
   https://doi.org/10.1007/s10648-025-10099-z

@@ -57,6 +57,8 @@ The skill activates automatically when working on:
 - Initial-learning order Patterns (I-PS / PS-I) distinguished from optional Strategies and smaller teaching techniques
 - Primary Representation: choose visual, code/CodePreview, text, diagram, or motion media by task and instructional horizon rather than forcing screenshots
 - Meaningful segmenting and split-attention control rather than “one screen = one segment” rules
+- Bounded instructional continuity and local-coherence review for novice initial
+  instruction, separate from action matching and research findings
 - Prior-knowledge/performance-adaptive scaffolding and worked examples
 - Meaningful activity and engagement, preserving productive challenge while reducing accidental difficulty
 - Retrieval/generative activity separated conceptually from feedback and aligned Evidence; no Section-local closure mandate

@@ -51,6 +51,31 @@ contracts.
   or recovery; prior knowledge does not justify a mechanical callout on every
   page.
 
+## Instructional continuity / local coherence
+
+- [ ] In novice-oriented initial instruction, the learner's current state makes
+  clear why the next topic, operation, or concept appears now.
+- [ ] A new concept, tool, or operation is introduced after its need becomes
+  clear, or its purpose is stated before the learner must use it.
+- [ ] A heading read ahead of its section does not jump to a conclusion beyond
+  the learner's current state.
+- [ ] The cause or purpose connecting a previous result to the next explanation
+  or operation is easy to follow.
+- [ ] Sequence / discourse continuity is reviewed separately from learner-
+  action consistency between a heading, explanation, task, and UI cue.
+- [ ] An essential principle needed for the main path, a later operation, or a
+  QuickCheck is explained on the main path, not only in a Hint, collapsed
+  block, or optional callout.
+- [ ] A Verify is close enough to the operation that produced the result to
+  support checking it; when useful, use operation → result check →
+  generalization.
+- [ ] When a concrete example introduces a principle, consider concrete need
+  → example operation → result check → principle / general rule →
+  understanding check as a candidate, not a template.
+- [ ] The continuity heuristic does not add transitions mechanically between
+  every paragraph, remove intended retrieval or problem-solving inference, or
+  demand universally high coherence from knowledgeable learners.
+
 ## Learning Unit / Event / Evidence
 
 - [ ] Each stable learning objective/capability is treated as a Learning Unit; pages are not treated as Learning Units.

@@ -312,6 +312,45 @@ and each stage is clear. This applies signaling and coherence research locally;
 it is not a directly tested rule about particular verb pairs. See
 [`references/research-foundations.md`](references/research-foundations.md).
 
+Separately review **sequence / discourse continuity** across adjacent
+material: does the learner's current state make it clear why the next topic,
+operation, or concept appears now? This is broader than checking whether a
+heading and its activity ask for the same action. It is especially useful for
+novice-oriented initial instruction. A concise bridge may connect a learner
+goal, an observed result, a limitation of the current method, a need for the
+next concept or operation, or an explicit transition. Do not make learners
+infer a logical bridge the material can state briefly. Cold-read questions
+include:
+
+- Would a learner who has just read the preceding material ask “why this now?”
+- Does a new concept, tool, or operation appear after its need becomes clear?
+- Does a heading reveal a conclusion that is ahead of the learner's current
+  state?
+- Does the purpose or cause connecting the previous result to the next
+  explanation or operation read naturally?
+
+Apply this as a **bounded sequence / discourse continuity heuristic**, not as
+a requirement to add transitions between every paragraph or maximize
+coherence for every audience. Preserve intentional inference in retrieval
+and problem-solving activities; do not make high coherence a universal rule
+for learners with substantial prior knowledge.
+
+When a concrete example introduces a principle, review
+`concrete need → example operation → result check → principle / general rule →
+understanding check` as a candidate progression, not a fixed template. Put
+an explanation needed to understand the main instructional path, a later
+operation, or a QuickCheck on that path; do not rely on a Hint, collapsed
+content, or optional callout for an essential principle. Review whether a
+Verify belongs near the operation whose result it checks. When it fits,
+consider `operation → result check → generalization`.
+
+For example, if a broad `p` selector changes every price when the goal is to
+style only the 180-yen price, use the observed result to motivate targeting
+it with `class="nedan"` / `.nedan`. Verify that only the intended price
+changed, then explain the `class="name"` ↔ `.name` rule on the main path and
+check understanding. This illustrates the candidate progression; it is not a
+fixed lesson template.
+
 For guided demonstrations where observing or comparing a result is itself
 meaningful learner processing, consider
 `fully guided action/code → observable result → explanation`. Review whether
