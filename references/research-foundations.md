@@ -218,15 +218,33 @@ review length semantically rather than targeting 2–5 sentences.
 ## Headings and structural signaling
 
 **Evidence:** Lorch, Lemarié, and Chen (2013) compared headings and preview
-sentences in two text-processing experiments. Effects depended on the reading
-task and whether memory for topics, facts, or outlining was assessed.
+sentences in two text-processing experiments. In one experiment, headings
+improved memory for subtopics over preview sentences, with no difference for
+memory of simple facts. In another, outlining was better when topic structure
+was signaled than when it was not, with no reliable difference between headings
+and previews. Effects depended on the reading task and outcome.
 
 **Boundary / what this does NOT prove:** Headings do not prescribe one teaching
-order, numbering format, or goal-first page layout.
+order, numbering format, or goal-first page layout. These studies do not directly
+compare verbs such as “look” and “write” in headings and activities, and do not
+show that matching those verbs causes better comprehension or learning.
 
 **Authoring implication:** Use headings that predict the task, topic, or
 capability and expose useful structure. A title can name a new term before it
 is explained; explain it before its understanding is required.
+
+### Bounded Course Docs heuristic: learner-action consistency
+
+For Course Docs, review whether learner-facing headings, their immediate
+explanations, task statements, and relevant UI cues communicate the action
+required at the same stage. A mismatch is a learner-facing defect when it makes
+the learner decide what to do for reasons unrelated to the learning task. This
+is a **bounded quality heuristic** informed by findings about headings and
+signaling, coherence, and avoiding goal-irrelevant processing; it is not a
+research finding about particular verb pairs. Natural paraphrases that mean the
+same action are acceptable. Multiple actions are acceptable when their order
+and stages are explicit. Do not turn this heuristic into a mechanical
+same-word lint rule.
 
 ## Preinstructional objectives
 

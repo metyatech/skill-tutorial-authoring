@@ -301,6 +301,17 @@ when it enables actionable preparation, re-entry, or recovery. In a
 guaranteed linear progression, omit it when it adds no such value; prior
 knowledge matters without requiring prerequisite UI on every page.
 
+For Course Docs, use **learner-action consistency** as a bounded quality
+heuristic: a learner-facing heading, its immediate explanation, the task
+statement, and relevant UI cues should communicate the action required at the
+same stage. Review a mismatch as a learner-facing defect when it leaves the
+learner unsure whether to look, write, choose, fix, try, check, answer, or
+create. Natural paraphrases are fine when they mean the same action; do not
+require identical words. Multiple actions are fine when their order is explicit
+and each stage is clear. This applies signaling and coherence research locally;
+it is not a directly tested rule about particular verb pairs. See
+[`references/research-foundations.md`](references/research-foundations.md).
+
 For guided demonstrations where observing or comparing a result is itself
 meaningful learner processing, consider
 `fully guided action/code → observable result → explanation`. Review whether

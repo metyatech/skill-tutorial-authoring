@@ -29,6 +29,13 @@ contracts.
   objective.
 - [ ] Orientation does not front-load information the learner cannot yet use
   without a clear purpose.
+- [ ] For Course Docs, the learner action promised by a heading matches the
+  action required by the immediate explanation and activity.
+- [ ] For Course Docs, verbs such as “look,” “write,” and “fix” do not ambiguously
+  describe different actions at the same stage; natural paraphrases for the
+  same action remain acceptable.
+- [ ] When multiple actions are intended, their order and stage boundaries are
+  explicit.
 - [ ] An unfamiliar term is not relied on before its meaning is understood;
   it may still first appear in a heading or preview when understanding is not
   yet required.
