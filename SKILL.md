@@ -344,11 +344,11 @@ content, or optional callout for an essential principle. Review whether a
 Verify belongs near the operation whose result it checks. When it fits,
 consider `operation → result check → generalization`.
 
-For example, if a broad `p` selector changes every price when the goal is to
-style only the 180-yen price, use the observed result to motivate targeting
-it with `class="nedan"` / `.nedan`. Verify that only the intended price
-changed, then explain the `class="name"` ↔ `.name` rule on the main path and
-check understanding. This illustrates the candidate progression; it is not a
+For example, if a broad `p` selector changes every `<p>` element when the goal
+is to style only the 180-yen price, use the observed result to motivate
+targeting it with `class="nedan"` / `.nedan`. Verify that only the intended
+price changed, then explain the `class="name"` ↔ `.name` rule on the main path
+and check understanding. This illustrates the candidate progression; it is not a
 fixed lesson template.
 
 For guided demonstrations where observing or comparing a result is itself
