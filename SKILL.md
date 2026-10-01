@@ -360,7 +360,7 @@ one immediate success.
 ## Pre-attempt conditions for retrieval and generation activities
 
 When a task is intentionally designed to elicit unaided retrieval or learner
-generation (a QuickCheck testing recall, or a problem-solving task), learner-visible prompt material and
+generation (a QuickCheck testing recall, or a task requiring the learner to produce or generate the target response), learner-visible prompt material and
 default pre-attempt state should not reveal the target response or decisive
 cues that remove the intended retrieval or generation opportunity before the
 learner's first attempt.

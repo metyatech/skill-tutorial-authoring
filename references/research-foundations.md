@@ -443,8 +443,12 @@ indicated medium or large benefits, with an overall trend toward positive outcom
 
 **Boundary / what this does NOT prove:**
 
+- The review itself reports that only 6% of the reviewed experiments were conducted
+  in non-WEIRD countries, indicating substantial geographic/cultural concentration
+  in the evidence base.
 - This evidence is drawn from classroom contexts and may not generalise uniformly
-  to all digital or self-paced environments.
+  to all digital or self-paced environments; keep generalization appropriately cautious
+  if retained beyond classroom settings.
 - The review notes heterogeneity in effect magnitudes and calls for continued
   study of moderator variables.
 - Consistent benefits does not mean retrieval practice is universally superior for
@@ -461,22 +465,25 @@ conditions and presentation context shape the magnitude of the advantage.
 
 **Boundary / what this does NOT prove:**
 
+- Bertsch et al. compares generation with reading and does not by itself establish
+  whether unsupported generation outperforms guided generation or worked examples,
+  or justify unguided struggle.
 - Generation advantage varies with learner characteristics, task type, and retention
   interval.
-- An immediate, unsupported generation attempt does not universally outperform
-  guided generation or worked examples for all learners.
 - This evidence supports generation as beneficial when conditions are suited; it
   does not mandate unguided struggle or eliminate the role of guided practice and
   scaffolding.
+- Separate evidence on scaffolding, expertise, and the conditions governing
+  instructional support is needed to guide assistance choices.
 
 **Authoring implication:**
 
 If a task is intentionally designed to elicit unaided retrieval (e.g., a
 QuickCheck testing memory for previously taught material) or learner generation
-(e.g., problem solving before instruction), avoid presenting the target response,
-complete worked solutions, or decisive cues in the learner-visible prompt or
-default pre-attempt state. Doing so removes the retrieval or generation opportunity
-before the learner's first attempt.
+(e.g., a task that requires the learner to produce or generate the target response),
+avoid presenting the target response, complete worked solutions, or decisive cues
+in the learner-visible prompt or default pre-attempt state. Doing so removes the
+retrieval or generation opportunity before the learner's first attempt.
 
 If the response is deliberately supplied as worked instruction, guided modeling,
 or scaffolded support (e.g., a worked example, completion task, or faded support),

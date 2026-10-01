@@ -126,7 +126,7 @@ contracts.
 
 ## Pre-attempt conditions for retrieval and generation
 
-- [ ] When a task is intentionally designed to elicit unaided retrieval (e.g., a QuickCheck testing recall) or learner generation (e.g., problem-solving before instruction), learner-visible prompt material and default pre-attempt state do not reveal the target response or decisive cues that remove the intended retrieval/generation opportunity before the learner's first attempt.
+- [ ] When a task is intentionally designed to elicit unaided retrieval (e.g., a QuickCheck testing recall) or learner generation (e.g., a task requiring the learner to produce or generate the target response), learner-visible prompt material and default pre-attempt state do not reveal the target response or decisive cues that remove the intended retrieval/generation opportunity before the learner's first attempt.
 - [ ] When a response is deliberately supplied as worked instruction, guided modeling, or scaffolded support, that design choice is recognised as guided practice, not unaided retrieval/generation evidence.
 - [ ] Task design reflects the instructional goal, learner knowledge, and evidence for the tactic; exercises do not uniformly hide answers or minimise guidance.
 
