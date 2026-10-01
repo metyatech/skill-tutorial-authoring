@@ -224,10 +224,20 @@ memory of simple facts. In another, outlining was better when topic structure
 was signaled than when it was not, with no reliable difference between headings
 and previews. Effects depended on the reading task and outcome.
 
+Ritchey, Schuster, and Allen (2008) had college students read a multiple-topic
+expository text while experimentally varying the relatedness of headings to
+text content and the distance between them. Free recall of main topics was
+facilitated when content was related to and close to headings, and inhibited
+when it was unrelated or distant. Conditional recall of subordinate information
+was not affected by relatedness or distance.
+
 **Boundary / what this does NOT prove:** Headings do not prescribe one teaching
 order, numbering format, or goal-first page layout. These studies do not directly
-compare verbs such as “look” and “write” in headings and activities, and do not
-show that matching those verbs causes better comprehension or learning.
+compare verbs such as “look” and “write” in headings and activities. Ritchey et
+al. support the narrower claim that heading/content relatedness can affect
+readers' recall of main topics; they do not directly demonstrate learner-action
+consistency or show that matching action language causes better comprehension
+or learning.
 
 **Authoring implication:** Use headings that predict the task, topic, or
 capability and expose useful structure. A title can name a new term before it
@@ -669,6 +679,9 @@ Therefore:
 - Strohmaier, A. R., Ehmke, T., Härtig, H., & Leiss, D. (2023). *On the role
   of linguistic features for comprehension and learning from STEM texts.
   A meta-analysis*. https://doi.org/10.1016/j.edurev.2023.100533
+- Ritchey, K., Schuster, J., & Allen, J. (2008). *How the relationship between
+  text and headings influences readers’ memory*. *Contemporary Educational
+  Psychology, 33*(4), 859–874. https://doi.org/10.1016/j.cedpsych.2007.11.001
 - Lorch, R. F., Lemarié, J., & Chen, H. T. (2013). *Signaling topic structure
   via headings or preview sentences*. https://doi.org/10.1016/S1135-755X(13)70011-3
 - Klauer, K. J. (1984). *Intentional and Incidental Learning with Instructional
