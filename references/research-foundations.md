@@ -52,6 +52,11 @@ them:
 Evidence strength does not determine lint severity. Machine confidence and cost
 of an artefact defect are separate concerns.
 
+When a local rule applies research ideas to a new authoring decision, label
+the rule as a **bounded quality heuristic** and state where it applies. Do not
+imply its exact wording or sequence was directly tested unless a source tested
+that intervention.
+
 ## Learning objectives, events, and aligned evidence
 
 Biggs's constructive alignment connects intended learning outcomes, teaching
@@ -78,6 +83,56 @@ transfer.
 Section-local closure is not part of this Learning System model. Evidence is
 aligned to Unit outcomes at suitable Event/progression points; presentation
 boundaries and goal banners do not establish assessment or mastery.
+
+## Learner-facing orientation
+
+**Evidence:** Hamilton (1985) reviewed effects of adjunct questions and
+objectives in instructional prose through a framework attentive to text
+structure and learner characteristics. Luiten, Ames, and Ackerson's (1980)
+meta-analysis of 135 published and unpublished studies found facilitative
+effects of advance organizers on learning and retention.
+
+**Boundary / what this does NOT prove:** These findings support keeping useful
+objectives and organizers available as options; they do not make an orientation
+banner useful merely because it exists, establish one optimal placement for
+every learner/task, or show that every orientation form improves learning.
+They do not support a blanket rule to remove objectives or advance organizers.
+
+**Authoring implication:** Review an introduction, objective summary, Section
+goal, preview, prerequisite callout, or sequence announcement for concrete
+value to the activity, structure, or decision at its location. Consider
+reworking material that only repeats nearby headings/prose, a guaranteed
+sequence, a canonical Unit objective, or information not yet usable. This is
+a context-dependent review heuristic, not a ban on orientation.
+
+An unfamiliar term may appear before its explanation, including in a heading.
+When understanding is needed, explain the name and relevant characteristics or
+relations before relying on it. Mayer's **Pre-training Principle** concerns
+learning names and key characteristics of unfamiliar components before a
+complex task depends on coordinating them; a name-only list is not
+pre-training. This does not require defining every term before its first
+appearance.
+
+Prior knowledge can matter without requiring prerequisite UI on every page.
+In a guaranteed linear sequence, a callout with no added preparation, re-entry,
+or recovery value is a candidate for removal; retain it when it supports an
+actual learner decision or use.
+
+## Bounded quality heuristic: guided observation
+
+When observing or comparing an operation's result is itself meaningful learner
+processing, review whether announcing the exact observable consequence before
+the action removes that opportunity. Consider **fully guided action/code →
+observable result → explanation** when it fits.
+
+This ordering is a **bounded quality heuristic adopted for this tutorial
+context**, informed by work on appropriate guidance, meaningful processing,
+signaling, and coherence. It is not a directly demonstrated universal
+instructional law. Supplying the action/code in full is compatible with it. It
+does not require discovery, weaken worked examples or explicit guidance, or
+prescribe delayed answer/result disclosure for every instructional task. It is
+separate from the retrieval and generation pre-attempt rule below, which
+applies only when those are the intended learner activity.
 
 ## Academic enjoyment and achievement emotions
 
@@ -594,6 +649,11 @@ Therefore:
   via headings or preview sentences*. https://doi.org/10.1016/S1135-755X(13)70011-3
 - Klauer, K. J. (1984). *Intentional and Incidental Learning with Instructional
   Texts: A Meta-Analysis for 1970–1980*. https://doi.org/10.3102/00028312021002323
+- Hamilton, R. J. (1985). *A Framework for the Evaluation of the Effectiveness
+  of Adjunct Questions and Objectives*. https://doi.org/10.3102/00346543055001047
+- Luiten, J. W., Ames, W. S., & Ackerson, G. (1980). *A Meta-analysis of the
+  Effects of Advance Organizers on Learning and Retention*.
+  https://doi.org/10.3102/00028312017002211
 - Cheng, C., Wu, Y., Wang, R., & Wang, Z. (2026). *Seductive Details,
   Cognitive Load, and Learning Outcomes: A Multi-level Meta-analysis and MASEM*.
   https://doi.org/10.1007/s10648-025-10099-z

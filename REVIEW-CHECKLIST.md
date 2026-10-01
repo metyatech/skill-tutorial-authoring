@@ -20,6 +20,30 @@ contracts.
 - [ ] Assistance, signaling, Concept density, and narrative depth match the target learner.
 - [ ] Expert or already-trained readers are not forced through redundant novice guidance.
 
+## Learner-facing orientation and guided observation
+
+- [ ] Each learner-facing orientation item gives concrete value for the
+  activity, structure, or decision where it appears.
+- [ ] An orientation item is not merely a restatement of its heading or
+  adjacent prose, a guaranteed course sequence, or the canonical Unit
+  objective.
+- [ ] Orientation does not front-load information the learner cannot yet use
+  without a clear purpose.
+- [ ] An unfamiliar term is not relied on before its meaning is understood;
+  it may still first appear in a heading or preview when understanding is not
+  yet required.
+- [ ] Pre-training teaches the name plus relevant characteristics or relations
+  needed later; a name-only list is not treated as pre-training.
+- [ ] When a guided demonstration has a result worth observing or comparing,
+  the exact consequence is not disclosed beforehand without a useful reason
+  that preserves the observation.
+- [ ] The guided-observation heuristic does not remove useful worked
+  instruction, explicit guidance, or advance organizers, and does not require
+  discovery learning or delayed results in every lesson.
+- [ ] A prerequisite callout has actionable value for preparation, re-entry,
+  or recovery; prior knowledge does not justify a mechanical callout on every
+  page.
+
 ## Learning Unit / Event / Evidence
 
 - [ ] Each stable learning objective/capability is treated as a Learning Unit; pages are not treated as Learning Units.

@@ -271,12 +271,44 @@ current or near learning activity.
   or reference placement may also be semantically appropriate.
 - Explain what it is and why it matters for the activity; avoid unrelated
   distant-future material.
+- When pre-training is needed, teach the name and the relevant
+  characteristics/relations the learner must understand before a later task can
+  depend on them; a list of names alone does not prepare that understanding.
 - Use the length needed for clarity. Six or more sentences may trigger review
   for mixed concepts or reference detail; this is neither a hard limit nor a
   research threshold, and shorter blocks are not inherently better.
 
 If the learner already knows the concept, a collapsible/reference form or no
 Concept at all may be better.
+
+## Learner-facing orientation and guided observation
+
+Use a page introduction, prerequisite callout, objective summary, Section
+goal, preview, or sequence announcement when it gives concrete help with the
+current activity, structure, or decision at that point. In cold-read review,
+consider reworking an item that only repeats its heading or adjacent prose, a
+guaranteed course sequence, a canonical Unit objective, or information the
+learner cannot yet use. This context-dependent review does not reject learning
+objectives or advance organizers; they can orient attention or expose structure
+when useful.
+See [references/research-foundations.md](references/research-foundations.md).
+
+An unfamiliar term may appear in an orientation or heading before explanation.
+If the learner needs its meaning to understand or act, explain the name and
+relevant characteristics or relations before depending on that understanding;
+do not call a name-only preview pre-training. A prerequisite callout is useful
+when it enables actionable preparation, re-entry, or recovery. In a
+guaranteed linear progression, omit it when it adds no such value; prior
+knowledge matters without requiring prerequisite UI on every page.
+
+For guided demonstrations where observing or comparing a result is itself
+meaningful learner processing, consider
+`fully guided action/code → observable result → explanation`. Review whether
+disclosing the exact consequence before the observation removes a useful reason
+to inspect or compare. This is a **bounded quality heuristic**, not a directly
+established universal sequence: the action/code may be fully supplied, and the
+heuristic does not require discovery, weaken worked examples or explicit
+guidance, or apply to every instructional task.
 
 ## Activation
 
