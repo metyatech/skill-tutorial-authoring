@@ -428,10 +428,10 @@ Do not manufacture an analogy where no helpful bridge exists.
 ## Retrieval practice and generation effect: pre-attempt conditions
 
 When a learning event intentionally targets unaided retrieval or learner generation
-(e.g., a retrieval-practice QuickCheck, problem-solving task, or discovery-based
-activity), learner-visible prompt material and default pre-attempt content should
-not reveal the target response or provide a decisive cue that removes the intended
-retrieval or generation opportunity before the learner's first attempt.
+(e.g., a retrieval-practice QuickCheck or problem-solving task), learner-visible
+prompt material and default pre-attempt content should not reveal the target
+response or provide a decisive cue that removes the intended retrieval or
+generation opportunity before the learner's first attempt.
 
 **Evidence — Retrieval Practice:**
 
@@ -455,8 +455,8 @@ indicated medium or large benefits, with an overall trend toward positive outcom
 
 Bertsch, Pesta, Wiscott & McDaniel (2007) meta-analyzed 86 studies spanning 445
 effect sizes. The generation effect (learning gains from producing or generating
-information vs. passive reading) showed an average benefit with Hedges' *g* = .40.
-The meta-analysis identified substantial moderator variability, indicating that
+information vs. passive reading) showed an average effect size of .40. The
+meta-analysis identified substantial moderator variability, indicating that
 conditions and presentation context shape the magnitude of the advantage.
 
 **Boundary / what this does NOT prove:**
@@ -560,13 +560,14 @@ Therefore:
 
 ## Sources
 
+- Camacho-Morles, J., Slemp, G. R., Pekrun, R., Loderer, K., Hou, H., &
+  Oades, L. G. (2021). *Activity Achievement Emotions and Academic Performance:
+  A Meta-analysis*. https://doi.org/10.1007/s10648-020-09585-3
 - Agarwal, P. K., Nunes, L. D., & Blunt, J. R. (2021). *Retrieval Practice
   Consistently Benefits Student Learning: A Systematic Review of Applied Research
   in Schools and Classrooms*. https://doi.org/10.1007/s10648-021-09595-9
 - Bertsch, S., Pesta, B. J., Wiscott, R., & McDaniel, M. A. (2007). *The
   generation effect: A meta-analytic review*. https://doi.org/10.3758/BF03193441
-  Oades, L. G. (2021). *Activity Achievement Emotions and Academic Performance:
-  A Meta-analysis*. https://doi.org/10.1007/s10648-020-09585-3
 - Mammadov, S., & Schroeder, K. (2023). *A meta-analytic review of the
   relationships between autonomy support and positive learning outcomes*.
   https://doi.org/10.1016/j.cedpsych.2023.102235
