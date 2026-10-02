@@ -55,23 +55,27 @@ problem solving, and productive struggle while reducing accidental difficulty.
 
 ## Rule provenance
 
-Do not present every concrete rule as a scientific finding. Classify rules as:
+Use research provenance separately from enforcement severity:
 
-| Class | Meaning |
+| Code | Meaning |
 |---|---|
-| **Normative purpose** (`normative-purpose`) | Adopted educational value judgment, not an empirical finding |
-| **Evidence-backed principle** | Direction supported by learning-science evidence, applied within stated boundary conditions |
-| **Quality convention** | Deliberate local writing standard for consistency or usability |
-| **Platform contract** | Requirement imposed by the rendering/component system |
-| **Context-dependent heuristic** | Review prompt whose usefulness depends on task, medium, or learner |
+| **R — multiple-research-supported** | Multiple independent studies or research syntheses support the direction within relevant boundary conditions |
+| **S — multi-study research synthesis** | A conclusion follows from an explicit inference chain using only research-supported premises from multiple studies/syntheses |
+| **L — local decision** | Normative purpose, writing convention, product decision, or platform contract; not a scientific finding |
+| **U — unresolved** | The available research does not determine the decision |
 
-The remaining class identifiers are `evidence-backed-principle`,
-`quality-convention`, `platform-contract`, and `context-dependent-heuristic`.
+The educational purpose above is normative and therefore local, not empirical.
+A rule may be promoted to **R** or **S** only when its evidence and boundary
+conditions are traceable in
+[references/research-foundations.md](references/research-foundations.md).
+For **S**, record the inference chain; do not combine one research result with
+unaudited design intuition. **U** items do not become pedagogical rules merely
+to fill a design gap: gather more evidence, test the alternatives, or keep the
+choice explicitly local/experimental.
 
-Evidence strength and enforcement severity are separate axes. A platform
-contract may be strict without being a scientific finding; a strong research
-principle may remain advisory when correct application requires semantic
-judgement.
+Evidence strength and enforcement severity are separate axes. A strict platform
+contract can be **L**; an **R** principle can remain advisory when correct
+application requires semantic judgement.
 
 ## Authoring procedure
 
@@ -95,9 +99,6 @@ When creating or reviewing a tutorial, follow this order.
    transfer when the curriculum owns that horizon.
 9. **Presentation / accessibility / cold-read:** choose representations and
    components, then check access, clarity, and accidental difficulty.
-
-`Need / Context → Name + meaning → Use` is a context-dependent heuristic for
-some explanations, not a fixed required or default authoring sequence.
 
 ## Learning system and tutorial pages
 
@@ -281,14 +282,14 @@ current or near learning activity.
 If the learner already knows the concept, a collapsible/reference form or no
 Concept at all may be better.
 
-## Learner-facing orientation and guided observation
+## Learner-facing orientation
 
 Use a page introduction, prerequisite callout, objective summary, Section
 goal, preview, or sequence announcement when it gives concrete help with the
 current activity, structure, or decision at that point. In cold-read review,
 consider reworking an item that only repeats its heading or adjacent prose, a
 guaranteed course sequence, a canonical Unit objective, or information the
-learner cannot yet use. This context-dependent review does not reject learning
+learner cannot yet use. This **L review convention** does not reject learning
 objectives or advance organizers; they can orient attention or expose structure
 when useful.
 See [references/research-foundations.md](references/research-foundations.md).
@@ -301,14 +302,13 @@ when it enables actionable preparation, re-entry, or recovery. In a
 guaranteed linear progression, omit it when it adds no such value; prior
 knowledge matters without requiring prerequisite UI on every page.
 
-For Course Docs, use **learner-action consistency** as a bounded quality
-heuristic: a learner-facing heading, its immediate explanation, the task
+For Course Docs, use **learner-action consistency** as an **S research synthesis**: a learner-facing heading, its immediate explanation, the task
 statement, and relevant UI cues should communicate the action required at the
 same stage. Review a mismatch as a learner-facing defect when it leaves the
 learner unsure whether to look, write, choose, fix, try, check, answer, or
 create. Natural paraphrases are fine when they mean the same action; do not
 require identical words. Multiple actions are fine when their order is explicit
-and each stage is clear. This applies signaling and coherence research locally;
+and each stage is clear. This synthesis combines heading/signaling, coherence, and consistent task-action mapping evidence;
 it is not a directly tested rule about particular verb pairs. See
 [`references/research-foundations.md`](references/research-foundations.md).
 
@@ -329,36 +329,20 @@ include:
 - Does the purpose or cause connecting the previous result to the next
   explanation or operation read naturally?
 
-Apply this as a **bounded sequence / discourse continuity heuristic**, not as
+Apply this as an **S research synthesis**, not as
 a requirement to add transitions between every paragraph or maximize
 coherence for every audience. Preserve intentional inference in retrieval
 and problem-solving activities; do not make high coherence a universal rule
 for learners with substantial prior knowledge.
 
-When a concrete example introduces a principle, review
-`concrete need → example operation → result check → principle / general rule →
-understanding check` as a candidate progression, not a fixed template. Put
-an explanation needed to understand the main instructional path, a later
-operation, or a QuickCheck on that path; do not rely on a Hint, collapsed
-content, or optional callout for an essential principle. Review whether a
-Verify belongs near the operation whose result it checks. When it fits,
-consider `operation → result check → generalization`.
-
-For example, if a broad `p` selector changes every `<p>` element when the goal
-is to style only the 180-yen price, use the observed result to motivate
-targeting it with `class="nedan"` / `.nedan`. Verify that only the intended
-price changed, then explain the `class="name"` ↔ `.name` rule on the main path
-and check understanding. This illustrates the candidate progression; it is not a
-fixed lesson template.
-
-For guided demonstrations where observing or comparing a result is itself
-meaningful learner processing, consider
-`fully guided action/code → observable result → explanation`. Review whether
-disclosing the exact consequence before the observation removes a useful reason
-to inspect or compare. This is a **bounded quality heuristic**, not a directly
-established universal sequence: the action/code may be fully supplied, and the
-heuristic does not require discovery, weaken worked examples or explicit
-guidance, or apply to every instructional task.
+Keep an explanation needed to understand the main instructional path, a later
+operation, or a QuickCheck on that path; do not rely only on a Hint, collapsed
+content, or optional callout for an essential principle. When mutually dependent
+operations, results, code, and explanations must be integrated, keep them close
+enough to avoid unnecessary search or split attention. Do not infer a fixed
+instructional ordering from example-based learning, contiguity, or coherence
+research; select the Event pattern and activity sequence for the actual goal and
+learner state.
 
 ## Activation
 
@@ -479,6 +463,14 @@ goal-relevant information.
 
 Good signals include a concise goal, visual callouts, an important UI label, an
 exact value to type, or a key gesture. Decorative emphasis is not signaling.
+
+Make important task-relevant information visually distinctive, while limiting
+competing emphasis so the signal remains selective. Use grouping cues such as
+proximity, common region, alignment, or connectivity when they communicate real
+semantic structure. Keep the same task-action mapping and cue consistent when
+the meaning/operation is the same. These are research-supported directions, not
+a license to invent exact colours, border widths, radii, spacing, or component
+families and call them research findings.
 
 Remove decoration or emotional stimulation that is irrelevant to the learning
 goal. Deliberate affective design may support motivation or attention when it

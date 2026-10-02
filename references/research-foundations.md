@@ -33,29 +33,25 @@ when they materially affect engagement or capacity.
 
 ## Rule provenance
 
-The adopted educational purpose is normative: enjoyable, positive learning with
-actual capability growth and increasing ability to think, create, and continue
-learning independently. Empirical research evaluates means, side effects, and
-boundary conditions; it does not uniquely determine this value judgment.
+Research provenance uses four codes:
 
-Classify concrete rules separately from the research principles motivating
-them:
+| Code | Meaning |
+|---|---|
+| **R — multiple-research-supported** | Multiple independent studies or research syntheses support the direction within relevant boundary conditions |
+| **S — multi-study research synthesis** | An explicit inference chain combines only research-supported premises from multiple studies/syntheses |
+| **L — local decision** | Normative purpose, quality convention, product choice, or platform contract; not an empirical finding |
+| **U — unresolved** | Available research does not determine the authoring/design decision |
 
-| Class | Meaning | Example |
-|---|---|---|
-| Normative purpose | Adopted educational value, not a research finding | positive learning and actual capability growth |
-| Evidence-backed principle | Direction supported by research within boundary conditions | coherence, worked examples, retrieval |
-| Quality convention | Local standard chosen for learner-facing quality | no author-facing audience meta prose |
-| Platform contract | Rendering/component-system requirement | Course Docs task-block structure |
-| Context-dependent heuristic | Useful review signal, not a scientific threshold | Concept sentence-count advisory |
+The adopted educational purpose is **L/normative**: enjoyable, positive learning
+with actual capability growth and increasing ability to think, create, and
+continue learning independently. Research evaluates means, effects, and boundary
+conditions; it does not uniquely determine that value judgment.
 
-Evidence strength does not determine lint severity. Machine confidence and cost
-of an artefact defect are separate concerns.
-
-When a local rule applies research ideas to a new authoring decision, label
-the rule as a **bounded quality heuristic** and state where it applies. Do not
-imply its exact wording or sequence was directly tested unless a source tested
-that intervention.
+For **S**, document the premises and inference chain here. Do not combine one
+research result with unaudited design intuition and call the result
+research-based. **U** items remain unresolved until additional evidence or
+direct evaluation justifies a local choice; they are not pedagogical rules by
+default. Evidence strength and lint/enforcement severity remain separate axes.
 
 ## Learning objectives, events, and aligned evidence
 
@@ -106,7 +102,7 @@ goal, preview, prerequisite callout, or sequence announcement for concrete
 value to the activity, structure, or decision at its location. Consider
 reworking material that only repeats nearby headings/prose, a guaranteed
 sequence, a canonical Unit objective, or information not yet usable. This is
-a context-dependent review heuristic, not a ban on orientation.
+an **L review convention**, not a research finding or a ban on orientation.
 
 An unfamiliar term may appear before its explanation, including in a heading.
 When understanding is needed, explain its meaning before relying on it. Mayer's
@@ -126,7 +122,7 @@ actual learner decision or use.
 
 ## Instructional continuity and local coherence
 
-Keep the research findings separate from the local Course Docs heuristic.
+Keep the direct research findings separate from the Course Docs **S synthesis**.
 
 ### McNamara, Kintsch, Songer, and Kintsch (1996)
 
@@ -142,11 +138,13 @@ Course Docs paragraph order, transition sentences, or the timing of a tool or
 concept in a tutorial. The results do not show that adding explanations or
 transitions is always better.
 
-**Course Docs bounded implication:** For novice-oriented initial instruction,
-review whether each new topic or operation follows intelligibly from the
-learner's preceding goal, observation, unresolved problem, or stated need. This
-is a local sequence / discourse continuity heuristic, not a research-validated
-requirement for particular transitions or for every audience.
+**Contribution to S synthesis:** These findings support the premise that
+low-prior-knowledge learners can need explicitly stated relations that more
+knowledgeable learners may infer. Combined with heading/signaling evidence and
+evidence that some inference is intentionally useful in retrieval/problem
+solving, this contributes to the later **S — novice local discourse continuity**
+rule. This study alone does not establish a required transition form or a
+need-before-concept sequence.
 
 ### McNamara and Kintsch (1996)
 
@@ -180,30 +178,14 @@ watching an example alone guarantees abstraction
 `class="nedan"` → `.nedan`, nor establish one universal placement for a
 general rule, Verify, or QuickCheck in Course Docs.
 
-**Course Docs bounded implication:** When a concrete example introduces a new
-principle, review `concrete need → example operation → result check → principle
-/ general rule → understanding check` as one candidate progression. Keep a
-principle needed for the main path or a later QuickCheck on that path. Review
-whether Verify is close to the operation whose result it checks; when it fits,
-consider `operation → result check → generalization`. These are local review
-heuristics, not fixed templates. A Hint, collapsed block, or optional callout
-may add support, but does not replace essential explanation on the main path.
-
-## Bounded quality heuristic: guided observation
-
-When observing or comparing an operation's result is itself meaningful learner
-processing, review whether announcing the exact observable consequence before
-the action removes that opportunity. Consider **fully guided action/code →
-observable result → explanation** when it fits.
-
-This ordering is a **bounded quality heuristic adopted for this tutorial
-context**, informed by work on appropriate guidance, meaningful processing,
-signaling, and coherence. It is not a directly demonstrated universal
-instructional law. Supplying the action/code in full is compatible with it. It
-does not require discovery, weaken worked examples or explicit guidance, or
-prescribe delayed answer/result disclosure for every instructional task. It is
-separate from the retrieval and generation pre-attempt rule below, which
-applies only when those are the intended learner activity.
+**Research-synthesis implication:** Example-based learning supports using worked
+or guided examples where they fit learner knowledge and the learning goal, but
+it does not establish one universal Course Docs ordering of need, operation,
+result, principle, and check. Apply separate evidence for contiguity when
+mutually dependent sources must be integrated, and apply the retrieval/generation
+pre-attempt evidence below only when those activities are intended. Essential
+main-path explanation should not be hidden only in optional support when later
+activity depends on it.
 
 ## Academic enjoyment and achievement emotions
 
@@ -308,18 +290,74 @@ or learning.
 capability and expose useful structure. A title can name a new term before it
 is explained; explain it before its understanding is required.
 
-### Bounded Course Docs heuristic: learner-action consistency
+### S — Course Docs learner-action consistency
 
-For Course Docs, review whether learner-facing headings, their immediate
-explanations, task statements, and relevant UI cues communicate the action
-required at the same stage. A mismatch is a learner-facing defect when it makes
-the learner decide what to do for reasons unrelated to the learning task. This
-is a **bounded quality heuristic** informed by findings about headings and
-signaling, coherence, and avoiding goal-irrelevant processing; it is not a
-research finding about particular verb pairs. Natural paraphrases that mean the
-same action are acceptable. Multiple actions are acceptable when their order
-and stages are explicit. Do not turn this heuristic into a mechanical
-same-word lint rule.
+This is a multi-study research synthesis, not a directly tested rule about
+particular verbs. The inference chain is:
+
+1. heading/content relatedness and signaling can improve attention to useful
+   structure and memory for that structure;
+2. HCI studies of consistent task-action mappings show benefits for learning
+   and use when the same meaning/action recurs consistently;
+3. text-coherence research shows that low-prior-knowledge readers can be harmed
+   when needed relations must be inferred without enough support.
+
+Therefore, when a Course Docs heading, immediate explanation, task statement,
+and relevant UI cue all refer to the same learner-action stage, keep their
+action mapping semantically consistent. Treat a mismatch as a defect when it
+forces a decision unrelated to the learning task. Natural paraphrases are
+acceptable; multiple actions are acceptable when order and stages are explicit.
+Do not turn this synthesis into a mechanical same-word lint rule.
+
+### S — novice local discourse continuity
+
+This is also a multi-study synthesis. McNamara/Kintsch coherence findings show
+that low-prior-knowledge readers often need more explicit relations, while
+heading/signaling research supports exposing useful structure. Retrieval,
+problem solving, and productive-failure evidence simultaneously shows that some
+inference and struggle can be intentional.
+
+Therefore, in novice-oriented initial instruction, state short causal or purpose
+bridges when they are required to understand why the next topic, operation, or
+concept appears. Do not add transitions mechanically, maximize coherence for
+every learner, or remove inference that is itself the intended learning
+activity.
+
+## Signaling selectivity, perceptual grouping, and visual complexity
+
+**R — signaling:** Schneider, Beege, Nebel, and Rey (2018) meta-analysed 103
+studies with 12,201 participants. Signaling improved retention and transfer on
+average and reduced cognitive load. This supports making task-relevant structure
+and important information perceptually distinctive.
+
+**R/S — selective emphasis:** Lorch, Lorch, and Klusewitz (1995) compared no,
+light, and heavy typographical signaling. Target-only signaling improved cued
+recall, while heavy signaling did not outperform the control condition. Combined
+with the broader signaling meta-analysis, the supported direction is to keep
+strong emphasis selective rather than giving many competing elements equivalent
+salience. This does not determine a specific colour, background, icon, or border.
+
+**R/S — grouping:** Palmer (1992) showed that common region is a strong
+perceptual grouping cue. Bae and Watson (2014) found that reinforcing combinations
+of proximity, colour similarity, common region, connectivity, and alignment can
+communicate more complex informational structure, with effectiveness depending
+on the cue combination and structure. Authoring implication: use grouping cues
+to represent actual semantic grouping; a border is one possible common-region
+encoding, not a generic marker of importance.
+
+**R/S — visual complexity:** Tuch et al. (2009) found that greater website
+visual complexity increased visual-search time and reduced later recognition in
+their tasks. Combined with signaling/selectivity evidence, avoid visual elements
+that add complexity without a task, structure, feedback, accessibility, or
+learning role. This does not imply that all borders, colour, or decoration are
+harmful.
+
+**S — task-action consistency:** Barnard et al. (1981), Tanaka, Eberts, and
+Salvendy (1991), and Howes (1996) support benefits of consistent mappings or
+positioning in interface learning/use. The bounded implication is to keep the
+same task-action meaning mapped consistently when it recurs. These studies do
+not establish that all components should share one visual style or that surface
+uniformity itself improves learning.
 
 ## Preinstructional objectives
 
@@ -433,11 +471,11 @@ Mayer's multimedia principle concerns learning from **words and pictures** versu
 words alone when the representations support understanding. It is not a rule
 that every operational step needs an image.
 
-For software tutorials, the **Primary Representation** model in `SKILL.md` is a
-local instructional-design heuristic derived from several principles at once:
-multimedia, contiguity, split attention, redundancy, signaling, and minimalism.
-Treat that model as a useful synthesis, not as the literal statement of Mayer's
-multimedia principle.
+For software tutorials, the **Primary Representation** model in SKILL.md is
+an **L local design model**. Multimedia, contiguity, split-attention, redundancy,
+signaling, and minimalism evidence constrain that choice, but do not uniquely
+derive the model or its table. Do not present the model as a research synthesis
+or as the literal statement of Mayer's multimedia principle.
 
 ### Spatial contiguity
 
@@ -705,6 +743,23 @@ including the *Cambridge Handbook of Multimedia Learning*.
 Keep Mayer's *Multimedia Learning* distinct from Mayer & Fiorella's edited
 *Cambridge Handbook of Multimedia Learning* (3rd ed., 2021).
 
+## Research does not currently determine
+
+Keep the following as **U** unless newer, directly applicable evidence resolves
+them or a clearly labelled local evaluation chooses among alternatives:
+
+- exact Course Docs colours, tint strength, border widths, radii, and spacing;
+- an exact relative salience value for a KeyPoint-like signal;
+- a fixed number of visual component families;
+- a universal "one functional unit = one border" rule;
+- exact Japanese technical-prose line length and typography values for this
+  platform;
+- CodePreview minimum editor height and toolbar density;
+- tabs versus vertically stacked code/result panes on mobile.
+
+A local prototype or usability test may select among these alternatives. Record
+that choice as **L/experimental** rather than retrofitting a research rationale.
+
 ## Boundary conditions
 
 Cromley & Chen (2025) synthesised Mayer's multimedia-learning research across
@@ -721,6 +776,28 @@ Therefore:
 
 ## Sources
 
+- Schneider, S., Beege, M., Nebel, S., & Rey, G. D. (2018).
+  *A meta-analysis of how signaling affects learning with media*.
+  https://doi.org/10.1016/j.edurev.2017.11.001
+- Lorch, R. F., Lorch, E. P., & Klusewitz, M. A. (1995).
+  *Effects of Typographical Cues on Reading and Recall of Text*.
+  https://doi.org/10.1006/ceps.1995.1003
+- Palmer, S. E. (1992). *Common region: A new principle of perceptual grouping*.
+  https://doi.org/10.1016/0010-0277(92)90014-S
+- Bae, J., & Watson, B. (2014).
+  *Reinforcing Visual Grouping Cues to Communicate Complex Informational Structure*.
+  https://doi.org/10.1109/TVCG.2014.2346998
+- Tuch, A. N., Bargas-Avila, J. A., Opwis, K., & Wilhelm, F. H. (2009).
+  *Visual complexity of websites: Effects on users' experience, physiology,
+  performance, and memory*. https://doi.org/10.1016/j.ijhcs.2009.04.002
+- Barnard, P. J., Hammond, N. V., Morton, J., Long, J. B., & Clark, I. A. (1981). *Consistency and compatibility in
+  human-computer dialogue*. https://doi.org/10.1016/S0020-7373(81)80024-7
+- Tanaka, T., Eberts, R. E., & Salvendy, G. (1991).
+  *Consistency of Human-Computer Interface Design: Quantification and Validation*.
+  https://doi.org/10.1177/001872089103300604
+- Howes, A. (1996). *Learning Consistent, Interactive, and Meaningful
+  Task-Action Mappings: A Computational Model*.
+  https://doi.org/10.1207/s15516709cog2003_1
 - Camacho-Morles, J., Slemp, G. R., Pekrun, R., Loderer, K., Hou, H., &
   Oades, L. G. (2021). *Activity Achievement Emotions and Academic Performance:
   A Meta-analysis*. https://doi.org/10.1007/s10648-020-09585-3

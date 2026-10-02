@@ -20,7 +20,7 @@ contracts.
 - [ ] Assistance, signaling, Concept density, and narrative depth match the target learner.
 - [ ] Expert or already-trained readers are not forced through redundant novice guidance.
 
-## Learner-facing orientation and guided observation
+## Learner-facing orientation
 
 - [ ] Each learner-facing orientation item gives concrete value for the
   activity, structure, or decision where it appears.
@@ -41,12 +41,6 @@ contracts.
   yet required.
 - [ ] Pre-training teaches the name plus relevant characteristics or relations
   needed later; a name-only list is not treated as pre-training.
-- [ ] When a guided demonstration has a result worth observing or comparing,
-  the exact consequence is not disclosed beforehand without a useful reason
-  that preserves the observation.
-- [ ] The guided-observation heuristic does not remove useful worked
-  instruction, explicit guidance, or advance organizers, and does not require
-  discovery learning or delayed results in every lesson.
 - [ ] A prerequisite callout has actionable value for preparation, re-entry,
   or recovery; prior knowledge does not justify a mechanical callout on every
   page.
@@ -66,13 +60,11 @@ contracts.
 - [ ] An essential principle needed for the main path, a later operation, or a
   QuickCheck is explained on the main path, not only in a Hint, collapsed
   block, or optional callout.
-- [ ] A Verify is close enough to the operation that produced the result to
-  support checking it; when useful, use operation → result check →
-  generalization.
-- [ ] When a concrete example introduces a principle, consider concrete need
-  → example operation → result check → principle / general rule →
-  understanding check as a candidate, not a template.
-- [ ] The continuity heuristic does not add transitions mechanically between
+- [ ] Mutually dependent operations, results, code, and explanations are close
+  enough to integrate without unnecessary search or split attention.
+- [ ] No fixed local instructional sequence is attributed to example-based,
+  contiguity, or coherence research unless that sequence itself is supported.
+- [ ] The S continuity synthesis does not add transitions mechanically between
   every paragraph, remove intended retrieval or problem-solving inference, or
   demand universally high coherence from knowledgeable learners.
 
@@ -84,7 +76,8 @@ contracts.
 - [ ] A locally designed course sequence is not presented as a single research-proven optimum.
 - [ ] Observable evidence/assessment is aligned to the Learning Unit objective.
 - [ ] Evidence is placed at useful Event/progression points; Section boundaries do not require local closure.
-- [ ] An Exercise is treated as a task/container format that may be ordinary practice or transfer; transfer evidence uses meaningfully changed conditions and requires selecting/adapting the learned principle.
+- [ ] An Exercise is treated as a task/container format that may be ordinary practice or transfer.
+- [ ] When Course Docs uses its local `phase="transfer"`, the task satisfies the deliberately strict local criterion of selecting/adapting a learned principle under meaningfully changed conditions; this is not presented as the universal scientific definition of transfer.
 - [ ] Pages are treated as presentation/distribution units; teaching can normally follow learner-visible material in Event order without a duplicate teacher lesson plan.
 - [ ] Initial-learning order, when relevant, is described as I-PS (instruction-first) or PS-I (problem-solving-first), rather than a global page template.
 - [ ] Strategies are optional and compatible with the selected Pattern; Productive Failure is a high-fidelity PS-I subset/variant, and Inquiry-Based Learning is not unguided discovery.
@@ -135,7 +128,6 @@ contracts.
 - [ ] Placement is judged by the learner's activity and knowledge rather than a component-position template.
 - [ ] Each Concept makes its meaning and relevance to the intended activity clear.
 - [ ] Length serves clarity; 6+ sentences triggers review for mixed ideas rather than a hard limit or scientific threshold. There is no preferred sentence-count target.
-- [ ] Need → Name → Use is a context-dependent heuristic, not mandatory or default sequencing.
 
 ## Activation
 
@@ -198,6 +190,10 @@ contracts.
 
 - [ ] Bold/callouts/highlights are tied to task-relevant identities, exact values, sequence, or gestures.
 - [ ] Competing emphasis is limited so the important signal remains visually distinctive.
+- [ ] Strong signals are selective; unimportant material is not given competing emphasis merely for decoration.
+- [ ] Visual grouping cues represent actual semantic grouping rather than serving as generic decoration.
+- [ ] Repeated task-action mappings use consistent cues when they represent the same meaning/operation.
+- [ ] Exact colours, border widths, radii, spacing, or component-family counts are not presented as research-determined without direct evidence.
 - [ ] Any numeric bold-density lint threshold is treated as an advisory heuristic, not a scientific boundary.
 - [ ] Goal-irrelevant decoration/emotional stimulation is removed; deliberate affective design is retained only when aligned with the goal and not creating competing processing.
 
@@ -259,6 +255,11 @@ site uses `@metyatech/course-docs-platform`.
 
 ## Evidence and boundary conditions
 
+- [ ] Each disputed/high-impact rule is classified as R, S, L, or U before being presented as research-based.
+- [ ] R claims have multiple-study/research-synthesis support within relevant boundary conditions.
+- [ ] S claims have a traceable multi-study inference chain and do not combine one research result with unaudited design intuition.
+- [ ] L decisions are explicitly local/normative/platform choices rather than research findings.
+- [ ] U decisions are not promoted into pedagogical rules merely to fill a design gap.
 - [ ] The author has loaded `references/research-foundations.md` when a disputed or high-impact pedagogical rule needs evidence review.
 - [ ] Research principles are not presented as universal formatting laws when medium, expertise, outcome, or population changes the boundary conditions.
 - [ ] Course Docs contracts and local quality conventions are not misrepresented as direct scientific findings.
