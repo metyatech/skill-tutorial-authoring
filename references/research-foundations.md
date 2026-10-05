@@ -309,6 +309,50 @@ make a self-explanation a fake mandatory gate, and provide an explicit route to
 reveal the explanation or answer when appropriate. This is not a learning
 finding and does not replace appropriate feedback or retrieval practice.
 
+## Formative feedback and post-attempt results
+
+**Feedback principle:** Shute (2008) defines formative feedback as information
+communicated to a learner with the intent of modifying thinking or behaviour to
+improve learning. Her review supports feedback that is specific, focused on the
+task/process or useful self-regulation, and actionable, while noting that
+effectiveness depends on factors such as timing, learner characteristics, and
+task context. This supports giving a learner useful information about what
+actually happened and what to do or understand next; it does not support
+turning every visible interface change into extra explanatory prose.
+
+**Computer-based feedback meta-analysis:** Van der Kleij, Feskens, and Eggen
+(2015) synthesised item-based feedback in computer-based learning environments
+across 40 studies and 70 effect sizes. Elaborated feedback had an effect size
+of .49, correct-answer (knowledge-of-correct-response) feedback had .32, and
+correctness-only / knowledge-of-results feedback had .05. Elaborated
+feedback was particularly more effective than the other forms for higher-order
+learning outcomes. These results are bounded to the reviewed computer-based,
+item-level feedback literature and its measured outcomes; they do not establish
+that one feedback form is best for every task, medium, learner, or ungraded
+free-text response.
+
+**Authoring implication:** Distinguish useful verification or performance
+feedback from redundant UI-state narration. Retain objectively or checkably
+scorable feedback when it resolves uncertainty about the learner's performance,
+even when a visual result is also present. After a prediction, give the concrete
+observed outcome or relation; correctness-only feedback is not sufficient when
+elaboration would help. Supportive comparison wording may be useful for an
+exploratory prediction, but its exact wording, tone, colour, and icon style are
+local decisions. Remove status narration such as “recorded”, “added”, or “result
+shown below” when it adds no learning, action, recovery, orientation, or
+accessibility value. Avoid an identical duplicate visible result sentence when
+it has no distinct role, while retaining a concise visual-to-text mapping or
+accessibility equivalent when it provides access or interpretation.
+
+If a canonical explanation would leak a planned self-explanation or generation
+target, stage the response as: verification plus the concrete result; learner
+generation or self-explanation; then the canonical elaborated explanation. Do
+not assign fake semantic correctness to ungraded free text. In provenance terms,
+the Shute and Van der Kleij feedback principle is **R** within these boundaries;
+the staged sequence is an **S** Course Docs synthesis from feedback plus
+generation/self-explanation evidence; exact wording, tone, and styling are **L**
+local decisions.
+
 ## Headings and structural signaling
 
 **Evidence:** Lorch, Lemarié, and Chen (2013) compared headings and preview
@@ -1053,7 +1097,12 @@ Therefore:
 - van der Meij, H., & Carroll, J. M. (1995). Principles and heuristics for
   designing minimalist instruction.
 - Carroll, J. M. (1990). *The Nurnberg Funnel*.
-- Shute, V. J. (2008). Focus on formative feedback.
+- Shute, V. J. (2008). *Focus on formative feedback*. Review of Educational
+  Research, 78(1), 153–189. https://doi.org/10.3102/0034654307313795
+- Van der Kleij, F. M., Feskens, R. C. W., & Eggen, T. J. H. M. (2015).
+  *Effects of feedback in a computer-based learning environment on students'
+  learning outcomes: A meta-analysis*. Review of Educational Research, 85(4),
+  475–511. https://doi.org/10.3102/0034654314564881
 - Merrill, M. D. (2002). First principles of instruction.
 - Désiron, J. C., Endres, T., & Schneider, S. (2026). *Is it not too
   redundant? When signaling overlap reduces extraneous load and enhances

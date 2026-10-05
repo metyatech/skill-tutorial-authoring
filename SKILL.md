@@ -458,6 +458,15 @@ retrieve, explain, predict, compare, apply, debug, adapt, or create. QuickChecks
 self-explanation, and suitably designed Exercises can serve this role. A passive
 Verify may be valuable feedback without being generative activity.
 
+Useful verification is not UI-state narration. If a response is objectively or
+checkably scorable and verification resolves learner uncertainty, retain that
+performance feedback even when the result is also visible; do not remove it as
+“redundant narration”. Verification alone is not sufficient when corrective or
+explanatory information would help: connect feedback to the actual result,
+correct information, a causal explanation, or a progressively useful hint as
+appropriate. Correctness-only feedback should not end the loop when elaboration
+would help.
+
 Recovery is error-support, not objective Evidence. Active/generative activity
 is not required on every job aid or initial-performance-only page.
 
@@ -494,19 +503,35 @@ not generalize those benefits to unrelated, unprequestioned content. A study of
 novices predicting code output before explanation supports this option for
 suitable initial programming instruction, not a mandatory pattern everywhere.
 Present the object/code clearly and ask for a concrete result. Preserve the
-pre-attempt state so the target answer is not leaked. After the attempt, show
-the actual result with causal or elaborated feedback, not only a correctness
-judgment.
+pre-attempt state so the target answer is not leaked. After the attempt, give
+concrete, task-focused feedback about the actual outcome or relation, with
+causal or elaborated feedback rather than only a correctness judgment. For
+exploratory prediction, supportive comparison wording may be preferable to
+punitive wrong-labelling; exact wording, colour, and icon choices are local
+decisions, not research-derived requirements.
 When self-explanation is useful, scaffold the prompt to identify the relation,
 error, or concept to explain; a generic “explain why” prompt is not
 automatically better. Non-empty self-explanation text does not establish
-correctness. If a
-reflection is not semantically graded, do not create a fake mandatory gate;
-where appropriate, allow “I don't know” or let the learner reveal the
-explanation or answer through an explicit route. Where useful, show the
-learner's complete generated statement beside the canonical explanation.
+correctness, and never fake semantic correctness for ungraded free text. If a
+full explanation would leak a planned self-explanation or generation target,
+stage feedback as verification plus the concrete observed result, then learner
+generation/self-explanation, then the canonical causal or elaborated
+explanation. If a reflection is not semantically graded, do not create a fake
+mandatory gate; where appropriate, allow “I don't know” or let the learner
+reveal the explanation or answer through an explicit route. Where useful, show
+the learner's complete generated statement beside the canonical explanation.
 Use self-explanation selectively at conceptual transitions, not after every
 action.
+
+Remove status narration such as “recorded”, “added”, or “result shown below”
+when it adds no learning, action, recovery, orientation, or accessibility value.
+Do not repeat the exact same visible result sentence when the second instance
+has no distinct role. Do not mechanically treat a visual result plus concise
+text mapping or accessibility equivalent as gratuitous duplication. Feedback
+findings from Shute (2008) and Van der Kleij, Feskens, and Eggen (2015) are
+R-level guidance within their stated boundary conditions; the staged sequence
+is an S Course Docs synthesis; exact wording, tone, colour, and icon styling
+are L local decisions.
 
 ## Recovery and error support
 
@@ -575,11 +600,12 @@ Use the **S — visible-prose value test**: if a learner-facing sentence does no
 materially improve understanding, a decision, the next action, error
 prevention/recovery, state interpretation, reference value, or accessibility,
 consider removing or reworking it. UI narration that only repeats an obvious
-interaction/result is usually unnecessary. Keep causal explanations,
-misconception prevention, task directions, useful status/accessibility
-messages, and elaboration that improves clarity. This is not “shorter is always
-better”: clarity and useful elaboration can help, while reducing complexity
-alone has not reliably improved STEM text learning. Visible prose and
+interaction/result is usually unnecessary. Keep objectively scorable verification
+that resolves learner uncertainty, useful performance feedback, causal
+explanations, misconception prevention, task directions, useful
+status/accessibility messages, and elaboration that improves clarity. This is
+not “shorter is always better”: clarity and useful elaboration can help, while
+reducing complexity alone has not reliably improved STEM text learning. Visible prose and
 assistive-technology status messages serve different purposes. Accessibility-
 equivalent content is not gratuitous redundancy. See the bounded synthesis in
 [`references/research-foundations.md`](references/research-foundations.md).

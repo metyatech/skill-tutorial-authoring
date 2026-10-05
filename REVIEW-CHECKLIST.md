@@ -176,6 +176,12 @@ contracts.
 - [ ] The prose-value check retains useful causal explanation, misconception
   prevention, directions, status/accessibility messages, and clarifying
   elaboration; it is not applied as “shorter is always better”.
+- [ ] Useful verification/performance feedback that resolves learner
+  uncertainty is not removed as UI-state narration merely because the result is
+  also visible; redundant status narration is distinguished from feedback.
+- [ ] An identical duplicate visible result sentence with no distinct role is
+  removed, while a visual-to-text mapping or accessibility equivalent is kept
+  when it provides access or interpretation.
 - [ ] Invisible assistive-technology status announcements serve their own
   purpose and are not forced into visible prose when that would add noise.
 - [ ] Mapping cues, labels, numbers, exact values, and accessibility equivalents are not removed mechanically as duplicate content.
@@ -234,13 +240,21 @@ contracts.
 - [ ] The code/object is clear, the pre-attempt state does not leak the answer,
   and post-attempt feedback shows the actual result with useful causal
   explanation rather than only correct/incorrect.
+- [ ] Correctness-only feedback does not end the feedback loop when elaboration
+  would help; the learner receives the concrete result and an appropriate
+  explanation, correction, or next-step support.
 - [ ] Code-output prediction is offered for suitable initial programming
   instruction, not required everywhere.
 - [ ] When useful, self-explanation prompts identify the relation, error, or
   concept to explain; generic “explain why” is not presumed superior.
 - [ ] Non-empty self-explanation text is not taken as evidence of correctness.
+- [ ] Ungraded free text is not assigned fake semantic correctness or treated as
+  a valid correctness gate without a real semantic assessment.
 - [ ] Ungraded reflection does not become a fake required gate; an explicit
   reveal route exists when appropriate.
+- [ ] When the canonical explanation would leak planned generation or
+  self-explanation, feedback is staged as verification plus the concrete result,
+  then learner generation/self-explanation, then canonical elaborated feedback.
 - [ ] Where useful, the learner's complete generated statement appears near the
   canonical explanation; reflection is used selectively at conceptual
   transitions rather than mechanically after every action.
