@@ -44,6 +44,29 @@ contracts.
 - [ ] A prerequisite callout has actionable value for preparation, re-entry,
   or recovery; prior knowledge does not justify a mechanical callout on every
   page.
+- [ ] Each novice initial-instruction sentence is normally interpretable from
+  information introduced so far; future material is not required to decode it.
+- [ ] Current/known state → need/problem → concept → use is used only when it
+  fits the lesson's causal structure, not as a universal required sequence.
+- [ ] Responsive-layout targets have stable names/identifiers; spatial terms
+  are not their sole locator when the layout can move them.
+- [ ] Learner-facing prompts identify the object/content, required
+  judgment/action, and expected response form at the point of asking.
+- [ ] Vague prompts do not leave a referent or baseline to infer unless it is
+  already unambiguous.
+- [ ] Selection options complete or answer the stem naturally, without adding
+  an accidental Japanese wording-decoding task or presupposing the target
+  category in a way that cues the answer.
+- [ ] Choice items keep the central idea in the stem; options are natural
+  answers to it, and prompt decoding does not add construct-irrelevant
+  difficulty.
+- [ ] Exact Japanese-copy checks are treated as a local Course Docs quality
+  synthesis, not as a universal research law.
+- [ ] Task language is direct rather than authoring/meta language where the
+  learner's action can be stated plainly.
+- [ ] A sentence-completion response shown back for comparison reconstructs the
+  complete semantic sentence when useful; this remains a bounded local
+  convention, not a universal law.
 
 ## Instructional continuity / local coherence
 
@@ -67,6 +90,15 @@ contracts.
 - [ ] The S continuity synthesis does not add transitions mechanically between
   every paragraph, remove intended retrieval or problem-solving inference, or
   demand universally high coherence from knowledgeable learners.
+- [ ] Sequential dynamic content appears at or after its triggering action in
+  meaningful reading/focus order when this helps avoid backward search; any
+  local layout pattern is kept distinct from a WCAG mandate.
+- [ ] An action does not silently change upstream prose and require the learner
+  to rediscover or reread it; step-transition feedback appears near the current
+  position, and top-level progress alone is not the primary change cue.
+- [ ] Semantic, visual, programmatic reading, and keyboard focus order remain
+  aligned when their order carries meaning; ordinary top-to-bottom flow is a
+  local default, not a research law.
 
 ## Learning Unit / Event / Evidence
 
@@ -93,6 +125,12 @@ contracts.
 - [ ] Short identity cues may appear in both representations when they reduce mapping/search cost.
 - [ ] Accessibility-equivalent content is retained even when it repeats essential visual information; it is not removed as “redundancy”.
 - [ ] A visual-primary Action is executable as a whole without requiring visible prose to restate the complete visual path; a complete accessible equivalent exists separately when needed.
+- [ ] Code, UI, diagram, and rendered output have an explicit semantic mapping
+  when learners must integrate them; proximity/selective cues are used where
+  useful without assuming adjacency alone explains the relationship.
+- [ ] Rendered panels are named in learner language before relying on their
+  meaning; auxiliary labels/notation do not add an unexplained decoding task.
+  Exact left/right or stacked placement is not treated as a proven optimum.
 
 ## Action unit and segmenting
 
@@ -102,6 +140,21 @@ contracts.
 - [ ] An Action is split when a meaningful state/sub-goal boundary, recovery point, or verification boundary makes the split useful.
 - [ ] Segments are learner-manageable semantic chunks; “one screen = one segment” is not applied as a universal law.
 - [ ] Screen/state transitions are treated as useful boundary candidates, not mandatory boundaries.
+- [ ] Semantic/causal boundaries, not screen count, drive segmentation.
+- [ ] Simultaneous changes are separated when needed to expose what caused
+  what, and meaningful “no visible change yet” states are preserved when they
+  explain a role or mental model.
+- [ ] Splitting does not mechanically raise integration cost.
+- [ ] Earlier relevant information remains available or easy to reopen when
+  later understanding requires comparison/integration; guided forward progress
+  may coexist with review access.
+- [ ] Reviewing earlier steps preserves learner state and answers where
+  practical; an intended reset is clear.
+- [ ] Cumulative presentation is treated as a promising candidate, not a
+  universal or uniquely proven optimum; exact tabs/accordions/layout remain
+  local or experimental.
+- [ ] A compact post-completion reference is added only when useful for likely
+  later re-entry, not as a requirement on every page.
 
 ## Contiguity / split attention
 
@@ -117,6 +170,14 @@ contracts.
 - [ ] Every retained element has a task, warning, reference, accessibility, explanation, or feedback role.
 - [ ] Irrelevant decorative images, sidebars, audio, animation, emoji, and digressions are removed.
 - [ ] The same complete instructional path is not presented twice as competing primary routes without benefit.
+- [ ] Each visible sentence materially helps understanding, a decision, next
+  action, error prevention/recovery, state interpretation, reference value, or
+  accessibility; obvious UI-state narration is reworked when it adds no value.
+- [ ] The prose-value check retains useful causal explanation, misconception
+  prevention, directions, status/accessibility messages, and clarifying
+  elaboration; it is not applied as “shorter is always better”.
+- [ ] Invisible assistive-technology status announcements serve their own
+  purpose and are not forced into visible prose when that would add noise.
 - [ ] Mapping cues, labels, numbers, exact values, and accessibility equivalents are not removed mechanically as duplicate content.
 - [ ] A settings table does not duplicate a primary visual/code example row-for-row unless it has a distinct lookup/accessibility purpose.
 
@@ -167,8 +228,27 @@ contracts.
 - [ ] Applied tasks may test ordinary practice or transfer; transfer goals use a task with meaningfully changed conditions and selection/adaptation of the learned principle.
 - [ ] Passive result verification is not mislabeled as generative learning.
 - [ ] Generative activities require learners to retrieve, explain, predict, organise, integrate, or apply information.
+- [ ] Prediction/prequestion prompts target a concrete upcoming relation or
+  outcome, and benefits are not generalized to unrelated unprequestioned
+  content.
+- [ ] The code/object is clear, the pre-attempt state does not leak the answer,
+  and post-attempt feedback shows the actual result with useful causal
+  explanation rather than only correct/incorrect.
+- [ ] Code-output prediction is offered for suitable initial programming
+  instruction, not required everywhere.
+- [ ] When useful, self-explanation prompts identify the relation, error, or
+  concept to explain; generic “explain why” is not presumed superior.
+- [ ] Non-empty self-explanation text is not taken as evidence of correctness.
+- [ ] Ungraded reflection does not become a fake required gate; an explicit
+  reveal route exists when appropriate.
+- [ ] Where useful, the learner's complete generated statement appears near the
+  canonical explanation; reflection is used selectively at conceptual
+  transitions rather than mechanically after every action.
 - [ ] Immediate success is described as initial performance, not proof of durable learning or transfer.
-- [ ] Important knowledge is revisited later through retrieval/distributed practice when curriculum scope owns that scheduling.
+- [ ] Important knowledge is revisited in later events through retrieval and
+  distributed practice when curriculum scope owns that scheduling; in-page
+  cumulative review supports offloading but does not replace later spacing or
+  transfer practice.
 - [ ] Error recovery is not counted as learning-goal closure.
 - [ ] No closure surface is added mechanically just because a Section exists.
 
@@ -222,6 +302,17 @@ contracts.
 - [ ] Meaningful non-text UI/graphical indicators meet the applicable 3:1 non-text contrast requirement.
 - [ ] Real text is preferred to images of text when equivalent presentation is practical.
 - [ ] Interactive examples are keyboard operable in a logical order.
+- [ ] After a meaningful state change, the changed source/target/result can be
+  identified without memory-based comparison; a persistent cue remains until
+  inspection is possible, and animation is supplemental.
+- [ ] Reduced-motion preferences are respected and text/UI contrast remains
+  intact during transitions.
+- [ ] Applicable status changes are exposed accessibly; W3C techniques are
+  treated as examples rather than universal mandates.
+- [ ] A single-line response with one primary submit action uses native form
+  semantics where applicable so Enter and the visible control mean the same
+  validation and state transition; multiline/control exceptions are respected.
+- [ ] Custom Enter handling accounts for IME composition or is avoided.
 - [ ] Section 508 is invoked only when the content is actually in U.S. federal ICT scope; WCAG 2.2 AA is the default target.
 
 ## Flexible use / re-entry

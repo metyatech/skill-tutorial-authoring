@@ -249,9 +249,11 @@ confusion. Neither enjoyment nor perceived ease demonstrates mastery alone.
 ## Linguistic clarity and elaboration
 
 **Evidence:** Strohmaier et al. (2023) synthesized experimental modifications
-of STEM texts. Clarity, elaboration, and personalization showed benefits;
-reducing complexity alone did not show a significant average benefit. Relevant
-prior knowledge moderated the results.
+of STEM texts: 45 studies, *N* = 6,477 learners, and 188 effects. The small
+overall effect was *g* = .15. Personalization and increasing clarity/elaboration
+showed positive effects; reducing complexity and increasing cohesion alone did
+not show significant effects. Learners with lower content prior knowledge
+benefited more.
 
 **Boundary / what this does NOT prove:** This does not establish sentence-count
 limits or prove that shorter prose is clearer. STEM text findings are not a
@@ -261,6 +263,51 @@ universal Japanese writing template.
 consistent with these boundaries. Keep causal relations, term meanings,
 UI/state correspondence, action purposes, and state transitions when needed;
 review length semantically rather than targeting 2–5 sentences.
+
+Prompt completeness (object/content, required judgment/action, and expected
+response form) and natural stem/option wording are Course Docs quality
+conventions synthesized from clarity and task-action alignment, not outcomes
+directly tested by this meta-analysis. Exact Japanese-copy checks remain a
+local quality convention. These findings support clarity/context-sensitive
+revision, not a claim that shorter or simpler text is always better.
+
+Breakall, Randles, and Tasker (2019) developed and evaluated a multiple-choice
+item-writing flaws instrument on general chemistry exams. Their account treats
+item-writing flaws as threats to validity because they can change performance
+independently of the target chemistry knowledge and add unwanted noise. It
+includes flaws such as moving the central idea from the stem into the choices.
+This supports keeping the central idea in the stem and making choices read as
+natural answers for that stem in multiple-choice items. It does not establish a
+universal rule for every open-response prompt or discipline.
+
+## Prediction and scaffolded self-explanation
+
+**Prequestions:** St. Hilaire, Chan, and Ahn's (2024) meta-analysis found a
+substantial prequestion effect on prequestioned material (*g* = .54), while the
+average general effect on untested material was virtually zero (*g* = .04).
+Prequestions should therefore target a concrete upcoming relation or outcome;
+their benefits must not be generalized to unrelated, unprequestioned content.
+
+**Programming prediction:** Tucker et al. (2024) randomly assigned 121 college
+novices with no coding experience to predict code output before explanation or
+to receive tell-and-practice instruction. The prediction group showed greater
+learning and more positive non-cognitive outcomes. This is domain- and
+population-specific evidence supporting prediction as an option for suitable
+initial programming instruction, not a mandatory tutorial pattern.
+
+**Scaffolded self-explanation:** In two experiments on feedback after physics
+problem-solving errors, generic self-explanation prompts did not consistently
+outperform no prompt. In Experiment 2, scaffolded prompts led to higher-quality
+explanations, more error correction, and better near (but not far) transfer
+than standard prompts or no prompt. Use this narrowly: when learners need to
+explain an error or relation, identify what to explain when useful; do not claim
+that a generic “explain why” prompt is automatically superior. Text entry alone
+is not evidence that the explanation is correct.
+
+Not grading reflection semantically is a local interaction contract: do not
+make a self-explanation a fake mandatory gate, and provide an explicit route to
+reveal the explanation or answer when appropriate. This is not a learning
+finding and does not replace appropriate feedback or retrieval practice.
 
 ## Headings and structural signaling
 
@@ -520,6 +567,22 @@ Accessibility-equivalent content is not gratuitous redundancy. Presentation can
 still minimise competing parallel paths for sighted readers while preserving a
 complete equivalent route for assistive technology or on-demand access.
 
+**S — visible-prose value test:** Coherence and Minimalism support removing
+goal-irrelevant detail while retaining information needed to act, understand,
+recover, orient, and access the material. Linguistic-feature evidence also
+shows that clarity and elaboration can help, while reducing complexity alone
+does not reliably improve STEM-text learning. Together, these sources support
+reviewing whether a visible sentence changes understanding, a decision, the
+next action, causal interpretation, error recovery, useful orientation, or
+accessibility. Obvious UI narration with no such role is a deletion candidate;
+this is not a mechanical brevity rule. Assistive-technology status messages
+serve a separate purpose and should not be forced into visible prose when that
+adds noise. This is a cross-source review synthesis, not a directly tested
+sentence-level deletion instrument (Strohmaier et al., 2023,
+https://doi.org/10.1016/j.edurev.2023.100533; van der Meij & Carroll, 1995;
+WCAG 2.2 SC 4.1.3,
+https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html).
+
 A 2026 software-video experiment (Désiron, Endres & Schneider) found that more
 spatially integrated task-relevant signaling overlap improved retention/transfer
 and reduced extraneous load in that specific medium. Treat this as a boundary-
@@ -531,9 +594,67 @@ The research principle is to present complex material in meaningful,
 learner-manageable segments rather than one continuous unit. It does **not**
 define a universal “one screen = one segment” law.
 
+Rey et al. (2019) meta-analyzed 56 investigations and 88 comparisons. Meaningful
+segmentation showed small-to-medium effects for retention and transfer, reduced
+cognitive load, and increased learning time. Segment by semantic/causal
+boundaries rather than screen count; separate simultaneous changes when that
+helps learners observe each causal contribution, but do not split when
+integration cost would rise. Preserving a meaningful “no visible change yet”
+state is a local design application, not a directly tested universal rule.
+
 For software tutorials, screen/state transitions are useful candidate boundaries,
 but semantic sub-goals are stronger. Coding or conceptual tasks can require
 segmentation without any screen transition.
+
+### Cumulative presentation and re-entry
+
+Ito and Ichikawa (2026) compared cumulative visual disclosure with whole-slide
+presentation in one narrated biology lesson with 40 Japanese university
+students. Learning outcomes favored cumulative presentation (*d* = .49), with
+earlier/longer attention to congruent visual material. Treat this as promising
+direct evidence for that presentation and population, not enough to establish a
+universal R rule or a Course Docs interaction pattern.
+
+Chen et al. (2026) provide a review of the relationship between cognitive
+offloading and the transient information effect. Their synthesis relates
+external availability/permanence to reduced working-memory demands, while
+emphasizing task and learner moderators and the distinction between the two
+literatures. Combined with meaningful segmenting and the
+cumulative-presentation study, the **S — bounded Course Docs synthesis** is:
+when later understanding requires comparison or integration, keep earlier
+relevant information available or easy to revisit. Forward-guided novice
+progression can coexist with review access; this does not establish complete
+free navigation as beneficial. Tabs, accordions, collapsing, precise layout,
+and post-completion references remain local/experimental choices; a compact
+reference is useful only when later quick re-entry is likely.
+
+### Dynamic change awareness and meaningful sequence
+
+Baudisch et al. (2006) demonstrated that users may miss display changes and
+evaluated persistent afterglow cues that show transitions while leaving the
+result immediately available. This supports attention to change awareness; it
+does not determine an educational effect or a universally correct cue, style,
+or duration.
+
+**S — bounded Course Docs synthesis:** When a sequential dynamic tutorial
+reveals new instruction after an action, place it at or after that trigger in
+meaningful reading/focus order so the learner can follow the action and its
+result without searching earlier prose. This applies coherence/change
+awareness principles while respecting WCAG meaningful-sequence and focus-order
+guidance. Keep semantic, visual, programmatic reading, and keyboard focus order
+aligned when order affects meaning. W3C techniques such as inserting dynamic
+content after its trigger and exposing status messages are examples that may
+apply; they are not universal mandates. A major step change should be clear near
+the current attention locus, with a remote progress indicator only as a
+secondary orientation cue. Normally top-to-bottom reading flow is a local
+default for this tutorial context; source/result cue combinations and other
+dynamic-flow details are local design conventions, not directly tested
+universal tutorial laws.
+
+Choosing persistent source/target/result cue combinations and their duration is
+an L product/accessibility decision informed by this HCI evidence and WCAG
+contracts; it is not a demonstrated educational effect or a universal visual
+pattern.
 
 ### Signaling
 
@@ -821,6 +942,34 @@ Therefore:
 - Strohmaier, A. R., Ehmke, T., Härtig, H., & Leiss, D. (2023). *On the role
   of linguistic features for comprehension and learning from STEM texts.
   A meta-analysis*. https://doi.org/10.1016/j.edurev.2023.100533
+- Breakall, J., Randles, C., & Tasker, R. (2019). *Development and use of a
+  multiple-choice item writing flaws evaluation instrument in the context of
+  general chemistry*. *Chemistry Education Research and Practice, 20*, 369–382.
+  https://doi.org/10.1039/C8RP00262B
+- St. Hilaire, J. R., Chan, J. C. K., & Ahn, D. (2024). *Guessing as a
+  learning intervention: A meta-analytic review of the prequestion effect*.
+  https://doi.org/10.3758/s13423-023-02353-8
+- Tucker, M. C., Wang, X. (W.), Son, J. Y., & Stigler, J. W. (2024).
+  *Prediction versus production for teaching computer programming*.
+  https://doi.org/10.1016/j.learninstruc.2023.101871
+- Zhang, Q., & Fiorella, L. (2024). *Effects of self-explaining feedback on
+  learning from problem-solving errors*. *Contemporary Educational Psychology,
+  79*, 102326.
+  https://doi.org/10.1016/j.cedpsych.2024.102326
+- Rey, G. D., Beege, M., Nebel, S., Wirzberger, M., Schmitt, T. H., &
+  Schneider, S. (2019). *A meta-analysis of the segmenting effect*.
+  https://doi.org/10.1007/s10648-018-9456-4
+- Ito, H., & Ichikawa, H. (2026). *Cumulative presentation enhances learning
+  outcomes by directing learners' visual attention*. *Journal of Computer
+  Assisted Learning, 42*(4), e70286. https://doi.org/10.1002/jcal.70286
+- Chen, O., Allen, R., Waterman, A., & Sweller, J. (2026). *The relationship
+  between cognitive offloading and the transient information effect*.
+  *Educational Psychology Review, 38*, 35.
+  https://doi.org/10.1007/s10648-026-10132-9
+- Baudisch, P., Tan, D., Collomb, M., Robbins, D., Hinckley, K., Agrawala, M.,
+  Zhao, S., & Ramos, G. (2006). *Phosphor: Explaining transitions in the user
+  interface using afterglow effects*. *Proceedings of UIST '06*, 169–178.
+  https://doi.org/10.1145/1166253.1166280
 - Ritchey, K., Schuster, J., & Allen, J. (2008). *How the relationship between
   text and headings influences readers’ memory*. *Contemporary Educational
   Psychology, 33*(4), 859–874. https://doi.org/10.1016/j.cedpsych.2007.11.001

@@ -257,6 +257,26 @@ Screen/state transitions are useful boundary candidates in GUI tutorials, but a
 semantic sub-goal is the stronger criterion. Coding or conceptual tasks may need
 segmentation without any screen transition.
 
+Segment at meaningful semantic or causal boundaries, not by screen count. If
+simultaneous changes would obscure which change caused which result, separate
+them so each contribution can be observed. Preserve an intentional “no visible
+change yet” state when it distinguishes roles or clarifies the mental model;
+for example, adding an HTML class before CSS selects that class. Do not split
+mechanically when the resulting integration cost would rise.
+
+Meaningful segments may be progressively disclosed. When later understanding
+requires comparison or integration with earlier material, keep that material
+available or easy to reopen. A novice guided flow may guide forward progression
+while keeping covered content reviewable; this does not imply that unrestricted
+navigation is always beneficial. When reviewing earlier steps, preserve learner
+state and answers where practical; make an intended reset clear. Cumulative
+presentation is a promising, evidence-aligned candidate, not a proven universal
+or uniquely optimal UI. In-page cumulative review supports offloading, but does
+not replace later spaced retrieval or transfer practice.
+Exact tabs, accordions, collapsing, and layout remain local/experimental
+choices. A compact post-completion reference may help quick re-entry when
+learners need it; it is not required on every page.
+
 Split attention occurs when the learner must mentally integrate separated
 sources. Physical distance is a common cause, not the definition. Keep
 corresponding visuals, labels, values, and explanatory text close enough to
@@ -334,6 +354,29 @@ a requirement to add transitions between every paragraph or maximize
 coherence for every audience. Preserve intentional inference in retrieval
 and problem-solving activities; do not make high coherence a universal rule
 for learners with substantial prior knowledge.
+
+For novice initial instruction, a sentence should normally be interpretable
+from information introduced up to that point; do not make future content
+necessary to understand an earlier sentence. When it fits the lesson's causal
+structure, prefer current/known state → need/problem → new concept → use. This
+sequence is a local heuristic, not a universally optimal order. Stable names or
+identifiers (for example, `index.html`, `style.css`, or the browser result) are
+an **L usability/accessibility convention** and more reliable than
+viewport-dependent locations as the sole reference when a responsive layout
+can move the target. Prefer direct task wording over
+authoring/meta labels when the learner's action can be stated plainly.
+
+Learner-facing prompts should make clear, at the point of asking, what object
+or content is in question, what judgment/action is required, and what response
+form is expected. Do not leave a referent or baseline for learners to infer
+unless it is already unambiguous. Selection options should complete or answer
+the stem naturally; avoid making Japanese wording a separate decoding task or
+presupposing the answer's target category. Preserve intended retrieval or
+generation before the first attempt. For Course Docs, exact Japanese-copy checks
+are a local quality synthesis, not a universal research law. Prefer showing a
+sentence-completion response as the complete semantic sentence when it is
+returned for comparison; this is a bounded local convention, not a directly
+tested universal rule.
 
 Keep an explanation needed to understand the main instructional path, a later
 operation, or a QuickCheck on that path; do not rely only on a Hint, collapsed
@@ -445,6 +488,26 @@ always be minimized, or that every learning event must maximize generative
 difficulty. Choose task design to fit instructional goal, learner knowledge, and
 evidence for the tactic being applied.
 
+Prediction/prequestion activities should ask about the concrete upcoming
+relation or outcome. Evidence supports benefits for prequestioned content; do
+not generalize those benefits to unrelated, unprequestioned content. A study of
+novices predicting code output before explanation supports this option for
+suitable initial programming instruction, not a mandatory pattern everywhere.
+Present the object/code clearly and ask for a concrete result. Preserve the
+pre-attempt state so the target answer is not leaked. After the attempt, show
+the actual result with causal or elaborated feedback, not only a correctness
+judgment.
+When self-explanation is useful, scaffold the prompt to identify the relation,
+error, or concept to explain; a generic “explain why” prompt is not
+automatically better. Non-empty self-explanation text does not establish
+correctness. If a
+reflection is not semantically graded, do not create a fake mandatory gate;
+where appropriate, allow “I don't know” or let the learner reveal the
+explanation or answer through an explicit route. Where useful, show the
+learner's complete generated statement beside the canonical explanation.
+Use self-explanation selectively at conceptual transitions, not after every
+action.
+
 ## Recovery and error support
 
 Minimalist error support covers prevention, detection, diagnosis, and recovery.
@@ -482,6 +545,16 @@ Do not enforce arbitrary emphasis counts as scientific laws. If a platform lint
 flags unusually dense bolding, treat it as a review prompt for competing visual
 signals.
 
+When learners must integrate code, a UI, diagram, or rendered output, make their
+semantic relationship explicit and use proximity, a common region, or selective
+mapping cues where useful. Do not assume novices will infer that a nearby
+preview results from a particular HTML/CSS state. Auxiliary notation must not
+create a new decoding task: explain labels directly instead of relying on
+unexplained symbols such as `A + B → C`. Exact left/right or stacked layouts
+remain local choices; research does not establish one arrangement as optimal.
+Name rendered panels in learner language (for example, “browser result”) before
+relying on that concept, and prefer stable object names over layout positions.
+
 ## Learner-facing prose
 
 **Clarity > brevity.** Do not shorten away causal relationships, UI/state
@@ -497,6 +570,19 @@ Keep authoring rationale and audience classification out of learner-facing prose
 when they do not help the task. Rewrite 「受講者は〜」「学習者は〜」
 「初学者向け」 as task-facing prose. Do not ban 「ユーザー」 when it refers
 to a real product/domain end user.
+
+Use the **S — visible-prose value test**: if a learner-facing sentence does not
+materially improve understanding, a decision, the next action, error
+prevention/recovery, state interpretation, reference value, or accessibility,
+consider removing or reworking it. UI narration that only repeats an obvious
+interaction/result is usually unnecessary. Keep causal explanations,
+misconception prevention, task directions, useful status/accessibility
+messages, and elaboration that improves clarity. This is not “shorter is always
+better”: clarity and useful elaboration can help, while reducing complexity
+alone has not reliably improved STEM text learning. Visible prose and
+assistive-technology status messages serve different purposes. Accessibility-
+equivalent content is not gratuitous redundancy. See the bounded synthesis in
+[`references/research-foundations.md`](references/research-foundations.md).
 
 ## Cold-read: accidental difficulty detector
 
@@ -524,6 +610,29 @@ inside specific components.
   non-text-contrast requirement.
 - Prefer real text to images of text when equivalent presentation is practical.
 - Interactive examples must be keyboard operable.
+- When a state-changing action matters to understanding, identify the changed
+  source, target, or result without requiring comparison from memory. Animation
+  alone is not the cue; retain a changed value/line marker, result text, or
+  equivalent until the learner can inspect it. Motion may support continuity,
+  but is supplemental. Respect reduced-motion preferences and preserve text/UI
+  contrast during transitions. Do not narrate every change when direct visual
+  signaling already makes it clear and prose adds no learning value.
+- In sequential dynamic tutorials, newly revealed instruction should normally
+  appear at or after its triggering action in meaningful reading/focus order,
+  instead of silently changing earlier prose and requiring a backward search.
+  Keep semantic, visual, DOM/reading, and keyboard focus order aligned when
+  order affects meaning. Predictable, normally top-to-bottom reading flow is a
+  local default for this tutorial context, not a universal rule for all
+  layouts or languages. A major step change should be understandable near the
+  learner's current position; a remote progress indicator may supplement that
+  cue but is not a sufficient primary signal by itself.
+- For an interactive single-line response with one primary submit/confirm
+  action, prefer native form semantics so Enter and the visible submit control
+  invoke the same validation and state transition where applicable. Do not
+  apply this to multiline inputs or controls whose standard keyboard operation
+  differs. Avoid custom Enter
+  handlers that submit during IME composition unless composition is explicitly
+  handled.
 
 WCAG 2.2 AA is the default accessibility target for this skill. U.S. Section
 508 E205 is additionally relevant when the material falls within U.S. federal

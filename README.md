@@ -15,6 +15,14 @@ Research foundations used by the skill include:
 - **Cromley & Chen's multimedia-learning meta-analysis** (2025): boundary conditions across principle, medium, learning outcome, age, and domain
 - **Expertise reversal / adaptive assistance** (Kalyuga, 2007; Tetzlaff et al., 2025)
 - **Feedback, retrieval, and distributed-practice evidence**: initial performance is not durable learning or transfer
+- **Linguistic clarity and task semantics**: clarity/elaboration and explicit
+  response expectations, without treating shorter/simpler as always better
+- **Prediction and scaffolded self-explanation**: concrete prequestions and
+  prompts bounded to the evidence and target content
+- **Transient information and cumulative presentation**: meaningful
+  segmentation, persistent review access, and evidence limits
+- **Dynamic-state accessibility**: meaningful reading/focus sequence and
+  accessible status changes
 - **Generative learning, worked examples, activation, and scaffolding**
 - **WCAG 2.2** accessibility requirements relevant to tutorial content
 

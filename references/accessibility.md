@@ -132,6 +132,44 @@ provide an equivalent explanation of the essential action/outcome.
 Interactive examples must be usable with a keyboard in a logical order and must
 not require pointer-only gestures without an equivalent method.
 
+### Dynamic reading, focus, and status
+
+When content order affects meaning, keep a meaningful programmatic reading
+sequence. When keyboard focus order affects meaning or operation, preserve a
+logical focus sequence. Keep those orders aligned with the visual sequence
+where their relationship carries meaning; they do not have to be identical
+when more than one sequence remains understandable and operable. See WCAG 2.2
+SC 1.3.2 Meaningful Sequence and SC 2.4.3 Focus Order.
+W3C technique [C27](https://www.w3.org/WAI/WCAG21/Techniques/css/C27)
+describes matching DOM and visual order when needed; documented techniques are
+examples of ways to meet WCAG, not mandatory layouts.
+
+For sequential dynamic tutorials, place newly revealed instructional content
+at or after its triggering action in the meaningful reading/focus order when
+that helps the learner follow the transition. W3C technique SCR26 describes
+inserting dynamic content immediately after its trigger as one technique; it is
+an example, not a universal WCAG requirement. If an action updates a status
+message without moving focus, ensure applicable status is programmatically
+available to assistive technology under WCAG 2.2 SC 4.1.3. W3C's `role=status`
+technique is one example, not the only conforming implementation.
+
+### Native response semantics and motion
+
+For an interactive single-line response with one primary submit/confirm action,
+prefer native form/submit semantics where applicable so Enter and the visible
+submit control invoke identical validation and state transitions. The HTML
+Standard describes implicit form submission and strongly encourages user-agent
+support. This is platform and usability guidance, not a learning-science
+finding. Do not apply it to multiline inputs or controls whose standard
+keyboard behavior differs. Avoid
+custom Enter handlers that submit during IME composition unless composition is
+explicitly handled.
+
+Respect reduced-motion preferences. W3C Technique SCR40 describes using the CSS
+`prefers-reduced-motion` query to prevent motion; this is an example technique,
+not a blanket WCAG requirement. Keep a state/result cue available without
+motion, and do not reduce text or UI contrast during a transition.
+
 The platform, not the tutorial author alone, owns many implementation details
 such as focus states and semantics. The author remains responsible for choosing
 content and labels that make the interaction understandable.
@@ -154,6 +192,20 @@ visible prose or another supported long-description mechanism.
   https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html
 - W3C WAI, Complex Images:
   https://www.w3.org/WAI/tutorials/images/complex/
+- W3C WAI, Understanding SC 1.3.2 Meaningful Sequence:
+  https://www.w3.org/WAI/WCAG22/Understanding/meaningful-sequence.html
+- W3C WAI, Understanding SC 2.4.3 Focus Order:
+  https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html
+- W3C WAI, Understanding SC 4.1.3 Status Messages:
+  https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html
+- W3C WAI Technique SCR26 (dynamic content after its trigger):
+  https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR26
+- W3C WAI Technique ARIA22 (status messages):
+  https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA22
+- W3C WAI Technique SCR40 (reduced motion):
+  https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR40
+- WHATWG, HTML Standard, implicit form submission:
+  https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#implicit-submission
 - W3C WAI, Technique G94 (short text alternative serving the same purpose):
   https://www.w3.org/WAI/WCAG22/Techniques/general/G94
 - U.S. Access Board, Revised 508 Standards:
