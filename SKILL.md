@@ -201,6 +201,20 @@ willingness to engage with the task.
 See [references/research-foundations.md](references/research-foundations.md)
 for sources and limits.
 
+## Controlled visual comparisons
+
+When a learner is supposed to infer causality from before/after or A/B states,
+preserve both the authored content invariants and the presentation environment
+that can affect the observed result. Preview/container width, viewport, scale,
+zoom, and clipping must not change merely because a shared renderer switches to
+a two-column layout. Side-by-side is useful only when it keeps the comparison
+valid; otherwise stack the states or preserve an equivalent reference viewport.
+
+When rendered size or spacing is instructional, browser review should inspect
+actual geometry/environment rather than only panel existence or labels. This is
+an **L Course Docs visual-validity contract**, not a research claim that one
+comparison layout is universally best.
+
 ## Primary representation
 
 Choose the representation that communicates the learner's operation with the
@@ -338,6 +352,13 @@ do not call a name-only preview pre-training. A prerequisite callout is useful
 when it enables actionable preparation, re-entry, or recovery. In a
 guaranteed linear progression, omit it when it adds no such value; prior
 knowledge matters without requiring prerequisite UI on every page.
+
+For Course Docs, keep learner-facing hierarchy explicit: document/lesson
+identity, meaningful activity or task headings, task prompts, response surfaces,
+and results/feedback should not collapse into visually equivalent body prose or
+generic cards. Headings should orient the learner to the current purpose/action
+without mechanically repeating the prompt; exact typography and grouping remain
+local design choices.
 
 For Course Docs, use **learner-action consistency** as an **S research synthesis**: a learner-facing heading, its immediate explanation, the task
 statement, and relevant UI cues should communicate the action required at the

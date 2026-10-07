@@ -22,6 +22,8 @@ contracts.
 
 ## Learner-facing orientation
 
+- [ ] The artifact exposes a clear learner-facing hierarchy among lesson/document identity, meaningful activity/task headings, task prompts, response surfaces, and results/feedback instead of flattening them into equivalent body prose/cards.
+- [ ] Headings orient to the current purpose/action without merely duplicating the adjacent prompt.
 - [ ] Each learner-facing orientation item gives concrete value for the
   activity, structure, or decision where it appears.
 - [ ] An orientation item is not merely a restatement of its heading or
@@ -309,6 +311,12 @@ contracts.
 - [ ] Cold-read review detects unexplained prerequisites, ambiguity, missing state, unnecessary backtracking, undefined assumptions, terminology gaps, and visual/prose mismatches.
 - [ ] Review preserves retrieval effort, problem solving, decision making, productive struggle, and changed-condition transfer.
 - [ ] After commitment, the learner's response remains directly comparable when comparison matters; an identical canonical answer is not duplicated unless it has a distinct instructional/accessibility role.
+
+## Controlled visual comparisons
+
+- [ ] Before/after or A/B comparisons preserve presentation conditions that affect the observed result, such as preview/container width, viewport, scale, zoom, and clipping, unless one of those conditions is the intended variable.
+- [ ] A generic side-by-side layout is not used when putting states into columns changes or masks the target effect; stacking or an equivalent preserved viewport is used instead.
+- [ ] When rendered size/spacing is instructional, browser acceptance inspects actual geometry/environment rather than only the presence of two panels or matching outer cards.
 
 ## Accessibility
 

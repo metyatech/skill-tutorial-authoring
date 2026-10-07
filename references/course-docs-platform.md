@@ -29,10 +29,21 @@ runtime fallback.
 
 For response-bearing activities, the pre-attempt state must make clear what the
 learner is responding about, the required learner action, and the expected
-response form. After commitment, keep the learner response directly comparable
-when that comparison supports learning, and avoid an immediately repeated
-canonical answer unless the second representation has a distinct instructional
-or accessibility role.
+response form. Structured learner-facing runtimes should also preserve explicit
+semantic hierarchy for lesson/page identity, meaningful activity/task headings,
+task prompts, response surfaces, and results/feedback rather than deriving
+those roles from internal IDs or rendering them all as generic body text.
+
+After commitment, keep the learner response directly comparable when that
+comparison supports learning, and avoid an immediately repeated canonical
+answer unless the second representation has a distinct instructional or
+accessibility role.
+
+For controlled visual comparisons, preserve presentation conditions that affect
+the observed result, including preview/container width, viewport, scale, zoom,
+and clipping. Do not force side-by-side columns when that layout changes the
+baseline or masks the target effect; stack or preserve an equivalent reference
+viewport instead.
 
 ## Component composition
 
@@ -234,7 +245,9 @@ Do not use:
 When a Course Docs learner-facing runtime has an explicit reference experience
 or visual acceptance contract, passing unit/E2E/accessibility tests is necessary
 but not sufficient for final acceptance. Inspect the specified rendered states
-in a real browser against the reference. Until the designated visual reviewer
+in a real browser against the reference. When rendered size, spacing, clipping,
+or responsive behavior carries instructional meaning, inspect the actual
+rendered geometry/environment rather than only DOM structure or labels. Until the designated visual reviewer
 accepts them, the work remains waiting for visual acceptance rather than final
 PASS.
 
