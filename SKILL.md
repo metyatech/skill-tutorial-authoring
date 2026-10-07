@@ -41,6 +41,12 @@ Keep author-facing audience labels in authoring context or metadata. Do not leak
 phrases such as 「初学者向け」 into learner-facing prose unless the learner
 genuinely needs that information.
 
+Treat learner-visible material as instructional content regardless of file type
+or path. Prompts, labels, code context, feedback, explanations, and visible
+state text embedded in JSON/YAML/TypeScript fixtures, Bundle source, test
+fixtures, or generated source receive the same authoring review as prose in a
+tutorial document.
+
 ## Educational purpose
 
 Adopt this **normative purpose**: learners enjoy learning with a positive
@@ -248,6 +254,12 @@ Do not “fix” redundancy by leaving an underspecified instruction such as
 「クリックします」 when neither the primary representation nor its accessible
 equivalent identifies the target and operation clearly.
 
+For any response-bearing activity, the visible pre-attempt state must make clear
+what the learner is responding about, what action or judgment is required, and
+the expected response form. Do not rely on a shared renderer to invent
+domain-specific task meaning that authoring omitted; neutral accessibility or
+platform labels are acceptable only when they cannot misstate the task.
+
 ## Segmenting and split attention
 
 Use **meaningful learner-controlled chunks**, not a mechanical “one screen =
@@ -269,7 +281,12 @@ requires comparison or integration with earlier material, keep that material
 available or easy to reopen. A novice guided flow may guide forward progression
 while keeping covered content reviewable; this does not imply that unrestricted
 navigation is always beneficial. When reviewing earlier steps, preserve learner
-state and answers where practical; make an intended reset clear. Cumulative
+state and answers where practical; make an intended reset clear. After a
+learner commits a response, preserve it in place or in an immediately comparable
+representation when comparison matters. Do not add an identical canonical
+answer immediately beside an already-visible correct response unless the second
+representation adds a distinct explanatory, normalization, comparison, or
+accessibility role. Cumulative
 presentation is a promising, evidence-aligned candidate, not a proven universal
 or uniquely optimal UI. In-page cumulative review supports offloading, but does
 not replace later spaced retrieval or transfer practice.

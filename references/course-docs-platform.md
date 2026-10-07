@@ -13,6 +13,27 @@ MDX components. Components express those choices. See the platform's
 for metadata contracts; component names or Section boundaries do not determine
 pedagogy.
 
+## Structured learner-facing sources and runtime fallback
+
+Course Docs learner-visible content remains instructional content even when it
+is stored outside MDX. Apply learner-facing authoring rules to prompts, labels,
+code context, feedback, explanations, and visible state text in JSON/YAML/TS
+fixtures, Learning Bundle source, generated source, and test fixtures.
+
+Shared platform/runtime components own mechanics and neutral platform behavior;
+they must not invent domain-specific instructional copy from generic response or
+evaluator kinds. If a task needs a subject-specific prompt, response label,
+causal explanation, or feedback relation, author and validate that meaning
+upstream. Missing instructional meaning is not safely repaired by a plausible
+runtime fallback.
+
+For response-bearing activities, the pre-attempt state must make clear what the
+learner is responding about, the required learner action, and the expected
+response form. After commitment, keep the learner response directly comparable
+when that comparison supports learning, and avoid an immediately repeated
+canonical answer unless the second representation has a distinct instructional
+or accessibility role.
+
 ## Component composition
 
 Course Docs tutorials are composed from local task components. There is no
@@ -207,6 +228,17 @@ Do not use:
 - `authoringMode` frontmatter;
 - page-wide tutorial/non-tutorial classification;
 - separate legacy Solution blocks.
+
+## Visual/reference acceptance
+
+When a Course Docs learner-facing runtime has an explicit reference experience
+or visual acceptance contract, passing unit/E2E/accessibility tests is necessary
+but not sufficient for final acceptance. Inspect the specified rendered states
+in a real browser against the reference. Until the designated visual reviewer
+accepts them, the work remains waiting for visual acceptance rather than final
+PASS.
+
+This is a local Course Docs QA contract, not a general learning-science claim.
 
 ## Mechanised tutorial lint
 

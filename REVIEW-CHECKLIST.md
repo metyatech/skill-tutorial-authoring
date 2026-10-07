@@ -303,8 +303,12 @@ contracts.
 
 ## Accidental difficulty cold-read
 
+- [ ] Learner-visible content inside JSON/YAML/TypeScript, Bundle source, generated source, or test fixtures is reviewed as instructional content rather than exempted as implementation/test data.
+- [ ] Every response-bearing activity makes clear from the visible pre-attempt state what content/object is in question, what learner action is required, and the expected response form.
+- [ ] Shared/runtime fallback wording is semantically neutral; domain-specific prompts, labels, explanations, or feedback are authored rather than guessed from a generic response type.
 - [ ] Cold-read review detects unexplained prerequisites, ambiguity, missing state, unnecessary backtracking, undefined assumptions, terminology gaps, and visual/prose mismatches.
 - [ ] Review preserves retrieval effort, problem solving, decision making, productive struggle, and changed-condition transfer.
+- [ ] After commitment, the learner's response remains directly comparable when comparison matters; an identical canonical answer is not duplicated unless it has a distinct instructional/accessibility role.
 
 ## Accessibility
 
@@ -379,3 +383,5 @@ user-specific execution standards for tutorial approval and review.
 - [ ] Final tutorial approval and review inspect the complete final artifact, not only the diff or a subset of changes.
 - [ ] For sequential or cumulative tutorials, review proceeds in learner-visible order while carrying forward the state produced by each required step and by each optional branch when evaluating consequences.
 - [ ] When an out-of-edit-scope issue violates applicable rules or is blocking, do not silently ignore it; report it and do not claim a clean PASS status.
+- [ ] When the target system defines an explicit learner-facing visual/reference acceptance contract, final approval inspects the required rendered states in a real browser; automated tests alone do not establish learner-experience acceptance.
+- [ ] Until that visual/reference review is accepted, report a waiting-for-visual-acceptance status rather than final PASS.
